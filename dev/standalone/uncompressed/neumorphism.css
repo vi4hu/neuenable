@@ -1,0 +1,451 @@
+.btn {
+  border: 0;
+  border-radius: 20%;
+  height: 3rem;
+  width: 6rem;
+  margin: 1rem;
+  font-weight: bold;
+  font-size: 1rem; }
+
+.bg-dark {
+  background: #24282d; }
+
+.dark {
+  color: #999; }
+
+.bg-light {
+  background: #ebecf0; }
+
+.light {
+  color: #ececec; }
+
+.bg-blue {
+  background: #017dd3; }
+
+.blue {
+  color: #80a3ff; }
+
+.bg-green {
+  background: #256668; }
+
+.green {
+  color: green; }
+
+.bg-red {
+  background: #b91715; }
+
+.red {
+  color: #ff0d45; }
+
+.bg-yellow {
+  background: #ffcf00; }
+
+.yellow {
+  color: #ffcf00; }
+
+.tr-dark {
+  background: #24282d;
+  box-shadow: -4px 4px 10px 2px #00000020, 4px -4px 10px 2px #ffffff08; }
+  .tr-dark.active:active {
+    animation: tr-push 50ms forwards ease-in-out; }
+  .tr-dark.active:not(:active) {
+    animation: tr-un-push 50ms forwards ease-in-out; }
+  .tr-dark.focus:focus {
+    animation: tr-push 50ms forwards ease-in-out; }
+  .tr-dark.focus:not(:focus) {
+    animation: tr-un-push 50ms forwards ease-in-out; }
+  .tr-dark.hover:hover {
+    animation: tr-push 50ms forwards ease-in-out; }
+  .tr-dark.hover:not(:hover) {
+    animation: tr-un-push 50ms forwards ease-in-out; }
+
+.br-dark {
+  background: #24282d;
+  box-shadow: -4px -4px 10px 2px #00000020, 4px 4px 10px 2px #ffffff08; }
+  .br-dark.active:active {
+    animation: br-push 50ms forwards ease-in-out; }
+  .br-dark.active:not(:active) {
+    animation: br-un-push 50ms forwards ease-in-out; }
+  .br-dark.focus:focus {
+    animation: br-push 50ms forwards ease-in-out; }
+  .br-dark.focus:not(:focus) {
+    animation: br-un-push 50ms forwards ease-in-out; }
+  .br-dark.hover:hover {
+    animation: br-push 50ms forwards ease-in-out; }
+  .br-dark.hover:not(:hover) {
+    animation: br-un-push 50ms forwards ease-in-out; }
+
+.tl-dark {
+  background: #24282d;
+  box-shadow: 4px 4px 10px 2px #00000020, -4px -4px 10px 2px #ffffff08; }
+  .tl-dark.active:active {
+    animation: tl-push 50ms forwards ease-in-out; }
+  .tl-dark.active:not(:active) {
+    animation: tl-un-push 50ms forwards ease-in-out; }
+  .tl-dark.focus:focus {
+    animation: tl-push 50ms forwards ease-in-out; }
+  .tl-dark.focus:not(:focus) {
+    animation: tl-un-push 50ms forwards ease-in-out; }
+  .tl-dark.hover:hover {
+    animation: tl-push 50ms forwards ease-in-out; }
+  .tl-dark.hover:not(:hover) {
+    animation: tl-un-push 50ms forwards ease-in-out; }
+
+.bl-dark {
+  background: #24282d;
+  box-shadow: 4px -4px 10px 2px #00000020, -4px 4px 10px 2px #ffffff08; }
+  .bl-dark.active:active {
+    animation: bl-push 50ms forwards ease-in-out; }
+  .bl-dark.active:not(:active) {
+    animation: bl-un-push 50ms forwards ease-in-out; }
+  .bl-dark.focus:focus {
+    animation: bl-push 50ms forwards ease-in-out; }
+  .bl-dark.focus:not(:focus) {
+    animation: bl-un-push 50ms forwards ease-in-out; }
+  .bl-dark.hover:hover {
+    animation: bl-push 50ms forwards ease-in-out; }
+  .bl-dark.hover:not(:hover) {
+    animation: bl-un-push 50ms forwards ease-in-out; }
+
+.tr-light {
+  background: #ebecf0;
+  box-shadow: -4px 4px 10px 2px #00000015, 4px -4px 10px 2px #ffffff92; }
+  .tr-light.active:active {
+    animation: tr-push 50ms forwards ease-in-out; }
+  .tr-light.active:not(:active) {
+    animation: tr-un-push 50ms forwards ease-in-out; }
+  .tr-light.focus:focus {
+    animation: tr-push 50ms forwards ease-in-out; }
+  .tr-light.focus:not(:focus) {
+    animation: tr-un-push 50ms forwards ease-in-out; }
+  .tr-light.hover:hover {
+    animation: tr-push 50ms forwards ease-in-out; }
+  .tr-light.hover:not(:hover) {
+    animation: tr-un-push 50ms forwards ease-in-out; }
+
+.br-light {
+  background: #ebecf0;
+  box-shadow: -4px -4px 10px 2px #00000015, 4px 4px 10px 2px #ffffff92; }
+  .br-light.active:active {
+    animation: br-push 50ms forwards ease-in-out; }
+  .br-light.active:not(:active) {
+    animation: br-un-push 50ms forwards ease-in-out; }
+  .br-light.focus:focus {
+    animation: br-push 50ms forwards ease-in-out; }
+  .br-light.focus:not(:focus) {
+    animation: br-un-push 50ms forwards ease-in-out; }
+  .br-light.hover:hover {
+    animation: br-push 50ms forwards ease-in-out; }
+  .br-light.hover:not(:hover) {
+    animation: br-un-push 50ms forwards ease-in-out; }
+
+.tl-light {
+  background: #ebecf0;
+  box-shadow: 4px 4px 10px 2px #00000015, -4px -4px 10px 2px #ffffff92; }
+  .tl-light.active:active {
+    animation: tl-push 50ms forwards ease-in-out; }
+  .tl-light.active:not(:active) {
+    animation: tl-un-push 50ms forwards ease-in-out; }
+  .tl-light.focus:focus {
+    animation: tl-push 50ms forwards ease-in-out; }
+  .tl-light.focus:not(:focus) {
+    animation: tl-un-push 50ms forwards ease-in-out; }
+  .tl-light.hover:hover {
+    animation: tl-push 50ms forwards ease-in-out; }
+  .tl-light.hover:not(:hover) {
+    animation: tl-un-push 50ms forwards ease-in-out; }
+
+.bl-light {
+  background: #ebecf0;
+  box-shadow: 4px -4px 10px 2px #00000015, -4px 4px 10px 2px #ffffff92; }
+  .bl-light.active:active {
+    animation: bl-push 50ms forwards ease-in-out; }
+  .bl-light.active:not(:active) {
+    animation: bl-un-push 50ms forwards ease-in-out; }
+  .bl-light.focus:focus {
+    animation: bl-push 50ms forwards ease-in-out; }
+  .bl-light.focus:not(:focus) {
+    animation: bl-un-push 50ms forwards ease-in-out; }
+  .bl-light.hover:hover {
+    animation: bl-push 50ms forwards ease-in-out; }
+  .bl-light.hover:not(:hover) {
+    animation: bl-un-push 50ms forwards ease-in-out; }
+
+.tr-blue {
+  background: #017dd3;
+  box-shadow: -4px 4px 10px 2px #00000020, 4px -4px 10px 2px #ffffff20; }
+  .tr-blue.active:active {
+    animation: tr-push 50ms forwards ease-in-out; }
+  .tr-blue.active:not(:active) {
+    animation: tr-un-push 50ms forwards ease-in-out; }
+  .tr-blue.focus:focus {
+    animation: tr-push 50ms forwards ease-in-out; }
+  .tr-blue.focus:not(:focus) {
+    animation: tr-un-push 50ms forwards ease-in-out; }
+  .tr-blue.hover:hover {
+    animation: tr-push 50ms forwards ease-in-out; }
+  .tr-blue.hover:not(:hover) {
+    animation: tr-un-push 50ms forwards ease-in-out; }
+
+.br-blue {
+  background: #017dd3;
+  box-shadow: -4px -4px 10px 2px #00000020, 4px 4px 10px 2px #ffffff20; }
+  .br-blue.active:active {
+    animation: br-push 50ms forwards ease-in-out; }
+  .br-blue.active:not(:active) {
+    animation: br-un-push 50ms forwards ease-in-out; }
+  .br-blue.focus:focus {
+    animation: br-push 50ms forwards ease-in-out; }
+  .br-blue.focus:not(:focus) {
+    animation: br-un-push 50ms forwards ease-in-out; }
+  .br-blue.hover:hover {
+    animation: br-push 50ms forwards ease-in-out; }
+  .br-blue.hover:not(:hover) {
+    animation: br-un-push 50ms forwards ease-in-out; }
+
+.tl-blue {
+  background: #017dd3;
+  box-shadow: 4px 4px 10px 2px #00000020, -4px -4px 10px 2px #ffffff20; }
+  .tl-blue.active:active {
+    animation: tl-push 50ms forwards ease-in-out; }
+  .tl-blue.active:not(:active) {
+    animation: tl-un-push 50ms forwards ease-in-out; }
+  .tl-blue.focus:focus {
+    animation: tl-push 50ms forwards ease-in-out; }
+  .tl-blue.focus:not(:focus) {
+    animation: tl-un-push 50ms forwards ease-in-out; }
+  .tl-blue.hover:hover {
+    animation: tl-push 50ms forwards ease-in-out; }
+  .tl-blue.hover:not(:hover) {
+    animation: tl-un-push 50ms forwards ease-in-out; }
+
+.bl-blue {
+  background: #017dd3;
+  box-shadow: 4px -4px 10px 2px #00000020, -4px 4px 10px 2px #ffffff20; }
+  .bl-blue.active:active {
+    animation: bl-push 50ms forwards ease-in-out; }
+  .bl-blue.active:not(:active) {
+    animation: bl-un-push 50ms forwards ease-in-out; }
+  .bl-blue.focus:focus {
+    animation: bl-push 50ms forwards ease-in-out; }
+  .bl-blue.focus:not(:focus) {
+    animation: bl-un-push 50ms forwards ease-in-out; }
+  .bl-blue.hover:hover {
+    animation: bl-push 50ms forwards ease-in-out; }
+  .bl-blue.hover:not(:hover) {
+    animation: bl-un-push 50ms forwards ease-in-out; }
+
+.tr-green {
+  background: #256668;
+  box-shadow: -4px 4px 10px 2px #00000020, 4px -4px 10px 2px #ffffff20; }
+  .tr-green.active:active {
+    animation: tr-push 50ms forwards ease-in-out; }
+  .tr-green.active:not(:active) {
+    animation: tr-un-push 50ms forwards ease-in-out; }
+  .tr-green.focus:focus {
+    animation: tr-push 50ms forwards ease-in-out; }
+  .tr-green.focus:not(:focus) {
+    animation: tr-un-push 50ms forwards ease-in-out; }
+  .tr-green.hover:hover {
+    animation: tr-push 50ms forwards ease-in-out; }
+  .tr-green.hover:not(:hover) {
+    animation: tr-un-push 50ms forwards ease-in-out; }
+
+.br-green {
+  background: #256668;
+  box-shadow: -4px -4px 10px 2px #00000020, 4px 4px 10px 2px #ffffff20; }
+  .br-green.active:active {
+    animation: br-push 50ms forwards ease-in-out; }
+  .br-green.active:not(:active) {
+    animation: br-un-push 50ms forwards ease-in-out; }
+  .br-green.focus:focus {
+    animation: br-push 50ms forwards ease-in-out; }
+  .br-green.focus:not(:focus) {
+    animation: br-un-push 50ms forwards ease-in-out; }
+  .br-green.hover:hover {
+    animation: br-push 50ms forwards ease-in-out; }
+  .br-green.hover:not(:hover) {
+    animation: br-un-push 50ms forwards ease-in-out; }
+
+.tl-green {
+  background: #256668;
+  box-shadow: 4px 4px 10px 2px #00000020, -4px -4px 10px 2px #ffffff20; }
+  .tl-green.active:active {
+    animation: tl-push 50ms forwards ease-in-out; }
+  .tl-green.active:not(:active) {
+    animation: tl-un-push 50ms forwards ease-in-out; }
+  .tl-green.focus:focus {
+    animation: tl-push 50ms forwards ease-in-out; }
+  .tl-green.focus:not(:focus) {
+    animation: tl-un-push 50ms forwards ease-in-out; }
+  .tl-green.hover:hover {
+    animation: tl-push 50ms forwards ease-in-out; }
+  .tl-green.hover:not(:hover) {
+    animation: tl-un-push 50ms forwards ease-in-out; }
+
+.bl-green {
+  background: #256668;
+  box-shadow: 4px -4px 10px 2px #00000020, -4px 4px 10px 2px #ffffff20; }
+  .bl-green.active:active {
+    animation: bl-push 50ms forwards ease-in-out; }
+  .bl-green.active:not(:active) {
+    animation: bl-un-push 50ms forwards ease-in-out; }
+  .bl-green.focus:focus {
+    animation: bl-push 50ms forwards ease-in-out; }
+  .bl-green.focus:not(:focus) {
+    animation: bl-un-push 50ms forwards ease-in-out; }
+  .bl-green.hover:hover {
+    animation: bl-push 50ms forwards ease-in-out; }
+  .bl-green.hover:not(:hover) {
+    animation: bl-un-push 50ms forwards ease-in-out; }
+
+.tr-red {
+  background: #b91715;
+  box-shadow: -4px 4px 10px 2px #00000025, 4px -4px 10px 2px #ffffff25; }
+  .tr-red.active:active {
+    animation: tr-push 50ms forwards ease-in-out; }
+  .tr-red.active:not(:active) {
+    animation: tr-un-push 50ms forwards ease-in-out; }
+  .tr-red.focus:focus {
+    animation: tr-push 50ms forwards ease-in-out; }
+  .tr-red.focus:not(:focus) {
+    animation: tr-un-push 50ms forwards ease-in-out; }
+  .tr-red.hover:hover {
+    animation: tr-push 50ms forwards ease-in-out; }
+  .tr-red.hover:not(:hover) {
+    animation: tr-un-push 50ms forwards ease-in-out; }
+
+.br-red {
+  background: #b91715;
+  box-shadow: -4px -4px 10px 2px #00000025, 4px 4px 10px 2px #ffffff25; }
+  .br-red.active:active {
+    animation: br-push 50ms forwards ease-in-out; }
+  .br-red.active:not(:active) {
+    animation: br-un-push 50ms forwards ease-in-out; }
+  .br-red.focus:focus {
+    animation: br-push 50ms forwards ease-in-out; }
+  .br-red.focus:not(:focus) {
+    animation: br-un-push 50ms forwards ease-in-out; }
+  .br-red.hover:hover {
+    animation: br-push 50ms forwards ease-in-out; }
+  .br-red.hover:not(:hover) {
+    animation: br-un-push 50ms forwards ease-in-out; }
+
+.tl-red {
+  background: #b91715;
+  box-shadow: 4px 4px 10px 2px #00000025, -4px -4px 10px 2px #ffffff25; }
+  .tl-red.active:active {
+    animation: tl-push 50ms forwards ease-in-out; }
+  .tl-red.active:not(:active) {
+    animation: tl-un-push 50ms forwards ease-in-out; }
+  .tl-red.focus:focus {
+    animation: tl-push 50ms forwards ease-in-out; }
+  .tl-red.focus:not(:focus) {
+    animation: tl-un-push 50ms forwards ease-in-out; }
+  .tl-red.hover:hover {
+    animation: tl-push 50ms forwards ease-in-out; }
+  .tl-red.hover:not(:hover) {
+    animation: tl-un-push 50ms forwards ease-in-out; }
+
+.bl-red {
+  background: #b91715;
+  box-shadow: 4px -4px 10px 2px #00000025, -4px 4px 10px 2px #ffffff25; }
+  .bl-red.active:active {
+    animation: bl-push 50ms forwards ease-in-out; }
+  .bl-red.active:not(:active) {
+    animation: bl-un-push 50ms forwards ease-in-out; }
+  .bl-red.focus:focus {
+    animation: bl-push 50ms forwards ease-in-out; }
+  .bl-red.focus:not(:focus) {
+    animation: bl-un-push 50ms forwards ease-in-out; }
+  .bl-red.hover:hover {
+    animation: bl-push 50ms forwards ease-in-out; }
+  .bl-red.hover:not(:hover) {
+    animation: bl-un-push 50ms forwards ease-in-out; }
+
+.tr-yellow {
+  background: #ffcf00;
+  box-shadow: -4px 4px 10px 2px #00000020, 4px -4px 10px 2px #ffffff98; }
+  .tr-yellow.active:active {
+    animation: tr-push 50ms forwards ease-in-out; }
+  .tr-yellow.active:not(:active) {
+    animation: tr-un-push 50ms forwards ease-in-out; }
+  .tr-yellow.focus:focus {
+    animation: tr-push 50ms forwards ease-in-out; }
+  .tr-yellow.focus:not(:focus) {
+    animation: tr-un-push 50ms forwards ease-in-out; }
+  .tr-yellow.hover:hover {
+    animation: tr-push 50ms forwards ease-in-out; }
+  .tr-yellow.hover:not(:hover) {
+    animation: tr-un-push 50ms forwards ease-in-out; }
+
+.br-yellow {
+  background: #ffcf00;
+  box-shadow: -4px -4px 10px 2px #00000020, 4px 4px 10px 2px #ffffff98; }
+  .br-yellow.active:active {
+    animation: br-push 50ms forwards ease-in-out; }
+  .br-yellow.active:not(:active) {
+    animation: br-un-push 50ms forwards ease-in-out; }
+  .br-yellow.focus:focus {
+    animation: br-push 50ms forwards ease-in-out; }
+  .br-yellow.focus:not(:focus) {
+    animation: br-un-push 50ms forwards ease-in-out; }
+  .br-yellow.hover:hover {
+    animation: br-push 50ms forwards ease-in-out; }
+  .br-yellow.hover:not(:hover) {
+    animation: br-un-push 50ms forwards ease-in-out; }
+
+.tl-yellow {
+  background: #ffcf00;
+  box-shadow: 4px 4px 10px 2px #00000020, -4px -4px 10px 2px #ffffff98; }
+  .tl-yellow.active:active {
+    animation: tl-push 50ms forwards ease-in-out; }
+  .tl-yellow.active:not(:active) {
+    animation: tl-un-push 50ms forwards ease-in-out; }
+  .tl-yellow.focus:focus {
+    animation: tl-push 50ms forwards ease-in-out; }
+  .tl-yellow.focus:not(:focus) {
+    animation: tl-un-push 50ms forwards ease-in-out; }
+  .tl-yellow.hover:hover {
+    animation: tl-push 50ms forwards ease-in-out; }
+  .tl-yellow.hover:not(:hover) {
+    animation: tl-un-push 50ms forwards ease-in-out; }
+
+.bl-yellow {
+  background: #ffcf00;
+  box-shadow: 4px -4px 10px 2px #00000020, -4px 4px 10px 2px #ffffff98; }
+  .bl-yellow.active:active {
+    animation: bl-push 50ms forwards ease-in-out; }
+  .bl-yellow.active:not(:active) {
+    animation: bl-un-push 50ms forwards ease-in-out; }
+  .bl-yellow.focus:focus {
+    animation: bl-push 50ms forwards ease-in-out; }
+  .bl-yellow.focus:not(:focus) {
+    animation: bl-un-push 50ms forwards ease-in-out; }
+  .bl-yellow.hover:hover {
+    animation: bl-push 50ms forwards ease-in-out; }
+  .bl-yellow.hover:not(:hover) {
+    animation: bl-un-push 50ms forwards ease-in-out; }
+
+/* Type 1 */
+@keyframes tl-push {
+  0% {
+    height: 3rem;
+    width: 6rem;
+    box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.25), -4px -4px 10px rgba(255, 255, 255, 0.08); }
+  100% {
+    height: 3rem;
+    width: 6rem;
+    box-shadow: -4px -4px 15px 0px rgba(177, 177, 177, 0.03) inset, 4px 4px 10px 2px rgba(0, 0, 0, 0.12) inset; } }
+/* box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.25), -4px -4px 10px rgba(177, 177, 177, 0.08), -4px -4px 15px 0px rgba(177, 177, 177, 0.03) inset, 4px 4px 10px 2px rgba(0, 0, 0, 0.12) inset; */
+@keyframes tl-un-push {
+  0% {
+    height: 3rem;
+    width: 6rem;
+    box-shadow: -4px -4px 15px rgba(177, 177, 177, 0.03) inset, 4px 4px 10px rgba(0, 0, 0, 0.12) inset; }
+  100% {
+    height: 3rem;
+    width: 6rem;
+    box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.25), -4px -4px 10px rgba(255, 255, 255, 0.08); } }
+
+/*# sourceMappingURL=neumorphism.css.map */
