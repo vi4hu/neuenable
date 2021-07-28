@@ -42,6 +42,8 @@ $keys: 'primary' 'dark' 'light' 'success' 'danger' 'warning';
 $props: 'background' 'box-shadow';
 // default events (this library offers)
 $events: 'active' 'focus' 'hover';
+// default effects
+$effects: 'push';
 
 .btn{
     border: 0;
@@ -53,17 +55,17 @@ $events: 'active' 'focus' 'hover';
     font-size: 1rem;
 }
 
-@mixin setup($map, $keys){
-    @each $keymap, $valuemap in $map{
-        .#{$keymap}-type{
-            @each $key in $keys{
-                @if(#{$key} != box-shadow){
-                    #{$key}: map-get($valuemap, $key);
-                }
-            }
-        }
-    }
-}
+// @mixin setup($map, $keys){
+//     @each $keymap, $valuemap in $map{
+//         .#{$keymap}-type{
+//             @each $key in $keys{
+//                 @if(#{$key} != box-shadow){
+//                     #{$key}: map-get($valuemap, $key);
+//                 }
+//             }
+//         }
+//     }
+// }
 
 // mixin for generating a type of color related classes
 @mixin set_neumorph_colors($map, $bgs, $texts){
@@ -83,17 +85,29 @@ $events: 'active' 'focus' 'hover';
 }
 
 // mixin for generating a type of animations on certain events
-// @mixin set_neumorph_animation($map, $bgs, $texts){
+// @mixin set_neumorph_animation($map, $keys){
 //     @each $keymap, $valuemap in $map{
-//         .bg-#{$keymap}{
-//             @each $bg in $bgs{
-//                 #{$bg}: map-get($valuemap, $bg);
-//             }
-//         }
-//         .#{$keymap}{
-//             @each $text in $texts{
-//                 #{$text}: map-get($valuemap, $text);
-//             }
+//         // seperating the first level keys and values
+//         @each $angle, $values in $angles{
+//             // $angle represents the angle of light source
+//             // .#{$angle}-#{$keymap}{
+//                 // @each $key in $keys{
+//                     // @if $key == box-shadow {
+//                         @keyframes #{$effect}{
+//                             0%{
+//                                 height: 3rem;
+//                                 width: 6rem;
+//                                 #{$key}: map-get($values, 'x') 10px 2px map-get(map-get($valuemap, box-shadow), darker), map-get($values, 'y') 10px 2px map-get(map-get($valuemap, box-shadow), lighter);
+//                             }
+//                             100%{
+//                                 height:  3rem;
+//                                 width: 6rem;
+//                                 #{$key}: map-get($values, 'x') 10px 2px map-get(map-get($valuemap, box-shadow) inset, darker), map-get($values, 'y') 10px 2px map-get(map-get($valuemap, box-shadow), lighter) inset;
+//                             }
+//                         }
+//                     // }
+//                 // }
+//             // }
 //         }
 //     }
 // }
@@ -116,12 +130,18 @@ $events: 'active' 'focus' 'hover';
                 }
                 // apply the effects if true
                 @if $eff == true {
-                    @each $event in $events{
-                        &.#{$event}:#{$event}{
-                            animation: push 50ms forwards ease-in-out;
-                        }
-                        &.#{$event}:not(:#{$event}){
-                            animation: pull 50ms forwards ease-in-out;
+                    @each $ang, $values in $angles{
+                        @if $angle == $ang{
+                            @each $event in $events{
+                                @each $effect in $effects{
+                                    &.#{$event}:#{$event}{
+                                        animation: #{$ang}-#{$effect} 50ms forwards ease-in-out;
+                                    }
+                                    &.#{$event}:not(:#{$event}){
+                                        animation: #{$ang}-un-#{$effect} 50ms forwards ease-in-out;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -136,7 +156,7 @@ $events: 'active' 'focus' 'hover';
 
 // @include setup($test, $k);
 /* Type 1 */
-@keyframes push{
+@keyframes tl-push{
     0%{
         height: 3rem;
         width: 6rem;
@@ -151,7 +171,7 @@ $events: 'active' 'focus' 'hover';
 
 /* box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.25), -4px -4px 10px rgba(177, 177, 177, 0.08), -4px -4px 15px 0px rgba(177, 177, 177, 0.03) inset, 4px 4px 10px 2px rgba(0, 0, 0, 0.12) inset; */
 
-@keyframes pull{
+@keyframes tl-un-push{
     0%{
         height:  3rem;
         width: 6rem;
