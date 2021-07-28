@@ -1,3 +1,5 @@
+// types of components (this library offers by default)
+// DESCRIPTION
 $types: (
     'dark': ('background': #24282d, 'box-shadow':('darker': #00000020, 'lighter': #ffffff08)),
     'light': ('background': #ebecf0, 'box-shadow':('darker': #00000015, 'lighter': #ffffff92)),
@@ -7,6 +9,12 @@ $types: (
     'yellow': ('background': #ffcf00, 'box-shadow':('darker': #00000020, 'lighter': #ffffff98))
     );
 
+// angles or direction of the light source (this library offers by default)
+// four default angles are given for light source
+// top-right
+// bottom-right
+// top-left
+// bottom-left
 $angles:(
     'tr':('x': -4px 4px, 'y': 4px -4px),
     'br':('x': -4px -4px, 'y': 4px 4px),
@@ -14,6 +22,8 @@ $angles:(
     'bl':('x': 4px -4px, 'y': -4px 4px)
     );
 
+// default colors
+// twelve default colors are given, six for background or components and six for text or icon 
 $colors: (
     'dark': ('color': #999, 'background': #24282d),
     'light': ('color': #ececec, 'background': #ebecf0),
@@ -22,11 +32,16 @@ $colors: (
     'red': ('color': #ff0d45, 'background': #b91715),
     'yellow': ('color': #ffcf00, 'background': #ffcf00)
     );
+
+// default props for background components
 $bgs: 'background';
+// default props for text components
 $texts: 'color';
 $keys: 'primary' 'dark' 'light' 'success' 'danger' 'warning';
+// default props for components
 $props: 'background' 'box-shadow';
-
+// default effects (this library offers)
+$effects: 'active' 'focus' 'hover';
 
 .btn{
     border: 0;
@@ -34,6 +49,8 @@ $props: 'background' 'box-shadow';
     height: 3rem;
     width: 6rem;
     margin: 1rem;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
 @mixin setup($map, $keys){
@@ -48,7 +65,9 @@ $props: 'background' 'box-shadow';
     }
 }
 
+// mixin for generating a type of color related classes
 @mixin set_neumorph_colors($map, $bgs, $texts){
+    // $map gets the keys and values, $bgs, $texts are the css property component will get
     @each $keymap, $valuemap in $map{
         .bg-#{$keymap}{
             @each $bg in $bgs{
@@ -62,9 +81,30 @@ $props: 'background' 'box-shadow';
         }
     }
 }
-@mixin set_neumorph_element($map, $keys){
+
+// mixin for generating a type of animations on certain events
+// @mixin set_neumorph_animation($map, $bgs, $texts){
+//     @each $keymap, $valuemap in $map{
+//         .bg-#{$keymap}{
+//             @each $bg in $bgs{
+//                 #{$bg}: map-get($valuemap, $bg);
+//             }
+//         }
+//         .#{$keymap}{
+//             @each $text in $texts{
+//                 #{$text}: map-get($valuemap, $text);
+//             }
+//         }
+//     }
+// }
+
+// mixin for generating a type of components with certain action or not
+@mixin set_neumorph_element($map, $keys, $eff){
+    // $map for the values and keys, $keys are the css property component will get, $eff tells if it has effects or not
     @each $keymap, $valuemap in $map{
+        // seperating the first level keys and values
         @each $angle, $values in $angles{
+            // $angle represents the angle of light source
             .#{$angle}-#{$keymap}{
                 @each $key in $keys{
                     @if $key == box-shadow {
@@ -74,13 +114,52 @@ $props: 'background' 'box-shadow';
                         #{$key}: map-get($valuemap, $key);
                     }
                 }
+                // apply the effects if true
+                @if $eff == true {
+                    @each $effect in $effects{
+                        &.#{$effect}:#{$effect}{
+                            animation: push 50ms forwards ease-in-out;
+                        }
+                        &.#{$effect}:not(:#{$effect}){
+                            animation: pull 50ms forwards ease-in-out;
+                        }
+                    }
+                }
             }
         }
     }
 }
 
 @include set_neumorph_colors($colors, $bgs, $texts);
-@include set_neumorph_element($types, $props);
+@include set_neumorph_element($types, $props, true);
 
 
 // @include setup($test, $k);
+/* Type 1 */
+@keyframes push{
+    0%{
+        height: 3rem;
+        width: 6rem;
+        box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.25), -4px -4px 10px rgba(255, 255, 255, 0.08);
+    }
+    100%{
+        height:  3rem;
+        width: 6rem;
+        box-shadow: -4px -4px 15px 0px rgba(177, 177, 177, 0.03) inset, 4px 4px 10px 2px rgba(0, 0, 0, 0.12) inset;
+    }
+}
+
+/* box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.25), -4px -4px 10px rgba(177, 177, 177, 0.08), -4px -4px 15px 0px rgba(177, 177, 177, 0.03) inset, 4px 4px 10px 2px rgba(0, 0, 0, 0.12) inset; */
+
+@keyframes pull{
+    0%{
+        height:  3rem;
+        width: 6rem;
+        box-shadow: -4px -4px 15px rgba(177, 177, 177, 0.03) inset, 4px 4px 10px rgba(0, 0, 0, 0.12) inset;
+    }
+    100%{
+        height: 3rem;
+        width: 6rem;
+        box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.25), -4px -4px 10px rgba(255, 255, 255, 0.08);
+    }
+}
