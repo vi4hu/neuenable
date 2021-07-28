@@ -1,0 +1,100 @@
+.danger-type {
+  background: salmon;
+  font-size: 1rem;
+  font-weight: bold;
+  -webkit-box-shadow: 5px 5px 10px #00000025, -5px -5px 10px #ffffff25;
+          box-shadow: 5px 5px 10px #00000025, -5px -5px 10px #ffffff25;
+}
+
+.btn {
+  border: 0;
+  border-radius: 20%;
+  height: 3rem;
+  width: 6rem;
+  margin: 1rem;
+}
+
+.nm-bg-dark {
+  background: #24282d;
+}
+
+.dark {
+  color: #999;
+}
+
+.nm-bg-light {
+  background: #ebecf0;
+}
+
+.light {
+  color: #ececec;
+}
+
+.nm-bg-blue {
+  background: #017dd3;
+}
+
+.blue {
+  color: #80a3ff;
+}
+
+.nm-bg-green {
+  background: #256668;
+}
+
+.green {
+  color: green;
+}
+
+.nm-bg-red {
+  background: #b91715;
+}
+
+.red {
+  color: #ff0d45;
+}
+
+.nm-bg-salmon {
+  background: salmon;
+}
+
+.salmon {
+  color: salmon;
+}
+
+.nm-dark {
+  background: #24282d;
+  -webkit-box-shadow: 5px 5px 10px #00000020, -5px -5px 10px #ffffff10;
+          box-shadow: 5px 5px 10px #00000020, -5px -5px 10px #ffffff10;
+}
+
+.nm-light {
+  background: #ebecf0;
+  -webkit-box-shadow: 5px 5px 10px #00000020, -5px -5px 10px #ffffff90;
+          box-shadow: 5px 5px 10px #00000020, -5px -5px 10px #ffffff90;
+}
+
+.nm-blue {
+  background: #017dd3;
+  -webkit-box-shadow: 5px 5px 10px #00000020, -5px -5px 10px #ffffff20;
+          box-shadow: 5px 5px 10px #00000020, -5px -5px 10px #ffffff20;
+}
+
+.nm-green {
+  background: #256668;
+  -webkit-box-shadow: 5px 5px 10px #00000020, -5px -5px 10px #ffffff20;
+          box-shadow: 5px 5px 10px #00000020, -5px -5px 10px #ffffff20;
+}
+
+.nm-red {
+  background: #b91715;
+  -webkit-box-shadow: 5px 5px 10px #00000025, -5px -5px 10px #ffffff25;
+          box-shadow: 5px 5px 10px #00000025, -5px -5px 10px #ffffff25;
+}
+
+.nm-salman {
+  background: salmon;
+  -webkit-box-shadow: 5px 5px 10px #00000020, -5px -5px 10px #ffffff98;
+          box-shadow: 5px 5px 10px #00000020, -5px -5px 10px #ffffff98;
+}
+/*# sourceMappingURL=neumorphism.css.map */

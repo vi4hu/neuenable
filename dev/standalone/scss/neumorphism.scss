@@ -1,0 +1,84 @@
+$types: (
+    'dark': ('background': #24282d, 'box-shadow':('darker': #00000020, 'lighter': #ffffff10)),
+    'light': ('background': #ebecf0, 'box-shadow':('darker': #00000020, 'lighter': #ffffff90)),
+    'blue': ('background': #017dd3, 'box-shadow':('darker': #00000020, 'lighter': #ffffff20)), 
+    'green': ('background': #256668, 'box-shadow':('darker': #00000020, 'lighter': #ffffff20)),
+    'red': ('background': #b91715, 'box-shadow':('darker': #00000025, 'lighter': #ffffff25)),
+    'salman': ('background': salmon, 'box-shadow':('darker': #00000020, 'lighter': #ffffff98))
+    );
+
+$colors: (
+    'dark': ('color': #999, 'background': #24282d),
+    'light': ('color': #ececec, 'background': #ebecf0),
+    'blue': ('color': #80a3ff, 'background': #017dd3), 
+    'green': ('color': green, 'background': #256668),
+    'red': ('color': #ff0d45, 'background': #b91715),
+    'salmon': ('color': salmon, 'background': salmon)
+    );
+$bgs: 'background';
+$texts: 'color';
+$keys: 'primary' 'dark' 'light' 'success' 'danger' 'warning';
+$props: 'background' 'box-shadow';
+
+.danger-type{
+    background: salmon;
+    // color: #ececec;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 5px 5px 10px #00000025, -5px -5px 10px #ffffff25;
+}
+
+.btn{
+    border: 0;
+    border-radius: 20%;
+    height: 3rem;
+    width: 6rem;
+    margin: 1rem;
+}
+
+@mixin setup($map, $keys){
+    @each $keymap, $valuemap in $map{
+        .#{$keymap}-type{
+            @each $key in $keys{
+                @if(#{$key} != box-shadow){
+                    #{$key}: map-get($valuemap, $key);
+                }
+            }
+        }
+    }
+}
+
+@mixin set_neumorph_colors($map, $bgs, $texts){
+    @each $keymap, $valuemap in $map{
+        .nm-bg-#{$keymap}{
+            @each $bg in $bgs{
+                #{$bg}: map-get($valuemap, $bg);
+            }
+        }
+        .#{$keymap}{
+            @each $text in $texts{
+                #{$text}: map-get($valuemap, $text);
+            }
+        }
+    }
+}
+@mixin set_neumorph_element($map, $keys){
+    @each $keymap, $valuemap in $map{
+        .nm-#{$keymap}{
+            @each $key in $keys{
+                @if $key == box-shadow {
+                    #{$key}: 5px 5px 10px map-get(map-get($valuemap, $key), darker), -5px -5px 10px map-get(map-get($valuemap, $key), lighter);
+                }
+                @else{
+                    #{$key}: map-get($valuemap, $key);
+                }
+            }
+        }
+    }
+}
+
+@include set_neumorph_colors($colors, $bgs, $texts);
+@include set_neumorph_element($types, $props);
+
+
+// @include setup($test, $k);
