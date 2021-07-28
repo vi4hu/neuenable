@@ -40,8 +40,8 @@ $texts: 'color';
 $keys: 'primary' 'dark' 'light' 'success' 'danger' 'warning';
 // default props for components
 $props: 'background' 'box-shadow';
-// default effects (this library offers)
-$effects: 'active' 'focus' 'hover';
+// default events (this library offers)
+$events: 'active' 'focus' 'hover';
 
 .btn{
     border: 0;
@@ -100,7 +100,7 @@ $effects: 'active' 'focus' 'hover';
 
 // mixin for generating a type of components with certain action or not
 @mixin set_neumorph_element($map, $keys, $eff){
-    // $map for the values and keys, $keys are the css property component will get, $eff tells if it has effects or not
+    // $map for the values and keys, $keys are the css property component will get, $eff tells if it has events or not
     @each $keymap, $valuemap in $map{
         // seperating the first level keys and values
         @each $angle, $values in $angles{
@@ -116,11 +116,11 @@ $effects: 'active' 'focus' 'hover';
                 }
                 // apply the effects if true
                 @if $eff == true {
-                    @each $effect in $effects{
-                        &.#{$effect}:#{$effect}{
+                    @each $event in $events{
+                        &.#{$event}:#{$event}{
                             animation: push 50ms forwards ease-in-out;
                         }
-                        &.#{$effect}:not(:#{$effect}){
+                        &.#{$event}:not(:#{$event}){
                             animation: pull 50ms forwards ease-in-out;
                         }
                     }
