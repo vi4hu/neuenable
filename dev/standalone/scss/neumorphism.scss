@@ -1,6 +1,6 @@
 // types of components (this library offers by default)
 // DESCRIPTION
-$types: (
+$base: (
     'dark': ('background': #24282d, 'box-shadow':('darker': #00000020, 'lighter': #ffffff08)),
     'light': ('background': #ebecf0, 'box-shadow':('darker': #00000015, 'lighter': #ffffff92)),
     'blue': ('background': #017dd3, 'box-shadow':('darker': #00000020, 'lighter': #ffffff20)), 
@@ -33,26 +33,50 @@ $colors: (
     'yellow': ('color': #ffcf00, 'background': #ffcf00)
     );
 
+// default curves
+$curves: (
+    'curve-1': ('border-radius': 10px),
+    'curve-2': ('border-radius': 20px),
+    'curve-3': ('border-radius': 30px), 
+    'curve-4': ('border-radius': 40px),
+    'curve-5': ('border-radius': 50px),
+    'rounded': ('border-radius': 50%, 'min-height': 2rem, 'min-width': 2rem)
+    );
+
 // default props for background components
-$bgs: 'background';
+$bg-p: 'background';
 // default props for text components
-$texts: 'color';
-$keys: 'primary' 'dark' 'light' 'success' 'danger' 'warning';
+$text-p: 'color';
+// default props for curves
+$curve-p: 'border-radius' 'min-height' 'min-width';
 // default props for components
-$props: 'background' 'box-shadow';
+$base-p: 'background' 'box-shadow';
 // default events (this library offers)
 $events: 'active' 'focus' 'hover';
 // default effects
 $effects: 'push';
+$effect-p: 'box-shadow';
 
 .btn{
-    border: 0;
-    border-radius: 20%;
-    height: 3rem;
-    width: 6rem;
-    margin: 1rem;
+    border: 0px;
+    // border-radius: 0%;
+    min-height: 3rem;
+    min-width: 6rem;
+    // margin: 1rem;
     font-weight: bold;
     font-size: 1rem;
+    // &:hover{
+    //     outline: none !important;
+    //     // box-shadow: none;
+    // }
+    // &:active{
+    //     outline: none !important;
+    //     // box-shadow: none;
+    // }
+    &:focus{
+        outline: none !important;
+        box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.25), -4px -4px 10px rgba(255, 255, 255, 0.08);
+    }
 }
 
 // @mixin setup($map, $keys){
@@ -67,18 +91,13 @@ $effects: 'push';
 //     }
 // }
 
-// mixin for generating a type of color related classes
-@mixin set_neumorph_colors($map, $bgs, $texts){
+// mixin for generating singletons
+@mixin set_neumorph_singletons($map, $props, $start: '', $img: ''){
     // $map gets the keys and values, $bgs, $texts are the css property component will get
     @each $keymap, $valuemap in $map{
-        .bg-#{$keymap}{
-            @each $bg in $bgs{
-                #{$bg}: map-get($valuemap, $bg);
-            }
-        }
-        .#{$keymap}{
-            @each $text in $texts{
-                #{$text}: map-get($valuemap, $text);
+        .#{$start}#{$keymap}{
+            @each $p in $props{
+                #{$p}: map-get($valuemap, $p);
             }
         }
     }
@@ -89,23 +108,36 @@ $effects: 'push';
 //     @each $keymap, $valuemap in $map{
 //         // seperating the first level keys and values
 //         @each $angle, $values in $angles{
-//             // $angle represents the angle of light source
-//             // .#{$angle}-#{$keymap}{
-//                 // @each $key in $keys{
-//                     // @if $key == box-shadow {
-//                         @keyframes #{$effect}{
-//                             0%{
-//                                 height: 3rem;
-//                                 width: 6rem;
-//                                 #{$key}: map-get($values, 'x') 10px 2px map-get(map-get($valuemap, box-shadow), darker), map-get($values, 'y') 10px 2px map-get(map-get($valuemap, box-shadow), lighter);
+//             // @each $ang, $values in $angles{
+//                 // @if $angle == $ang{
+//                     @each $event in $events{
+//                         @each $effect in $effects{
+//                             @keyframes #{$angle}-#{$effect}{
+//                                 0%{
+//                                     height: 3rem;
+//                                     width: 6rem;
+//                                     box-shadow: map-get($values, 'x') 10px 2px map-get(map-get($valuemap, box-shadow), darker), map-get($values, 'y') 10px 2px map-get(map-get($valuemap, box-shadow), lighter);
+//                                 }
+//                                 100%{
+//                                     height:  3rem;
+//                                     width: 6rem;
+//                                     box-shadow: map-get($values, 'x') 10px 2px map-get(map-get($valuemap, box-shadow), darker) inset, map-get($values, 'y') 10px 2px map-get(map-get($valuemap, box-shadow), lighter) inset;
+//                                 }
 //                             }
-//                             100%{
-//                                 height:  3rem;
-//                                 width: 6rem;
-//                                 #{$key}: map-get($values, 'x') 10px 2px map-get(map-get($valuemap, box-shadow) inset, darker), map-get($values, 'y') 10px 2px map-get(map-get($valuemap, box-shadow), lighter) inset;
+//                             @keyframes #{$angle}-un-#{$effect}{
+//                                 0%{
+//                                     height: 3rem;
+//                                     width: 6rem;
+//                                     box-shadow: map-get($values, 'x') 10px 2px map-get(map-get($valuemap, box-shadow), darker), map-get($values, 'y') 10px 2px map-get(map-get($valuemap, box-shadow), lighter);
+//                                 }
+//                                 100%{
+//                                     height:  3rem;
+//                                     width: 6rem;
+//                                     box-shadow: map-get($values, 'x') 10px 2px map-get(map-get($valuemap, box-shadow), darker) inset, map-get($values, 'y') 10px 2px map-get(map-get($valuemap, box-shadow), lighter) inset;
+//                                 }
 //                             }
 //                         }
-//                     // }
+//                     }
 //                 // }
 //             // }
 //         }
@@ -113,7 +145,7 @@ $effects: 'push';
 // }
 
 // mixin for generating a type of components with certain action or not
-@mixin set_neumorph_element($map, $keys, $eff){
+@mixin set_neumorph_element($map, $keys, $eff: false){
     // $map for the values and keys, $keys are the css property component will get, $eff tells if it has events or not
     @each $keymap, $valuemap in $map{
         // seperating the first level keys and values
@@ -150,9 +182,11 @@ $effects: 'push';
     }
 }
 
-@include set_neumorph_colors($colors, $bgs, $texts);
-@include set_neumorph_element($types, $props, true);
-
+@include set_neumorph_singletons($colors, $bg-p, 'bg-');
+@include set_neumorph_singletons($colors, $text-p, 'text-');
+@include set_neumorph_singletons($curves, $curve-p);
+@include set_neumorph_element($base, $base-p);
+// @include set_neumorph_animation($types, $effecttsprops);
 
 // @include setup($test, $k);
 /* Type 1 */
