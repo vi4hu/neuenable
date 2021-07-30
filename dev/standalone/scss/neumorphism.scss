@@ -1,13 +1,15 @@
 // types of components (this library offers by default)
 // DESCRIPTION
 $base: (
-    'dark': ('background': #24282d, 'box-shadow':('darker': #00000020, 'lighter': #ffffff08)),
-    'light': ('background': #ebecf0, 'box-shadow':('darker': #00000015, 'lighter': #ffffff92)),
-    'blue': ('background': #017dd3, 'box-shadow':('darker': #00000020, 'lighter': #ffffff20)), 
-    'green': ('background': #256668, 'box-shadow':('darker': #00000020, 'lighter': #ffffff20)),
-    'red': ('background': #b91715, 'box-shadow':('darker': #00000025, 'lighter': #ffffff25)),
-    'yellow': ('background': #ffcf00, 'box-shadow':('darker': #00000020, 'lighter': #ffffff98))
+    'dark': ('background': #24282d, 'box-shadow':('darker': #00000020, 'lighter': #ffffff08), 'border-color': #24282d),
+    'light': ('background': #ebecf0, 'box-shadow':('darker': #00000015, 'lighter': #ffffff92), 'border-color': #ebecf0),
+    'blue': ('background': #017dd3, 'box-shadow':('darker': #00000020, 'lighter': #ffffff20), 'border-color': #017dd3), 
+    'green': ('background': #256668, 'box-shadow':('darker': #00000020, 'lighter': #ffffff20), 'border-color': #256668),
+    'red': ('background': #b91715, 'box-shadow':('darker': #00000025, 'lighter': #ffffff25), 'border-color': #b91715),
+    'yellow': ('background': #ffcf00, 'box-shadow':('darker': #00000020, 'lighter': #ffffff98), 'border-color': #ffcf00)
     );
+// type of shapes
+//noclass, s1, s2
 
 // angles or direction of the light source (this library offers by default)
 // four default angles are given for light source
@@ -43,14 +45,24 @@ $curves: (
     'rounded': ('border-radius': 50%, 'min-height': 2rem, 'min-width': 2rem)
     );
 
+$borders: (
+    'border-1': ('border': .2rem solid),
+    'border-2': ('border': .3rem solid),
+    'border-3': ('border': .4rem solid), 
+    'border-4': ('border': .5rem solid),
+    'border-5': ('border': .6rem solid)
+    );
+
 // default props for background components
 $bg-p: 'background';
 // default props for text components
 $text-p: 'color';
 // default props for curves
 $curve-p: 'border-radius' 'min-height' 'min-width';
+// default props for borders
+$border-p: 'border';
 // default props for components
-$base-p: 'background' 'box-shadow';
+$base-p: 'background' 'box-shadow' 'border-color';
 // default events (this library offers)
 $events: 'active' 'focus' 'hover';
 // default effects
@@ -92,12 +104,19 @@ $effect-p: 'box-shadow';
 // }
 
 // mixin for generating singletons
-@mixin set_neumorph_singletons($map, $props, $start: '', $img: ''){
+@mixin set_neumorph_singletons($map, $props, $start: '', $imp: ''){
     // $map gets the keys and values, $bgs, $texts are the css property component will get
     @each $keymap, $valuemap in $map{
         .#{$start}#{$keymap}{
-            @each $p in $props{
-                #{$p}: map-get($valuemap, $p);
+            @if $imp == ''{
+                @each $p in $props{
+                    #{$p}: map-get($valuemap, $p);
+                }    
+            }
+            @else{
+                @each $p in $props{
+                    #{$p}: map-get($valuemap, $p) $imp;
+                }
             }
         }
     }
@@ -145,7 +164,7 @@ $effect-p: 'box-shadow';
 // }
 
 // mixin for generating a type of components with certain action or not
-@mixin set_neumorph_element($map, $keys, $eff: false){
+@mixin set_neumorph_element($map, $keys, $eff: false, $imp: ''){
     // $map for the values and keys, $keys are the css property component will get, $eff tells if it has events or not
     @each $keymap, $valuemap in $map{
         // seperating the first level keys and values
@@ -154,10 +173,21 @@ $effect-p: 'box-shadow';
             .#{$angle}-#{$keymap}{
                 @each $key in $keys{
                     @if $key == box-shadow {
-                        #{$key}: map-get($values, 'x') 10px 2px map-get(map-get($valuemap, $key), darker), map-get($values, 'y') 10px 2px map-get(map-get($valuemap, $key), lighter);
+                        #{$key}: map-get($values, 'x') 8px 2px map-get(map-get($valuemap, $key), darker), map-get($values, 'y') 8px 2px map-get(map-get($valuemap, $key), lighter);
+                        &.s1{
+                            #{$key}:inset map-get($values, 'x') 8px map-get(map-get($valuemap, $key), darker),inset map-get($values, 'y') 8px 2px map-get(map-get($valuemap, $key), lighter);
+                        }
+                        &.s2{
+                            #{$key}: map-get($values, 'x') 8px 2px map-get(map-get($valuemap, $key), darker), map-get($values, 'y') 8px 2px map-get(map-get($valuemap, $key), lighter),inset map-get($values, 'x') 4px map-get(map-get($valuemap, $key), darker),inset map-get($values, 'y') 4px map-get(map-get($valuemap, $key), lighter);
+                        }
                     }
                     @else{
-                        #{$key}: map-get($valuemap, $key);
+                        @if $imp == ''{
+                            #{$key}: map-get($valuemap, $key);
+                        }
+                        @else{
+                            #{$key}: map-get($valuemap, $key) $imp;
+                        }
                     }
                 }
                 // apply the effects if true
@@ -182,10 +212,11 @@ $effect-p: 'box-shadow';
     }
 }
 
-@include set_neumorph_singletons($colors, $bg-p, 'bg-');
+@include set_neumorph_singletons($colors, $bg-p, 'bg-', ! important);
 @include set_neumorph_singletons($colors, $text-p, 'text-');
 @include set_neumorph_singletons($curves, $curve-p);
-@include set_neumorph_element($base, $base-p);
+@include set_neumorph_singletons($borders, $border-p);
+@include set_neumorph_element($base, $base-p, '', ! important);
 // @include set_neumorph_animation($types, $effecttsprops);
 
 // @include setup($test, $k);
