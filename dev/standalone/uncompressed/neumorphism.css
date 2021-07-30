@@ -12,7 +12,7 @@
   background: #24282d !important; }
 
 .bg-light {
-  background: #ebecf0 !important; }
+  background: #e0e0e0 !important; }
 
 .bg-blue {
   background: #017dd3 !important; }
@@ -24,7 +24,7 @@
   background: #b91715 !important; }
 
 .bg-yellow {
-  background: #ffcf00 !important; }
+  background: #ffd06c !important; }
 
 .text-dark {
   color: #999; }
@@ -36,13 +36,19 @@
   color: #80a3ff; }
 
 .text-green {
-  color: green; }
+  color: #67ff48; }
 
 .text-red {
   color: #ff0d45; }
 
 .text-yellow {
-  color: #ffcf00; }
+  color: #ffe032; }
+
+.text-black {
+  color: #000000; }
+
+.text-white {
+  color: #ffffff; }
 
 .curve-1 {
   border-radius: 10px; }
@@ -116,36 +122,36 @@
     box-shadow: 4px -4px 8px 2px #00000020, -4px 4px 8px 2px #ffffff08, inset 4px -4px 4px #00000020, inset -4px 4px 4px #ffffff08; }
 
 .tr-light {
-  background: #ebecf0 !important;
+  background: #e0e0e0 !important;
   box-shadow: -4px 4px 8px 2px #00000015, 4px -4px 8px 2px #ffffff92;
-  border-color: #ebecf0 !important; }
+  border-color: #e0e0e0 !important; }
   .tr-light.s1 {
     box-shadow: inset -4px 4px 8px #00000015, inset 4px -4px 8px 2px #ffffff92; }
   .tr-light.s2 {
     box-shadow: -4px 4px 8px 2px #00000015, 4px -4px 8px 2px #ffffff92, inset -4px 4px 4px #00000015, inset 4px -4px 4px #ffffff92; }
 
 .br-light {
-  background: #ebecf0 !important;
+  background: #e0e0e0 !important;
   box-shadow: -4px -4px 8px 2px #00000015, 4px 4px 8px 2px #ffffff92;
-  border-color: #ebecf0 !important; }
+  border-color: #e0e0e0 !important; }
   .br-light.s1 {
     box-shadow: inset -4px -4px 8px #00000015, inset 4px 4px 8px 2px #ffffff92; }
   .br-light.s2 {
     box-shadow: -4px -4px 8px 2px #00000015, 4px 4px 8px 2px #ffffff92, inset -4px -4px 4px #00000015, inset 4px 4px 4px #ffffff92; }
 
 .tl-light {
-  background: #ebecf0 !important;
+  background: #e0e0e0 !important;
   box-shadow: 4px 4px 8px 2px #00000015, -4px -4px 8px 2px #ffffff92;
-  border-color: #ebecf0 !important; }
+  border-color: #e0e0e0 !important; }
   .tl-light.s1 {
     box-shadow: inset 4px 4px 8px #00000015, inset -4px -4px 8px 2px #ffffff92; }
   .tl-light.s2 {
     box-shadow: 4px 4px 8px 2px #00000015, -4px -4px 8px 2px #ffffff92, inset 4px 4px 4px #00000015, inset -4px -4px 4px #ffffff92; }
 
 .bl-light {
-  background: #ebecf0 !important;
+  background: #e0e0e0 !important;
   box-shadow: 4px -4px 8px 2px #00000015, -4px 4px 8px 2px #ffffff92;
-  border-color: #ebecf0 !important; }
+  border-color: #e0e0e0 !important; }
   .bl-light.s1 {
     box-shadow: inset 4px -4px 8px #00000015, inset -4px 4px 8px 2px #ffffff92; }
   .bl-light.s2 {
@@ -260,36 +266,36 @@
     box-shadow: 4px -4px 8px 2px #00000025, -4px 4px 8px 2px #ffffff25, inset 4px -4px 4px #00000025, inset -4px 4px 4px #ffffff25; }
 
 .tr-yellow {
-  background: #ffcf00 !important;
+  background: #ffd06c !important;
   box-shadow: -4px 4px 8px 2px #00000020, 4px -4px 8px 2px #ffffff98;
-  border-color: #ffcf00 !important; }
+  border-color: #ffd06c !important; }
   .tr-yellow.s1 {
     box-shadow: inset -4px 4px 8px #00000020, inset 4px -4px 8px 2px #ffffff98; }
   .tr-yellow.s2 {
     box-shadow: -4px 4px 8px 2px #00000020, 4px -4px 8px 2px #ffffff98, inset -4px 4px 4px #00000020, inset 4px -4px 4px #ffffff98; }
 
 .br-yellow {
-  background: #ffcf00 !important;
+  background: #ffd06c !important;
   box-shadow: -4px -4px 8px 2px #00000020, 4px 4px 8px 2px #ffffff98;
-  border-color: #ffcf00 !important; }
+  border-color: #ffd06c !important; }
   .br-yellow.s1 {
     box-shadow: inset -4px -4px 8px #00000020, inset 4px 4px 8px 2px #ffffff98; }
   .br-yellow.s2 {
     box-shadow: -4px -4px 8px 2px #00000020, 4px 4px 8px 2px #ffffff98, inset -4px -4px 4px #00000020, inset 4px 4px 4px #ffffff98; }
 
 .tl-yellow {
-  background: #ffcf00 !important;
+  background: #ffd06c !important;
   box-shadow: 4px 4px 8px 2px #00000020, -4px -4px 8px 2px #ffffff98;
-  border-color: #ffcf00 !important; }
+  border-color: #ffd06c !important; }
   .tl-yellow.s1 {
     box-shadow: inset 4px 4px 8px #00000020, inset -4px -4px 8px 2px #ffffff98; }
   .tl-yellow.s2 {
     box-shadow: 4px 4px 8px 2px #00000020, -4px -4px 8px 2px #ffffff98, inset 4px 4px 4px #00000020, inset -4px -4px 4px #ffffff98; }
 
 .bl-yellow {
-  background: #ffcf00 !important;
+  background: #ffd06c !important;
   box-shadow: 4px -4px 8px 2px #00000020, -4px 4px 8px 2px #ffffff98;
-  border-color: #ffcf00 !important; }
+  border-color: #ffd06c !important; }
   .bl-yellow.s1 {
     box-shadow: inset 4px -4px 8px #00000020, inset -4px 4px 8px 2px #ffffff98; }
   .bl-yellow.s2 {
