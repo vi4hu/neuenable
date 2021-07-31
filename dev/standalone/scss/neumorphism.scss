@@ -8,6 +8,15 @@ $base: (
     'red': ('background': #b91715, 'box-shadow':('darker': #00000025, 'lighter': #ffffff25), 'border-color': #b91715),
     'yellow': ('background': #ffd06c, 'box-shadow':('darker': #00000020, 'lighter': #ffffff98), 'border-color': #ffd06c)
     );
+// if gradient together with base
+// $base: (
+//     'dark': ('background': ('background': #24282d, 'start': #202429, 'end': #272b30), 'box-shadow':('darker': #00000020, 'lighter': #ffffff08), 'border-color': #24282d),
+//     'light': ('background': ('background': #e0e0e0, 'start': #cacaca, 'end': #f0f0f0), 'box-shadow':('darker': #00000015, 'lighter': #ffffff92), 'border-color': #e0e0e0),
+//     'blue': ('background': ('background': #017dd3, 'start': #0171be, 'end': #0186e2), 'box-shadow':('darker': #00000020, 'lighter': #ffffff20), 'border-color': #017dd3), 
+//     'green': ('background': ('background': #256668, 'start': #215c5e, 'end': #286d6f), 'box-shadow':('darker': #00000020, 'lighter': #ffffff20), 'border-color': #256668),
+//     'red': ('background': ('background': #b91715, 'start': #a71513, 'end': #c61916), 'box-shadow':('darker': #00000025, 'lighter': #ffffff25), 'border-color': #b91715),
+//     'yellow': ('background': ('background': #ffd06c, 'start': #e6bb61, 'end': #ffdf74), 'box-shadow':('darker': #00000020, 'lighter': #ffffff98), 'border-color': #ffd06c)
+//     );
 // type of shapes
 //noclass, s1, s2
 
@@ -18,10 +27,10 @@ $base: (
 // top-left
 // bottom-left
 $angles:(
-    'tr':('x': -4px 4px, 'y': 4px -4px),
-    'br':('x': -4px -4px, 'y': 4px 4px),
-    'tl':('x': 4px 4px, 'y': -4px -4px),
-    'bl':('x': 4px -4px, 'y': -4px 4px)
+    'tr':('x': -4px 4px, 'y': 4px -4px, 'ang': 145deg),
+    'br':('x': -4px -4px, 'y': 4px 4px, 'ang': 45deg),
+    'tl':('x': 4px 4px, 'y': -4px -4px, 'ang': 225deg),
+    'bl':('x': 4px -4px, 'y': -4px 4px, 'ang': 315deg)
     );
 
 // default colors
@@ -54,6 +63,17 @@ $borders: (
     'border-4': ('border': .5rem solid),
     'border-5': ('border': .6rem solid)
     );
+
+$grad:(
+    'dark': ('background': #24282d, 'start': #202429, 'end': #272b30),
+    'light': ('background': #e0e0e0, 'start': #cacaca, 'end': #f0f0f0),
+    'blue': ('background': #017dd3, 'start': #0171be, 'end': #0186e2), 
+    'green': ('background': #256668, 'start': #215c5e, 'end': #286d6f),
+    'red': ('background': #b91715, 'start': #a71513, 'end': #c61916),
+    'yellow': ('background': #ffd06c, 'start': #e6bb61, 'end': #ffdf74)
+);
+
+$grad-angles: 45deg 145deg 225deg 315deg;
 
 // default props for background components
 $bg-p: 'background';
@@ -126,6 +146,43 @@ $effect-p: 'box-shadow';
     }
 }
 
+@mixin set_neumorph_grad($map, $props:'', $imp: ''){
+    // $map gets the keys and values, $bgs, $texts are the css property component will get
+    @each $keymap, $valuemap in $map{
+        @each $angle, $anglemap in $angles{
+            .#{$angle}-#{$keymap}{
+                // @if $imp == ''{
+                    &.concave{
+                        background: linear-gradient(map-get($anglemap, ang), map-get($valuemap, start), map-get($valuemap, end)) $imp;
+                    }
+                    &.convex{
+                        background: linear-gradient(map-get($anglemap, ang), map-get($valuemap, end), map-get($valuemap, start)) $imp;
+                    }
+                    // @each $p in $props{
+                    //     @if $p == 'bump'{
+                    //         #{$p}: linear-gradient(map-get($valuemap, start));
+                    //     }
+                    // }    
+                // }
+                // @else{
+                //     @if map-get($valuemap, $p){
+                //         .press{
+                //             background: linear-gradient(map-get($anglemap, ang), map-get($valuemap, start), map-get($valuemap, end)) $imp;
+                //         }
+                //         .bump{
+                //             background: linear-gradient(map-get($anglemap, ang), map-get($valuemap, end), map-get($valuemap, start)) $imp;
+                //         }
+                //     }
+                //     // @each $p in $props{
+                            
+                //     //         #{$p}: map-get($valuemap, $p) $imp;
+                //     //     }
+                // }
+            }
+        }
+    }
+}
+
 // mixin for generating a type of animations on certain events
 // @mixin set_neumorph_animation($map, $keys){
 //     @each $keymap, $valuemap in $map{
@@ -172,19 +229,43 @@ $effect-p: 'box-shadow';
     // $map for the values and keys, $keys are the css property component will get, $eff tells if it has events or not
     @each $keymap, $valuemap in $map{
         // seperating the first level keys and values
-        @each $angle, $values in $angles{
+        @each $angle, $anglemap in $angles{
             // $angle represents the angle of light source
             .#{$angle}-#{$keymap}{
                 @each $key in $keys{
                     @if $key == box-shadow {
-                        #{$key}: map-get($values, 'x') 8px 2px map-get(map-get($valuemap, $key), darker), map-get($values, 'y') 8px 2px map-get(map-get($valuemap, $key), lighter);
+                        // types
+                        #{$key}: map-get($anglemap, 'x') 8px 2px map-get(map-get($valuemap, $key), darker), map-get($anglemap, 'y') 8px 2px map-get(map-get($valuemap, $key), lighter);
                         &.s1{
-                            #{$key}:inset map-get($values, 'x') 8px map-get(map-get($valuemap, $key), darker),inset map-get($values, 'y') 8px 2px map-get(map-get($valuemap, $key), lighter);
+                            #{$key}:inset map-get($anglemap, 'x') 8px map-get(map-get($valuemap, $key), darker),inset map-get($anglemap, 'y') 8px 2px map-get(map-get($valuemap, $key), lighter);
                         }
                         &.s2{
-                            #{$key}: map-get($values, 'x') 8px 2px map-get(map-get($valuemap, $key), darker), map-get($values, 'y') 8px 2px map-get(map-get($valuemap, $key), lighter),inset map-get($values, 'x') 4px map-get(map-get($valuemap, $key), darker),inset map-get($values, 'y') 4px map-get(map-get($valuemap, $key), lighter);
+                            #{$key}: map-get($anglemap, 'x') 8px 2px map-get(map-get($valuemap, $key), darker), map-get($anglemap, 'y') 8px 2px map-get(map-get($valuemap, $key), lighter),inset map-get($anglemap, 'x') 4px map-get(map-get($valuemap, $key), darker),inset map-get($anglemap, 'y') 4px map-get(map-get($valuemap, $key), lighter);
                         }
                     }
+                    // if created gradient
+                    // @else if $key == background {
+                    //     @if $imp == ''{
+                    //         #{$key}: map-get(map-get($valuemap, $key), background);
+                    //         &.press{
+                    //             #{$key}: linear-gradient(map-get($anglemap, ang), map-get(map-get($valuemap, $key), start), map-get(map-get($valuemap, $key), end)) $imp;
+                    //         }
+                    //         &.bump{
+                    //             #{$key}: linear-gradient(map-get($anglemap, ang), map-get(map-get($valuemap, $key), end), map-get(map-get($valuemap, $key), start)) $imp;
+                    //         }
+                    //     }
+                    //     @else{
+                    //         @if map-get($valuemap, $key){
+                    //             #{$key}: map-get(map-get($valuemap, $key), background) $imp;
+                    //             &.press{
+                    //                 #{$key}: linear-gradient(map-get($anglemap, ang), map-get(map-get($valuemap, $key), start), map-get(map-get($valuemap, $key), end)) $imp;
+                    //             }
+                    //             &.bump{
+                    //                 #{$key}: linear-gradient(map-get($anglemap, ang), map-get(map-get($valuemap, $key), end), map-get(map-get($valuemap, $key), start)) $imp;
+                    //             }
+                    //         }
+                    //     }
+                    // }
                     @else{
                         @if $imp == ''{
                             #{$key}: map-get($valuemap, $key);
@@ -223,6 +304,7 @@ $effect-p: 'box-shadow';
 @include set_neumorph_singletons($curves, $curve-p);
 @include set_neumorph_singletons($borders, $border-p);
 @include set_neumorph_element($base, $base-p, '', ! important);
+@include set_neumorph_grad($grad, '', ! important);
 // @include set_neumorph_animation($types, $effecttsprops);
 
 // @include setup($test, $k);
