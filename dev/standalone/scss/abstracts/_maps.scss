@@ -27,10 +27,10 @@ $base: (
 // top-left
 // bottom-left
 $angles:(
-    'tr':('x': -4px 4px, 'y': 4px -4px, 'ang': 145deg),
-    'br':('x': -4px -4px, 'y': 4px 4px, 'ang': 45deg),
-    'tl':('x': 4px 4px, 'y': -4px -4px, 'ang': 225deg),
-    'bl':('x': 4px -4px, 'y': -4px 4px, 'ang': 315deg)
+    'tr':('x': -4px 4px, 'y': 4px -4px, 'ang': 45deg),
+    'br':('x': -4px -4px, 'y': 4px 4px, 'ang': 145deg),
+    'tl':('x': 4px 4px, 'y': -4px -4px, 'ang': 315deg),
+    'bl':('x': 4px -4px, 'y': -4px 4px, 'ang': 255deg)
     );
 
 // default colors
@@ -38,7 +38,7 @@ $angles:(
 $colors: (
     'dark': ('color': #999, 'background': #24282d),
     'light': ('color': #ececec, 'background': #e0e0e0),
-    'blue': ('color': #80a3ff, 'background': #017dd3), 
+    'blue': ('color': #4169e1, 'background': #017dd3), 
     'green': ('color': #67ff48, 'background': #256668),
     'red': ('color': #ff0d45, 'background': #b91715),
     'yellow': ('color': #ffe032, 'background': #ffd06c),
@@ -53,7 +53,7 @@ $curves: (
     'curve-3': ('border-radius': 30px), 
     'curve-4': ('border-radius': 40px),
     'curve-5': ('border-radius': 50px),
-    'rounded': ('border-radius': 50%, 'min-height': 2rem, 'min-width': 2rem)
+    'rounded': ('border-radius': 200px, 'min-height': 4rem, 'min-width': 0, 'max-height': 5rem)
     );
 
 $borders: (
