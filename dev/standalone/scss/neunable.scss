@@ -1,0 +1,89 @@
+// map imports
+// @use './components/index' as *;
+// map imports
+// @use './components/maps' as *;
+// props imports
+// @use './components/props' as *;
+// mixin imports
+// @use './components/mixins' as *;
+@import './abstracts/maps';
+@import './abstracts/props';
+@import './components/mixins';
+
+.btn{
+    border: 0px;
+    // border-radius: 0%;
+    min-height: 3rem;
+    min-width: 6rem;
+    // margin: 1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    // &:hover{
+    //     outline: none !important;
+    //     // box-shadow: none;
+    // }
+    // &:active{
+    //     outline: none !important;
+    //     // box-shadow: none;
+    // }
+    &:focus{
+        outline: none !important;
+        box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.25), -4px -4px 10px rgba(255, 255, 255, 0.08);
+    }
+}
+
+// @mixin setup($map, $keys){
+//     @each $keymap, $valuemap in $map{
+//         .#{$keymap}-type{
+//             @each $key in $keys{
+//                 @if(#{$key} != box-shadow){
+//                     #{$key}: map-get($valuemap, $key);
+//                 }
+//             }
+//         }
+//     }
+// }
+
+@include set_neumorph_singletons($colors, $bg-p, 'bg-', ! important);
+@include set_neumorph_singletons($colors, $text-p, 'text-');
+@include set_neumorph_singletons($curves, $curve-p, '', ! important);
+@include set_neumorph_singletons($borders,$border-p);
+@include set_neumorph_element($base, $base-p, '', ! important);
+@include set_neumorph_grad($grad, '', ! important);
+// @include mi.set_neumorph_singletons(m.$colors, p.$bg-p, 'bg-', ! important);
+// @include mi.set_neumorph_singletons(m.$colors, p.$text-p, 'text-');
+// @include mi.set_neumorph_singletons(m.$curves, p.$curve-p);
+// @include mi.set_neumorph_singletons(m.$borders,p.$border-p);
+// @include mi.set_neumorph_element(m.$base, p.$base-p, '', ! important);
+// @include mi.set_neumorph_grad(m.$grad, '', ! important);
+// @include set_neumorph_animation($types, $effecttsprops);
+
+// @include setup($test, $k);
+/* Type 1 */
+@keyframes tl-push{
+    0%{
+        height: 3rem;
+        width: 6rem;
+        box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.25), -4px -4px 10px rgba(255, 255, 255, 0.08);
+    }
+    100%{
+        height:  3rem;
+        width: 6rem;
+        box-shadow: -4px -4px 15px 0px rgba(177, 177, 177, 0.03) inset, 4px 4px 10px 2px rgba(0, 0, 0, 0.12) inset;
+    }
+}
+
+/* box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.25), -4px -4px 10px rgba(177, 177, 177, 0.08), -4px -4px 15px 0px rgba(177, 177, 177, 0.03) inset, 4px 4px 10px 2px rgba(0, 0, 0, 0.12) inset; */
+
+@keyframes tl-un-push{
+    0%{
+        height:  3rem;
+        width: 6rem;
+        box-shadow: -4px -4px 15px rgba(177, 177, 177, 0.03) inset, 4px 4px 10px rgba(0, 0, 0, 0.12) inset;
+    }
+    100%{
+        height: 3rem;
+        width: 6rem;
+        box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.25), -4px -4px 10px rgba(255, 255, 255, 0.08);
+    }
+}

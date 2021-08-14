@@ -1,0 +1,74 @@
+// types of components (this library offers by default)
+// DESCRIPTION
+$base: (
+    'dark': ('background': #24282d, 'box-shadow':('darker': #00000020, 'lighter': #ffffff08), 'border-color': #24282d),
+    'light': ('background': #e0e0e0, 'box-shadow':('darker': #00000015, 'lighter': #ffffff92), 'border-color': #e0e0e0),
+    'blue': ('background': #017dd3, 'box-shadow':('darker': #00000020, 'lighter': #ffffff20), 'border-color': #017dd3), 
+    'green': ('background': #256668, 'box-shadow':('darker': #00000020, 'lighter': #ffffff20), 'border-color': #256668),
+    'red': ('background': #b91715, 'box-shadow':('darker': #00000025, 'lighter': #ffffff25), 'border-color': #b91715),
+    'yellow': ('background': #ffd06c, 'box-shadow':('darker': #00000020, 'lighter': #ffffff98), 'border-color': #ffd06c)
+    );
+// if gradient together with base
+// $base: (
+//     'dark': ('background': ('background': #24282d, 'start': #202429, 'end': #272b30), 'box-shadow':('darker': #00000020, 'lighter': #ffffff08), 'border-color': #24282d),
+//     'light': ('background': ('background': #e0e0e0, 'start': #cacaca, 'end': #f0f0f0), 'box-shadow':('darker': #00000015, 'lighter': #ffffff92), 'border-color': #e0e0e0),
+//     'blue': ('background': ('background': #017dd3, 'start': #0171be, 'end': #0186e2), 'box-shadow':('darker': #00000020, 'lighter': #ffffff20), 'border-color': #017dd3), 
+//     'green': ('background': ('background': #256668, 'start': #215c5e, 'end': #286d6f), 'box-shadow':('darker': #00000020, 'lighter': #ffffff20), 'border-color': #256668),
+//     'red': ('background': ('background': #b91715, 'start': #a71513, 'end': #c61916), 'box-shadow':('darker': #00000025, 'lighter': #ffffff25), 'border-color': #b91715),
+//     'yellow': ('background': ('background': #ffd06c, 'start': #e6bb61, 'end': #ffdf74), 'box-shadow':('darker': #00000020, 'lighter': #ffffff98), 'border-color': #ffd06c)
+//     );
+// type of shapes
+//noclass, s1, s2
+
+// angles or direction of the light source (this library offers by default)
+// four default angles are given for light source
+// top-right
+// bottom-right
+// top-left
+// bottom-left
+$angles:(
+    'tr':('x': -4px 4px, 'y': 4px -4px, 'ang': 45deg),
+    'br':('x': -4px -4px, 'y': 4px 4px, 'ang': 145deg),
+    'tl':('x': 4px 4px, 'y': -4px -4px, 'ang': 315deg),
+    'bl':('x': 4px -4px, 'y': -4px 4px, 'ang': 255deg)
+    );
+
+// default colors
+// twelve default colors are given, six for background or components and six for text or icon 
+$colors: (
+    'dark': ('color': #999, 'background': #24282d),
+    'light': ('color': #ececec, 'background': #e0e0e0),
+    'blue': ('color': #4169e1, 'background': #017dd3), 
+    'green': ('color': #67ff48, 'background': #256668),
+    'red': ('color': #ff0d45, 'background': #b91715),
+    'yellow': ('color': #ffe032, 'background': #ffd06c),
+    'black': ('color': #000000),
+    'white': ('color': #ffffff)
+    );
+
+// default curves
+$curves: (
+    'curve-1': ('border-radius': 10px),
+    'curve-2': ('border-radius': 20px),
+    'curve-3': ('border-radius': 30px), 
+    'curve-4': ('border-radius': 40px),
+    'curve-5': ('border-radius': 50px),
+    'rounded': ('border-radius': 200px, 'min-height': 4rem, 'min-width': 0, 'max-height': 5rem)
+    );
+
+$borders: (
+    'border-1': ('border': .2rem solid),
+    'border-2': ('border': .3rem solid),
+    'border-3': ('border': .4rem solid), 
+    'border-4': ('border': .5rem solid),
+    'border-5': ('border': .6rem solid)
+    );
+
+$grad:(
+    'dark': ('background': #24282d, 'start': #202429, 'end': #272b30),
+    'light': ('background': #e0e0e0, 'start': #cacaca, 'end': #f0f0f0),
+    'blue': ('background': #017dd3, 'start': #0171be, 'end': #0186e2), 
+    'green': ('background': #256668, 'start': #215c5e, 'end': #286d6f),
+    'red': ('background': #b91715, 'start': #a71513, 'end': #c61916),
+    'yellow': ('background': #ffd06c, 'start': #e6bb61, 'end': #ffdf74)
+);

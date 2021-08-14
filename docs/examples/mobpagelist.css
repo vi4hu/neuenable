@@ -1,0 +1,31 @@
+/* style 2 */
+.style2{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width:25rem;text-align:center;
+}
+.style2 h3{
+    margin-bottom: 4rem;
+    justify-content: center;
+    font-weight: bold;
+}
+.backbtn{
+    position:absolute;
+    left: 20px;
+}
+.element2{
+    height:10rem;
+}
+.element2 > .fa{    
+    font-size:3rem;
+}
+.element2 > span{
+    justify-content:center;
+    font-weight: bold;
+}
+.menubtn{
+    font-size:.8rem;
+    justify-content:center;
+    font-weight: bold;
+}
