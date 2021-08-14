@@ -46,7 +46,7 @@
 
 @include set_neumorph_singletons($colors, $bg-p, 'bg-', ! important);
 @include set_neumorph_singletons($colors, $text-p, 'text-');
-@include set_neumorph_singletons($curves, $curve-p);
+@include set_neumorph_singletons($curves, $curve-p, '', ! important);
 @include set_neumorph_singletons($borders,$border-p);
 @include set_neumorph_element($base, $base-p, '', ! important);
 @include set_neumorph_grad($grad, '', ! important);
