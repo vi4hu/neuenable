@@ -72,3 +72,12 @@ $grad:(
     'red': ('background': #b91715, 'start': #a71513, 'end': #c61916),
     'yellow': ('background': #ffd06c, 'start': #e6bb61, 'end': #ffdf74)
 );
+
+$button: (
+    'dark': ('background': #24282d, 'box-shadow':('darker': #00000020, 'lighter': #ffffff08), 'border-color': #24282d),
+    'light': ('background': #e0e0e0, 'box-shadow':('darker': #00000015, 'lighter': #ffffff92), 'border-color': #e0e0e0),
+    'blue': ('background': #017dd3, 'box-shadow':('darker': #00000020, 'lighter': #ffffff20), 'border-color': #017dd3), 
+    'green': ('background': #256668, 'box-shadow':('darker': #00000020, 'lighter': #ffffff20), 'border-color': #256668),
+    'red': ('background': #b91715, 'box-shadow':('darker': #00000025, 'lighter': #ffffff25), 'border-color': #b91715),
+    'yellow': ('background': #ffd06c, 'box-shadow':('darker': #00000020, 'lighter': #ffffff98), 'border-color': #ffd06c)
+    );

@@ -1,12 +1,7 @@
-.btn {
-  border: 0px;
-  min-height: 3rem;
-  min-width: 6rem;
-  font-weight: bold;
-  font-size: 1rem; }
-  .btn:focus {
-    outline: none !important;
-    box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.25), -4px -4px 10px rgba(255, 255, 255, 0.08); }
+.tl-light div.inherit {
+  background: inherit;
+  box-shadow: inherit;
+  border-color: inherit; }
 
 .bg-dark {
   background: #24282d !important; }
@@ -421,6 +416,70 @@
   background: linear-gradient(255deg, #e6bb61, #ffdf74) !important; }
 .bl-yellow.convex {
   background: linear-gradient(255deg, #ffdf74, #e6bb61) !important; }
+
+.button {
+  padding: 1rem;
+  margin: .5rem;
+  position: relative;
+  min-height: 4rem;
+  min-width: 8rem;
+  font-weight: bold;
+  color: inherit;
+  background: inherit;
+  font-size: 1rem;
+  box-shadow: 4px 4px 10px 2px #00000025, -4px -4px 10px 2px #ffffff25;
+  border-color: #00000020;
+  border: 0;
+  border-radius: 1rem;
+  transition: all .2s;
+  cursor: pointer; }
+  .button.b:hover {
+    outline: none !important;
+    box-shadow: 4px 4px 10px 2px #00000025, -4px -4px 10px 2px #ffffff25, inset 0 0 500px #00000010; }
+  .button.colored {
+    box-shadow: 4px 4px 10px 2px #00000025, -4px -4px 10px 2px #ffffff25, inset 0 0 500px #00000020; }
+  .button.button-outline {
+    border: 2px solid #b91715;
+    border-color: #00000020; }
+  .button.button-push:active {
+    outline: none !important;
+    box-shadow: 4px 4px 15px 0px #00000025 inset, -4px -4px 10px 2px #ffffff25 inset; }
+  .button.colored-bump:active {
+    outline: none !important;
+    box-shadow: 4px 4px 15px 2px #00000025, -4px -4px 10px 2px #ffffff25, 4px 4px 15px 0px #00000025 inset, -4px -4px 10px 2px #ffffff25 inset; }
+  .button.button-push:focus {
+    outline: none !important; }
+  .button.button-press:active {
+    outline: none !important;
+    box-shadow: 4px 4px 15px 0px #00000015, -4px -4px 10px 2px #ffffff15; }
+  .button.button-press:focus {
+    outline: 0; }
+  .button.button-bump:active {
+    outline: none;
+    box-shadow: 4px 4px 15px 2px #00000025, -4px -4px 10px 2px #ffffff25, 4px 4px 15px 0px #00000025 inset, -4px -4px 10px 2px #ffffff25 inset; }
+  .button.button-bump:focus {
+    outline: 0; }
+  .button.button-round {
+    min-height: 4rem;
+    min-width: 4rem;
+    border-radius: 50%; }
+
+.button-red {
+  border: 4px solid #00000020;
+  background: #b91715; }
+
+.button-blue {
+  border: 4px solid #00000020;
+  background: #017dd3; }
+
+.smaller {
+  padding: .8rem;
+  min-height: 2rem;
+  min-width: 6rem; }
+
+.larger {
+  min-height: 5rem;
+  min-width: 12rem; }
 
 /* Type 1 */
 @keyframes tl-push {
