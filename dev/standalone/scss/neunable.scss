@@ -42,92 +42,12 @@
 // @include mi.set_neumorph_element(m.$base, p.$base-p, '', ! important);
 // @include mi.set_neumorph_grad(m.$grad, '', ! important);
 // @include set_neumorph_animation($types, $effecttsprops);
-
-// buttons
-.button{
-    padding: 1rem;
-    margin: .5rem;
-    position: relative;
-    min-height: 4rem;
-    min-width: 8rem;
-    font-weight: bold;
-    color: inherit;
-    background: inherit;
-    font-size: 1rem;
-    box-shadow: 4px 4px 10px 2px #00000025, -4px -4px 10px 2px #ffffff25;
-    border-color: #00000020;
-    border: 0;
-    border-radius: 1rem;
-    transition: all .2s;
-    cursor: pointer;
-    &.b:hover{
-        outline: none !important;
-        box-shadow: 4px 4px 10px 2px #00000025, -4px -4px 10px 2px #ffffff25, inset 0 0 500px #00000010;
-    }
-    &.colored{
-        box-shadow: 4px 4px 10px 2px #00000025, -4px -4px 10px 2px #ffffff25, inset 0 0 500px #00000020;
-    }
-    &.button-outline{
-        border: 2px solid #b91715;
-        border-color: #00000020;
-    }
-    &.button-push:active{
-        outline: none !important;
-        box-shadow: 4px 4px 15px 0px #00000025 inset, -4px -4px 10px 2px #ffffff25 inset;
-    }
-    &.colored-bump:active{
-        outline: none !important;
-        box-shadow: 
-        // inset 0 0 500px #00000020,
-        4px 4px 15px 2px #00000025, -4px -4px 10px 2px #ffffff25,
-        4px 4px 15px 0px #00000025 inset, -4px -4px 10px 2px #ffffff25 inset;
-    }
-    &.button-push:focus{
-        outline: none !important;
-        // box-shadow: none;
-        // box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.25), -4px -4px 10px rgba(255, 255, 255, 0.08);
-        // box-shadow: -4px -4px 15px 0px rgba(177, 177, 177, 0.03) inset, 4px 4px 10px 2px rgba(0, 0, 0, 0.12) inset;
-    }
-    &.button-press:active{
-        outline: none !important;
-        box-shadow: 4px 4px 15px 0px #00000015, -4px -4px 10px 2px #ffffff15;
-    }
-    &.button-press:focus{
-        outline: 0;
-        // box-shadow: none;
-        // box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.25), -4px -4px 10px rgba(255, 255, 255, 0.08);
-        // box-shadow: -4px -4px 15px 0px rgba(177, 177, 177, 0.03) inset, 4px 4px 10px 2px rgba(0, 0, 0, 0.12) inset;
-    }
-    &.button-bump:active{
-        outline: none;
-        box-shadow: 4px 4px 15px 2px #00000025, -4px -4px 10px 2px #ffffff25, 4px 4px 15px 0px #00000025 inset, -4px -4px 10px 2px #ffffff25 inset;
-    }
-    &.button-bump:focus{
-        outline: 0;
-        // box-shadow: none;
-        // box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.25), -4px -4px 10px rgba(255, 255, 255, 0.08);
-        // box-shadow: -4px -4px 15px 0px rgba(177, 177, 177, 0.03) inset, 4px 4px 10px 2px rgba(0, 0, 0, 0.12) inset;
-    }
-    &.button-round{
-        min-height: 4rem;
-        min-width: 4rem;
-        border-radius: 50%;
-    }
-}
-.button-red{
-    border: 4px solid #00000020;
-    background: #b91715;
-    // box-shadow: inset 0 0 100px #00000020;
-}
-.button-blue{
-    border: 4px solid #00000020;
-    background:#017dd3;
-}
+@import './components/buttons';
 
 .smaller{
-    padding: .8rem;
+    padding: 1rem;
     min-height: 2rem;
-    min-width: 6rem;
+    min-width: 4rem;
 }
 .larger{
     min-height: 5rem;
