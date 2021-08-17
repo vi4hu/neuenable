@@ -5,7 +5,7 @@ $bg-p: 'background';
 // default props for text components
 $text-p: 'color';
 // default props for curves
-$curve-p: 'border-radius' 'min-height' 'min-width';
+$curve-p: 'border-radius' 'min-height' 'min-width' 'max-height' 'padding';
 // default props for borders
 $border-p: 'border';
 // default props for components
@@ -15,3 +15,5 @@ $events: 'active' 'focus' 'hover';
 // default effects
 $effects: 'push';
 $effect-p: 'box-shadow';
+// button props
+$btn-p: 'background' 'box-shadow';

@@ -108,12 +108,12 @@
                 @each $key in $keys{
                     @if $key == box-shadow {
                         // types
-                        #{$key}: map-get($anglemap, 'x') 8px 2px map-get(map-get($valuemap, $key), darker), map-get($anglemap, 'y') 8px 2px map-get(map-get($valuemap, $key), lighter);
+                        #{$key}: map-get($anglemap, 'x') map-get($anglemap, 'm') map-get(map-get($valuemap, $key), darker), map-get($anglemap, 'y') map-get($anglemap, 'm') map-get(map-get($valuemap, $key), lighter);
                         &.s1{
-                            #{$key}:inset map-get($anglemap, 'x') 8px map-get(map-get($valuemap, $key), darker),inset map-get($anglemap, 'y') 8px 2px map-get(map-get($valuemap, $key), lighter);
+                            #{$key}:inset map-get($anglemap, 'x') map-get($anglemap, 'm') map-get(map-get($valuemap, $key), darker),inset map-get($anglemap, 'y') map-get($anglemap, 'm') map-get(map-get($valuemap, $key), lighter);
                         }
                         &.s2{
-                            #{$key}: map-get($anglemap, 'x') 8px 2px map-get(map-get($valuemap, $key), darker), map-get($anglemap, 'y') 8px 2px map-get(map-get($valuemap, $key), lighter),inset map-get($anglemap, 'x') 4px map-get(map-get($valuemap, $key), darker),inset map-get($anglemap, 'y') 4px map-get(map-get($valuemap, $key), lighter);
+                            #{$key}: map-get($anglemap, 'x') map-get($anglemap, 'm') map-get(map-get($valuemap, $key), darker), map-get($anglemap, 'y') map-get($anglemap, 'm') map-get(map-get($valuemap, $key), lighter),inset map-get($anglemap, 'x') map-get($anglemap, 'm') map-get(map-get($valuemap, $key), darker),inset map-get($anglemap, 'y') map-get($anglemap, 'm') map-get(map-get($valuemap, $key), lighter);
                         }
                     }
                     // if created gradient
