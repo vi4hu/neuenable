@@ -46,19 +46,19 @@
   color: #ffffff; }
 
 .curve-1 {
-  border-radius: 10px !important; }
+  border-radius: 0.5rem !important; }
 
 .curve-2 {
-  border-radius: 20px !important; }
+  border-radius: 0.8rem !important; }
 
 .curve-3 {
-  border-radius: 30px !important; }
+  border-radius: 1rem !important; }
 
 .curve-4 {
-  border-radius: 40px !important; }
+  border-radius: 1.4rem !important; }
 
 .curve-5 {
-  border-radius: 50px !important; }
+  border-radius: 2rem !important; }
 
 .rounded {
   border-radius: 200px !important;
@@ -424,15 +424,15 @@ button:not(:disabled).button {
   padding: 1rem;
   margin: .5rem;
   position: relative;
-  min-height: 4rem;
-  min-width: 8rem;
+  min-height: 3rem;
+  min-width: 5rem;
   font-weight: bold;
   color: inherit;
   background: inherit;
   font-size: 1rem;
   border-color: #41353520 !important;
   border: 0;
-  border-radius: 1rem;
+  border-radius: .5rem;
   transition: box-shadow .05s ease, background-position .2s ease;
   box-shadow: 10px 10px 20px #00000015, -10px -10px 20px #ffffff92;
   cursor: pointer; }
@@ -440,19 +440,22 @@ button:not(:disabled).button {
   input[type="submit"]:not(:disabled).button.button-round,
   input[type="reset"]:not(:disabled).button.button-round,
   button:not(:disabled).button.button-round {
-    padding: 1rem 0 1rem 0;
+    padding: .5rem 0 .5rem 0;
+    position: relative;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     content: '';
-    min-height: 4rem;
-    min-width: 4rem;
-    max-height: 4rem;
-    max-width: 4rem;
+    min-height: 3rem;
+    min-width: 3rem;
+    max-height: 3rem;
+    max-width: 3rem;
     border-radius: 50%; }
   input[type="button"]:not(:disabled).button.hover--down,
   input[type="submit"]:not(:disabled).button.hover--down,
   input[type="reset"]:not(:disabled).button.hover--down,
   button:not(:disabled).button.hover--down {
-    background: linear-gradient(to bottom, transparent 50%, #33333320 50%);
+    background: linear-gradient(to bottom, transparent 50%, #00000020 50%);
     background-size: 100% 200%;
     background-position: left bottom; }
     input[type="button"]:not(:disabled).button.hover--down:hover,
@@ -464,7 +467,7 @@ button:not(:disabled).button {
   input[type="submit"]:not(:disabled).button.hover--up,
   input[type="reset"]:not(:disabled).button.hover--up,
   button:not(:disabled).button.hover--up {
-    background: linear-gradient(to bottom, transparent 50%, #33333320 50%);
+    background: linear-gradient(to bottom, transparent 50%, #00000020 50%);
     background-size: 100% 200%;
     background-position: left top; }
     input[type="button"]:not(:disabled).button.hover--up:hover,
@@ -501,13 +504,13 @@ button:disabled {
   padding: 1rem;
   margin: .5rem;
   position: relative;
-  min-height: 4rem;
-  min-width: 8rem;
+  min-height: 3rem;
+  min-width: 5rem;
   font-weight: bold;
   color: inherit;
   font-size: 1rem;
   border: 0;
-  border-radius: 1rem;
+  border-radius: .5rem;
   box-shadow: none;
   background: #00000020;
   border-color: #41353520 !important;
@@ -686,7 +689,7 @@ button:not(:disabled).colored-dark {
   input[type="submit"]:not(:disabled).colored-dark:focus,
   input[type="reset"]:not(:disabled).colored-dark:focus,
   button:not(:disabled).colored-dark:focus {
-    box-shadow: 10px 10px 20px #1f2226, -10px -10px 20px #292e34, inset 0 0 50px #00000020; }
+    box-shadow: 10px 10px 20px #1f2226, -10px -10px 20px #292e34, inset 0 0 30px #00000020; }
 input[type="button"]:not(:disabled).colored-light,
 input[type="submit"]:not(:disabled).colored-light,
 input[type="reset"]:not(:disabled).colored-light,
@@ -697,7 +700,7 @@ button:not(:disabled).colored-light {
   input[type="submit"]:not(:disabled).colored-light:focus,
   input[type="reset"]:not(:disabled).colored-light:focus,
   button:not(:disabled).colored-light:focus {
-    box-shadow: 10px 10px 20px #bfc5cc, -10px -10px 20px #ffffff, inset 0 0 50px #00000020; }
+    box-shadow: 10px 10px 20px #bfc5cc, -10px -10px 20px #ffffff, inset 0 0 30px #00000020; }
 input[type="button"]:not(:disabled).colored-blue,
 input[type="submit"]:not(:disabled).colored-blue,
 input[type="reset"]:not(:disabled).colored-blue,
@@ -708,7 +711,7 @@ button:not(:disabled).colored-blue {
   input[type="submit"]:not(:disabled).colored-blue:focus,
   input[type="reset"]:not(:disabled).colored-blue:focus,
   button:not(:disabled).colored-blue:focus {
-    box-shadow: 10px 10px 20px #016ab3, -10px -10px 20px #0190f3, inset 0 0 50px #00000020; }
+    box-shadow: 10px 10px 20px #016ab3, -10px -10px 20px #0190f3, inset 0 0 30px #00000020; }
 input[type="button"]:not(:disabled).colored-green,
 input[type="submit"]:not(:disabled).colored-green,
 input[type="reset"]:not(:disabled).colored-green,
@@ -719,7 +722,7 @@ button:not(:disabled).colored-green {
   input[type="submit"]:not(:disabled).colored-green:focus,
   input[type="reset"]:not(:disabled).colored-green:focus,
   button:not(:disabled).colored-green:focus {
-    box-shadow: 10px 10px 20px #247572, -10px -10px 20px #309f9a, inset 0 0 50px #00000020; }
+    box-shadow: 10px 10px 20px #247572, -10px -10px 20px #309f9a, inset 0 0 30px #00000020; }
 input[type="button"]:not(:disabled).colored-red,
 input[type="submit"]:not(:disabled).colored-red,
 input[type="reset"]:not(:disabled).colored-red,
@@ -730,7 +733,7 @@ button:not(:disabled).colored-red {
   input[type="submit"]:not(:disabled).colored-red:focus,
   input[type="reset"]:not(:disabled).colored-red:focus,
   button:not(:disabled).colored-red:focus {
-    box-shadow: 10px 10px 20px #9d1412, -10px -10px 20px #d51a18, inset 0 0 50px #00000020; }
+    box-shadow: 10px 10px 20px #9d1412, -10px -10px 20px #d51a18, inset 0 0 30px #00000020; }
 input[type="button"]:not(:disabled).colored-yellow,
 input[type="submit"]:not(:disabled).colored-yellow,
 input[type="reset"]:not(:disabled).colored-yellow,
@@ -741,7 +744,7 @@ button:not(:disabled).colored-yellow {
   input[type="submit"]:not(:disabled).colored-yellow:focus,
   input[type="reset"]:not(:disabled).colored-yellow:focus,
   button:not(:disabled).colored-yellow:focus {
-    box-shadow: 10px 10px 20px #d9b15c, -10px -10px 20px #ffef7c, inset 0 0 50px #00000020; }
+    box-shadow: 10px 10px 20px #d9b15c, -10px -10px 20px #ffef7c, inset 0 0 30px #00000020; }
 
 input[type="button"]:not(:disabled).smaller,
 input[type="submit"]:not(:disabled).smaller,
@@ -751,7 +754,8 @@ input[type="submit"].smaller,
 input[type="reset"].smaller,
 button.smaller,
 button:not(:disabled).smaller {
-  padding: 1rem;
+  padding: .6rem;
+  font-size: .8rem;
   min-height: 2rem;
   min-width: 4rem; }
 input[type="button"]:not(:disabled).larger,
@@ -762,8 +766,10 @@ input[type="submit"].larger,
 input[type="reset"].larger,
 button.larger,
 button:not(:disabled).larger {
-  min-height: 5rem;
-  min-width: 12rem; }
+  padding: 1rem;
+  font-size: 1.4rem;
+  min-height: 4rem;
+  min-width: 6rem; }
 
 /* Type 1 */
 @keyframes tl-push {

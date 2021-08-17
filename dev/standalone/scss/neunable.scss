@@ -16,45 +16,40 @@
         border-color: inherit;
     }
 }
-
-// @mixin setup($map, $keys){
-//     @each $keymap, $valuemap in $map{
-//         .#{$keymap}-type{
-//             @each $key in $keys{
-//                 @if(#{$key} != box-shadow){
-//                     #{$key}: map-get($valuemap, $key);
-//                 }
-//             }
-//         }
-//     }
-// }
-
 @include set_neumorph_singletons($colors, $bg-p, 'bg-', ! important);
 @include set_neumorph_singletons($colors, $text-p, 'text-');
 @include set_neumorph_singletons($curves, $curve-p, '', ! important);
 @include set_neumorph_singletons($borders,$border-p);
 @include set_neumorph_element($base, $base-p, '', ! important);
 @include set_neumorph_grad($grad, '', ! important);
-// @include mi.set_neumorph_singletons(m.$colors, p.$bg-p, 'bg-', ! important);
-// @include mi.set_neumorph_singletons(m.$colors, p.$text-p, 'text-');
-// @include mi.set_neumorph_singletons(m.$curves, p.$curve-p);
-// @include mi.set_neumorph_singletons(m.$borders,p.$border-p);
-// @include mi.set_neumorph_element(m.$base, p.$base-p, '', ! important);
-// @include mi.set_neumorph_grad(m.$grad, '', ! important);
-// @include set_neumorph_animation($types, $effecttsprops);
-@import './components/buttons';
 
-.smaller{
-    padding: 1rem;
-    min-height: 2rem;
-    min-width: 4rem;
-}
-.larger{
-    min-height: 5rem;
-    min-width: 12rem;
-}
-// @include setup($test, $k);
-/* Type 1 */
+// buttons
+@import './components/_buttons.scss';
+@include set_button_styling($button, $btn-p);
+@include set_button_colored($button, $btn-p);
+@import "./components/sizes";
+// @mixin setup($map, $keys){
+    //     @each $keymap, $valuemap in $map{
+        //         .#{$keymap}-type{
+            //             @each $key in $keys{
+                //                 @if(#{$key} != box-shadow){
+                    //                     #{$key}: map-get($valuemap, $key);
+                    //                 }
+                    //             }
+                    //         }
+                    //     }
+                    // }
+                    
+                    // @include mi.set_neumorph_singletons(m.$colors, p.$bg-p, 'bg-', ! important);
+                    // @include mi.set_neumorph_singletons(m.$colors, p.$text-p, 'text-');
+                    // @include mi.set_neumorph_singletons(m.$curves, p.$curve-p);
+                    // @include mi.set_neumorph_singletons(m.$borders,p.$border-p);
+                    // @include mi.set_neumorph_element(m.$base, p.$base-p, '', ! important);
+                    // @include mi.set_neumorph_grad(m.$grad, '', ! important);
+                    // @include set_neumorph_animation($types, $effecttsprops);
+                    
+                    // @include setup($test, $k);
+                    /* Type 1 */
 @keyframes tl-push{
     0%{
         height: 3rem;

@@ -6,30 +6,33 @@ button:not(:disabled){
         padding: 1rem;
         margin: .5rem;
         position: relative;
-        min-height: 4rem;
-        min-width: 8rem;
+        min-height: 3rem;
+        min-width: 5rem;
         font-weight: bold;
         color: inherit;
         background: inherit;
         font-size: 1rem;
         border-color: #41353520 !important;
         border: 0;
-        border-radius: 1rem;
+        border-radius: .5rem;
         transition: box-shadow .05s ease, background-position .2s ease;
         box-shadow: 10px 10px 20px #00000015, -10px -10px 20px #ffffff92;
         cursor: pointer;
         &.button-round{
-            padding: 1rem 0 1rem 0;
+            padding: .5rem 0 .5rem 0;
+            position: relative;
             text-align: center;
+            align-items: center;
+            justify-content: center;
             content: '';
-            min-height: 4rem;
-            min-width: 4rem;
-            max-height: 4rem;
-            max-width: 4rem;
+            min-height: 3rem;
+            min-width: 3rem;
+            max-height: 3rem;
+            max-width: 3rem;
             border-radius: 50%;
         }
         &.hover--down{
-            background: linear-gradient(to bottom, transparent 50%, #33333320 50%);
+            background: linear-gradient(to bottom, transparent 50%, #00000020 50%);
             background-size: 100% 200%;
             background-position: left bottom;
             &:hover{
@@ -37,7 +40,7 @@ button:not(:disabled){
             }
         }
         &.hover--up{
-            background: linear-gradient(to bottom, transparent 50%, #33333320 50%);
+            background: linear-gradient(to bottom, transparent 50%, #00000020 50%);
             background-size: 100% 200%;
             background-position: left top;
             &:hover{
@@ -70,13 +73,13 @@ button:disabled{
     padding: 1rem;
     margin: .5rem;
     position: relative;
-    min-height: 4rem;
-    min-width: 8rem;
+    min-height: 3rem;
+    min-width: 5rem;
     font-weight: bold;
     color: inherit;
     font-size: 1rem;
     border: 0;
-    border-radius: 1rem;
+    border-radius: .5rem;
     box-shadow: none;
     background: #00000020;
     border-color: #41353520 !important;
@@ -133,7 +136,7 @@ button:disabled{
                     @if $key == box-shadow {
                         #{$key}: 10px 10px 20px map-get(map-get($valuemap, $key), darker), -10px -10px 20px map-get(map-get($valuemap, $key), lighter), inset 0 0 100px #00000020;
                         &:focus{
-                            #{$key}: 10px 10px 20px map-get(map-get($valuemap, $key), darker), -10px -10px 20px map-get(map-get($valuemap, $key), lighter), inset 0 0 50px #00000020;
+                            #{$key}: 10px 10px 20px map-get(map-get($valuemap, $key), darker), -10px -10px 20px map-get(map-get($valuemap, $key), lighter), inset 0 0 30px #00000020;
                         }
                     }
                     @else{

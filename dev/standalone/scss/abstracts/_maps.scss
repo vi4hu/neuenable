@@ -27,10 +27,10 @@ $base: (
 // top-left
 // bottom-left
 $angles:(
-    'tr':('x': -4px 4px, 'y': 4px -4px, 'ang': 45deg),
-    'br':('x': -4px -4px, 'y': 4px 4px, 'ang': 145deg),
-    'tl':('x': 4px 4px, 'y': -4px -4px, 'ang': 315deg),
-    'bl':('x': 4px -4px, 'y': -4px 4px, 'ang': 255deg)
+    'tr':('x': -10px 10px, 'y': 10px -10px, 'm': 20px, 'ang': 45deg),
+    'br':('x': -10px -4px, 'y': 10px 10px, 'm': 20px, 'ang': 145deg),
+    'tl':('x': 10px 10px, 'y': -10px -10px, 'm': 20px, 'ang': 315deg),
+    'bl':('x': 10px -10px, 'y': -10px 10px, 'm': 20px, 'ang': 255deg)
     );
 
 // default colors
@@ -73,11 +73,11 @@ $grad:(
     'yellow': ('background': #ffd06c, 'start': #e6bb61, 'end': #ffdf74)
 );
 
-$button: (
-    'dark': ('background': #24282d, 'box-shadow':('darker': #00000020, 'lighter': #ffffff08), 'border-color': #24282d),
-    'light': ('background': #e1e8f0, 'box-shadow':('darker': #00000015, 'lighter': #ffffff92), 'border-color': #e1e8f0),
-    'blue': ('background': #017dd3, 'box-shadow':('darker': #00000020, 'lighter': #ffffff20), 'border-color': #017dd3), 
-    'green': ('background': #2a8a86, 'box-shadow':('darker': #00000020, 'lighter': #ffffff20), 'border-color': #2a8a86),
-    'red': ('background': #b91715, 'box-shadow':('darker': #00000025, 'lighter': #ffffff25), 'border-color': #b91715),
-    'yellow': ('background': #ffd06c, 'box-shadow':('darker': #00000020, 'lighter': #ffffff98), 'border-color': #ffd06c)
+$button:(
+    'dark': ('background': #24282d, 'color':'', 'box-shadow':('darker': #1f2226, 'lighter': #292e34, 'modd': #1f222690, 'modl': #292e3490)),
+    'light': ('background': #e1e8f0, 'box-shadow':('darker': #bfc5cc, 'lighter': #ffffff, 'modd': #bfc5cc90, 'modl': #ffffff90)),
+    'blue': ('background': #017dd3, 'box-shadow':('darker': #016ab3, 'lighter': #0190f3, 'modd': #016ab390, 'modl': #0190f390)), 
+    'green': ('background': #2a8a86, 'box-shadow':('darker': #247572, 'lighter': #309f9a, 'modd': #24757290, 'modl': #309f9a90)),
+    'red': ('background': #b91715, 'box-shadow':('darker': #9d1412, 'lighter': #d51a18, 'modd': #9d141290, 'modl': #d51a1890)),
+    'yellow': ('background': #ffd06c, 'box-shadow':('darker': #d9b15c, 'lighter': #ffef7c, 'modd': #d9b15c90, 'modl': #ffef7c90))
     );

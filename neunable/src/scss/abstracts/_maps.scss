@@ -48,11 +48,11 @@ $colors: (
 
 // default curves
 $curves: (
-    'curve-1': ('border-radius': 10px),
-    'curve-2': ('border-radius': 20px),
-    'curve-3': ('border-radius': 30px), 
-    'curve-4': ('border-radius': 40px),
-    'curve-5': ('border-radius': 50px),
+    'curve-1': ('border-radius': .5rem),
+    'curve-2': ('border-radius': .8rem),
+    'curve-3': ('border-radius': 1rem), 
+    'curve-4': ('border-radius': 1.4rem),
+    'curve-5': ('border-radius': 2rem),
     'rounded': ('border-radius': 200px, 'min-height': 4rem, 'min-width': 0, 'max-height': 5rem)
     );
 

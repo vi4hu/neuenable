@@ -5,71 +5,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
     <link href="../../neunable/src/uncompressed/neunable.css" rel="stylesheet" type="text/css" />
     <!-- <link href="styles.css" rel="stylesheet" /> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Buttons</title>
 </head>
 
-<body class="bg-red text-dark">
+<body class="bg-dark text-blue">
     <!-- button shape -->
     <h2 style="text-align:center;">Button Shapes</h2>
     <div class="container p-5">
-        <button class="button button-red">Square</button>
-        <button class="button button-red button-round">O</button>
+        <button class="button button-dark">Square</button>
+        <button class="button button-dark button-round">O</button>
         <!-- <label><- circle</label> -->
     </div>
     <!-- button sizes -->
     <h2 style="text-align:center;">Button Sizes</h2>
     <div class="container p-5">
-        <button class="button button-red smaller">Small</button>
-        <button class="button button-red">Normal</button>
-        <button class="button button-red larger">Large</button>
+        <button class="button button-dark smaller">Small</button>
+        <button class="button button-dark">Normal</button>
+        <button class="button button-dark larger">Large</button>
     </div>
     <!-- button events -->
     <h2 style="text-align:center;">Button Events</h2>
     <div class="container p-5">
-        <button class="button button-red">Active</button>
-        <button class="button button-red hover--font">Hover</button>
-        <button class="button button-red hover--up">Hover to darken</button>
-        <button class="button button-red hover--down">Hover to lighten</button>
-        <button class="button button-red focus">focus</button>
+        <button class="button button-dark">Active</button>
+        <button class="button button-dark hover--font">Hover</button>
+        <button class="button button-dark hover--up">Hover to darken</button>
+        <button class="button button-dark hover--down">Hover to lighten</button>
+        <button class="button button-dark focus">focus</button>
     </div>
     <!-- button borders -->
     <h2 style="text-align:center;">Button borders</h2>
     <div class="container p-5">
-        <button class="button button-red button-outline">.1rem</button>
-        <button class="button button-red button-outline border-2">.2rem</button>
-        <button class="button button-red button-outline border-3">.3rem</button>
-        <button class="button button-red button-outline border-4">.4rem</button>
-        <button class="button button-red button-outline border-5">.5rem</button>
+        <button class="button button-dark button-outline">.1rem</button>
+        <button class="button button-dark button-outline border-2">.2rem</button>
+        <button class="button button-dark button-outline border-3">.3rem</button>
+        <button class="button button-dark button-outline border-4">.4rem</button>
+        <button class="button button-dark button-outline border-5">.5rem</button>
+    </div>
+    <!-- button curves -->
+    <h2 style="text-align:center;">Button curves</h2>
+    <div class="container p-5">
+        <button class="button button-dark">.5rem</button>
+        <button class="button button-dark curve-2">.8rem</button>
+        <button class="button button-dark curve-3">1rem</button>
+        <button class="button button-dark curve-4">1.4rem</button>
+        <button class="button button-dark curve-5">2rem</button>
     </div>
     <!-- button Disabled -->
     <h2 style="text-align:center;">Button Disabled</h2>
     <div class="container p-5">
-        <button class="button button-red hover--up" disabled>Hover to darken</button>
-        <button class="button button-red button-outline border-5" disabled>.5rem</button>
+        <button class="button button-dark hover--up" disabled>Hover to darken: disabled</button>
+        <button class="button button-dark button-outline border-5" disabled>.5rem border: disabled</button>
     </div>
     <!-- button transitions -->
     <h2 style="text-align:center;">Button Transitions</h2>
     <div class="container p-5">
-        <button class="button button-red">Press</button>
-        <button class="button button-red button-bump">Bump</button>
-        <button class="button button-red button-push">Push</button>
-        <button class="button button-red button-round colored-red">B</button>
+        <button class="button button-dark">Press</button>
+        <button class="button button-dark button-bump">Bump</button>
+        <button class="button button-dark button-push">Push</button>
+        <button class="button button-dark button-round colored-dark">B</button>
     </div>
     <!-- some examples -->
     <h2 style="text-align:center;">Some Examples</h2>
-    <div class="container p-5 bg-light">
-        <button class="button button-light button-push button-outline border-4 curve-5">Click me</button>
-        <input type="button" class="button button-light colored-light button-bump larger" value="Disable Big button" disabled>
-        <button class="button button-light button-round button-bump button-outline border-3"><i
+    <div class="container p-5">
+        <button class="button button-dark button-push button-outline border-4 curve-5">Click me</button>
+        <input type="button" class="button button-dark colored-light button-bump larger curve-4" value="Disable Big button" disabled>
+        <button class="button button-dark button-round button-bump button-outline border-3"><i
                 class="fa fa-download"></i></button>
-        <button class="button button-light button-round button-outline border-4 colored-light colored text-light"><i
+        <button class="button button-dark button-round button-outline border-4 colored-dark colored text-light"><i
                 class="fa fa-thumbs-up"></i></button>
-        <button class="button button-light button-round button-push button-outline border-5"><i
+        <button class="button button-dark button-round button-push button-outline border-5"><i
                 class="fa fa-play"></i></button>
     </div>
 </body>
