@@ -67,19 +67,19 @@
   max-height: 5rem !important; }
 
 .border-1 {
-  border: 0.2rem solid; }
+  border: 0.2rem solid !important; }
 
 .border-2 {
-  border: 0.2rem solid; }
+  border: 0.2rem solid !important; }
 
 .border-3 {
-  border: 0.3rem solid; }
+  border: 0.3rem solid !important; }
 
 .border-4 {
-  border: 0.4rem solid; }
+  border: 0.4rem solid !important; }
 
 .border-5 {
-  border: 0.5rem solid; }
+  border: 0.5rem solid !important; }
 
 .tr-dark {
   background: #24282d !important;
@@ -417,7 +417,10 @@
 .bl-yellow.convex {
   background: linear-gradient(255deg, #ffdf74, #e6bb61) !important; }
 
-.button {
+input[type="button"]:not(:disabled).button,
+input[type="submit"]:not(:disabled).button,
+input[type="reset"]:not(:disabled).button,
+button:not(:disabled).button {
   padding: 1rem;
   margin: .5rem;
   position: relative;
@@ -427,13 +430,16 @@
   color: inherit;
   background: inherit;
   font-size: 1rem;
-  box-shadow: 10px 10px 20px #00000015, -10px -10px 20px #ffffff92;
-  border-color: #00000020;
+  border-color: #41353520 !important;
   border: 0;
   border-radius: 1rem;
   transition: box-shadow .05s ease, background-position .2s ease;
+  box-shadow: 10px 10px 20px #00000015, -10px -10px 20px #ffffff92;
   cursor: pointer; }
-  .button.button-round {
+  input[type="button"]:not(:disabled).button.button-round,
+  input[type="submit"]:not(:disabled).button.button-round,
+  input[type="reset"]:not(:disabled).button.button-round,
+  button:not(:disabled).button.button-round {
     padding: 1rem 0 1rem 0;
     text-align: center;
     content: '';
@@ -442,148 +448,320 @@
     max-height: 4rem;
     max-width: 4rem;
     border-radius: 50%; }
-  .button.hover--down {
+  input[type="button"]:not(:disabled).button.hover--down,
+  input[type="submit"]:not(:disabled).button.hover--down,
+  input[type="reset"]:not(:disabled).button.hover--down,
+  button:not(:disabled).button.hover--down {
     background: linear-gradient(to bottom, transparent 50%, #33333320 50%);
     background-size: 100% 200%;
     background-position: left bottom; }
-    .button.hover--down:hover {
+    input[type="button"]:not(:disabled).button.hover--down:hover,
+    input[type="submit"]:not(:disabled).button.hover--down:hover,
+    input[type="reset"]:not(:disabled).button.hover--down:hover,
+    button:not(:disabled).button.hover--down:hover {
       background-position: right top; }
-  .button.hover--up {
+  input[type="button"]:not(:disabled).button.hover--up,
+  input[type="submit"]:not(:disabled).button.hover--up,
+  input[type="reset"]:not(:disabled).button.hover--up,
+  button:not(:disabled).button.hover--up {
     background: linear-gradient(to bottom, transparent 50%, #33333320 50%);
     background-size: 100% 200%;
     background-position: left top; }
-    .button.hover--up:hover {
+    input[type="button"]:not(:disabled).button.hover--up:hover,
+    input[type="submit"]:not(:disabled).button.hover--up:hover,
+    input[type="reset"]:not(:disabled).button.hover--up:hover,
+    button:not(:disabled).button.hover--up:hover {
       background-position: right bottom; }
-  .button.hover--font:hover {
+  input[type="button"]:not(:disabled).button.hover--font:hover,
+  input[type="submit"]:not(:disabled).button.hover--font:hover,
+  input[type="reset"]:not(:disabled).button.hover--font:hover,
+  button:not(:disabled).button.hover--font:hover {
     color: black; }
-  .button.button-outline {
+  input[type="button"]:not(:disabled).button.button-outline,
+  input[type="submit"]:not(:disabled).button.button-outline,
+  input[type="reset"]:not(:disabled).button.button-outline,
+  button:not(:disabled).button.button-outline {
     border: .1rem solid;
     border-color: #00000020; }
-  .button.button-push:focus {
+  input[type="button"]:not(:disabled).button.button-push:focus,
+  input[type="submit"]:not(:disabled).button.button-push:focus,
+  input[type="reset"]:not(:disabled).button.button-push:focus,
+  button:not(:disabled).button.button-push:focus {
     outline: 0; }
-  .button.button-bump:focus {
+  input[type="button"]:not(:disabled).button.button-bump:focus,
+  input[type="submit"]:not(:disabled).button.button-bump:focus,
+  input[type="reset"]:not(:disabled).button.button-bump:focus,
+  button:not(:disabled).button.button-bump:focus {
     outline: 0; }
 
-.button-dark {
+input[type="button"]:disabled,
+input[type="submit"]:disabled,
+input[type="reset"]:disabled,
+button:disabled {
+  padding: 1rem;
+  margin: .5rem;
+  position: relative;
+  min-height: 4rem;
+  min-width: 8rem;
+  font-weight: bold;
+  color: inherit;
+  font-size: 1rem;
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: none;
+  background: #00000020;
+  border-color: #41353520 !important;
+  cursor: auto; }
+
+input[type="button"]:not(:disabled).button-dark,
+input[type="submit"]:not(:disabled).button-dark,
+input[type="reset"]:not(:disabled).button-dark,
+button:not(:disabled).button-dark {
   content: '';
   box-shadow: 10px 10px 20px #1f2226, -10px -10px 20px #292e34; }
-  .button-dark.button-push:active {
+  input[type="button"]:not(:disabled).button-dark.button-push:active,
+  input[type="submit"]:not(:disabled).button-dark.button-push:active,
+  input[type="reset"]:not(:disabled).button-dark.button-push:active,
+  button:not(:disabled).button-dark.button-push:active {
     box-shadow: 10px 10px 20px #1f2226 inset, -10px -10px 20px #292e34 inset; }
-  .button-dark:active {
+  input[type="button"]:not(:disabled).button-dark:active,
+  input[type="submit"]:not(:disabled).button-dark:active,
+  input[type="reset"]:not(:disabled).button-dark:active,
+  button:not(:disabled).button-dark:active {
     box-shadow: 10px 10px 20px #1f222690, -10px -10px 20px #292e3490; }
-  .button-dark.focus:focus {
+  input[type="button"]:not(:disabled).button-dark.focus:focus,
+  input[type="submit"]:not(:disabled).button-dark.focus:focus,
+  input[type="reset"]:not(:disabled).button-dark.focus:focus,
+  button:not(:disabled).button-dark.focus:focus {
     outline: 0;
     box-shadow: 10px 10px 20px #1f222690, -10px -10px 20px #292e3490; }
-  .button-dark.button-bump:active {
+  input[type="button"]:not(:disabled).button-dark.button-bump:active,
+  input[type="submit"]:not(:disabled).button-dark.button-bump:active,
+  input[type="reset"]:not(:disabled).button-dark.button-bump:active,
+  button:not(:disabled).button-dark.button-bump:active {
     box-shadow: 10px 10px 20px #1f2226, -10px -10px 20px #292e34, 10px 10px 20px #1f2226 inset, -10px -10px 20px #292e34 inset; }
-
-.button-light {
+input[type="button"]:not(:disabled).button-light,
+input[type="submit"]:not(:disabled).button-light,
+input[type="reset"]:not(:disabled).button-light,
+button:not(:disabled).button-light {
   content: '';
   box-shadow: 10px 10px 20px #bfc5cc, -10px -10px 20px #ffffff; }
-  .button-light.button-push:active {
+  input[type="button"]:not(:disabled).button-light.button-push:active,
+  input[type="submit"]:not(:disabled).button-light.button-push:active,
+  input[type="reset"]:not(:disabled).button-light.button-push:active,
+  button:not(:disabled).button-light.button-push:active {
     box-shadow: 10px 10px 20px #bfc5cc inset, -10px -10px 20px #ffffff inset; }
-  .button-light:active {
+  input[type="button"]:not(:disabled).button-light:active,
+  input[type="submit"]:not(:disabled).button-light:active,
+  input[type="reset"]:not(:disabled).button-light:active,
+  button:not(:disabled).button-light:active {
     box-shadow: 10px 10px 20px #bfc5cc90, -10px -10px 20px #ffffff90; }
-  .button-light.focus:focus {
+  input[type="button"]:not(:disabled).button-light.focus:focus,
+  input[type="submit"]:not(:disabled).button-light.focus:focus,
+  input[type="reset"]:not(:disabled).button-light.focus:focus,
+  button:not(:disabled).button-light.focus:focus {
     outline: 0;
     box-shadow: 10px 10px 20px #bfc5cc90, -10px -10px 20px #ffffff90; }
-  .button-light.button-bump:active {
+  input[type="button"]:not(:disabled).button-light.button-bump:active,
+  input[type="submit"]:not(:disabled).button-light.button-bump:active,
+  input[type="reset"]:not(:disabled).button-light.button-bump:active,
+  button:not(:disabled).button-light.button-bump:active {
     box-shadow: 10px 10px 20px #bfc5cc, -10px -10px 20px #ffffff, 10px 10px 20px #bfc5cc inset, -10px -10px 20px #ffffff inset; }
-
-.button-blue {
+input[type="button"]:not(:disabled).button-blue,
+input[type="submit"]:not(:disabled).button-blue,
+input[type="reset"]:not(:disabled).button-blue,
+button:not(:disabled).button-blue {
   content: '';
   box-shadow: 10px 10px 20px #016ab3, -10px -10px 20px #0190f3; }
-  .button-blue.button-push:active {
+  input[type="button"]:not(:disabled).button-blue.button-push:active,
+  input[type="submit"]:not(:disabled).button-blue.button-push:active,
+  input[type="reset"]:not(:disabled).button-blue.button-push:active,
+  button:not(:disabled).button-blue.button-push:active {
     box-shadow: 10px 10px 20px #016ab3 inset, -10px -10px 20px #0190f3 inset; }
-  .button-blue:active {
+  input[type="button"]:not(:disabled).button-blue:active,
+  input[type="submit"]:not(:disabled).button-blue:active,
+  input[type="reset"]:not(:disabled).button-blue:active,
+  button:not(:disabled).button-blue:active {
     box-shadow: 10px 10px 20px #016ab390, -10px -10px 20px #0190f390; }
-  .button-blue.focus:focus {
+  input[type="button"]:not(:disabled).button-blue.focus:focus,
+  input[type="submit"]:not(:disabled).button-blue.focus:focus,
+  input[type="reset"]:not(:disabled).button-blue.focus:focus,
+  button:not(:disabled).button-blue.focus:focus {
     outline: 0;
     box-shadow: 10px 10px 20px #016ab390, -10px -10px 20px #0190f390; }
-  .button-blue.button-bump:active {
+  input[type="button"]:not(:disabled).button-blue.button-bump:active,
+  input[type="submit"]:not(:disabled).button-blue.button-bump:active,
+  input[type="reset"]:not(:disabled).button-blue.button-bump:active,
+  button:not(:disabled).button-blue.button-bump:active {
     box-shadow: 10px 10px 20px #016ab3, -10px -10px 20px #0190f3, 10px 10px 20px #016ab3 inset, -10px -10px 20px #0190f3 inset; }
-
-.button-green {
+input[type="button"]:not(:disabled).button-green,
+input[type="submit"]:not(:disabled).button-green,
+input[type="reset"]:not(:disabled).button-green,
+button:not(:disabled).button-green {
   content: '';
   box-shadow: 10px 10px 20px #247572, -10px -10px 20px #309f9a; }
-  .button-green.button-push:active {
+  input[type="button"]:not(:disabled).button-green.button-push:active,
+  input[type="submit"]:not(:disabled).button-green.button-push:active,
+  input[type="reset"]:not(:disabled).button-green.button-push:active,
+  button:not(:disabled).button-green.button-push:active {
     box-shadow: 10px 10px 20px #247572 inset, -10px -10px 20px #309f9a inset; }
-  .button-green:active {
+  input[type="button"]:not(:disabled).button-green:active,
+  input[type="submit"]:not(:disabled).button-green:active,
+  input[type="reset"]:not(:disabled).button-green:active,
+  button:not(:disabled).button-green:active {
     box-shadow: 10px 10px 20px #24757290, -10px -10px 20px #309f9a90; }
-  .button-green.focus:focus {
+  input[type="button"]:not(:disabled).button-green.focus:focus,
+  input[type="submit"]:not(:disabled).button-green.focus:focus,
+  input[type="reset"]:not(:disabled).button-green.focus:focus,
+  button:not(:disabled).button-green.focus:focus {
     outline: 0;
     box-shadow: 10px 10px 20px #24757290, -10px -10px 20px #309f9a90; }
-  .button-green.button-bump:active {
+  input[type="button"]:not(:disabled).button-green.button-bump:active,
+  input[type="submit"]:not(:disabled).button-green.button-bump:active,
+  input[type="reset"]:not(:disabled).button-green.button-bump:active,
+  button:not(:disabled).button-green.button-bump:active {
     box-shadow: 10px 10px 20px #247572, -10px -10px 20px #309f9a, 10px 10px 20px #247572 inset, -10px -10px 20px #309f9a inset; }
-
-.button-red {
+input[type="button"]:not(:disabled).button-red,
+input[type="submit"]:not(:disabled).button-red,
+input[type="reset"]:not(:disabled).button-red,
+button:not(:disabled).button-red {
   content: '';
   box-shadow: 10px 10px 20px #9d1412, -10px -10px 20px #d51a18; }
-  .button-red.button-push:active {
+  input[type="button"]:not(:disabled).button-red.button-push:active,
+  input[type="submit"]:not(:disabled).button-red.button-push:active,
+  input[type="reset"]:not(:disabled).button-red.button-push:active,
+  button:not(:disabled).button-red.button-push:active {
     box-shadow: 10px 10px 20px #9d1412 inset, -10px -10px 20px #d51a18 inset; }
-  .button-red:active {
+  input[type="button"]:not(:disabled).button-red:active,
+  input[type="submit"]:not(:disabled).button-red:active,
+  input[type="reset"]:not(:disabled).button-red:active,
+  button:not(:disabled).button-red:active {
     box-shadow: 10px 10px 20px #9d141290, -10px -10px 20px #d51a1890; }
-  .button-red.focus:focus {
+  input[type="button"]:not(:disabled).button-red.focus:focus,
+  input[type="submit"]:not(:disabled).button-red.focus:focus,
+  input[type="reset"]:not(:disabled).button-red.focus:focus,
+  button:not(:disabled).button-red.focus:focus {
     outline: 0;
     box-shadow: 10px 10px 20px #9d141290, -10px -10px 20px #d51a1890; }
-  .button-red.button-bump:active {
+  input[type="button"]:not(:disabled).button-red.button-bump:active,
+  input[type="submit"]:not(:disabled).button-red.button-bump:active,
+  input[type="reset"]:not(:disabled).button-red.button-bump:active,
+  button:not(:disabled).button-red.button-bump:active {
     box-shadow: 10px 10px 20px #9d1412, -10px -10px 20px #d51a18, 10px 10px 20px #9d1412 inset, -10px -10px 20px #d51a18 inset; }
-
-.button-yellow {
+input[type="button"]:not(:disabled).button-yellow,
+input[type="submit"]:not(:disabled).button-yellow,
+input[type="reset"]:not(:disabled).button-yellow,
+button:not(:disabled).button-yellow {
   content: '';
   box-shadow: 10px 10px 20px #d9b15c, -10px -10px 20px #ffef7c; }
-  .button-yellow.button-push:active {
+  input[type="button"]:not(:disabled).button-yellow.button-push:active,
+  input[type="submit"]:not(:disabled).button-yellow.button-push:active,
+  input[type="reset"]:not(:disabled).button-yellow.button-push:active,
+  button:not(:disabled).button-yellow.button-push:active {
     box-shadow: 10px 10px 20px #d9b15c inset, -10px -10px 20px #ffef7c inset; }
-  .button-yellow:active {
+  input[type="button"]:not(:disabled).button-yellow:active,
+  input[type="submit"]:not(:disabled).button-yellow:active,
+  input[type="reset"]:not(:disabled).button-yellow:active,
+  button:not(:disabled).button-yellow:active {
     box-shadow: 10px 10px 20px #d9b15c90, -10px -10px 20px #ffef7c90; }
-  .button-yellow.focus:focus {
+  input[type="button"]:not(:disabled).button-yellow.focus:focus,
+  input[type="submit"]:not(:disabled).button-yellow.focus:focus,
+  input[type="reset"]:not(:disabled).button-yellow.focus:focus,
+  button:not(:disabled).button-yellow.focus:focus {
     outline: 0;
     box-shadow: 10px 10px 20px #d9b15c90, -10px -10px 20px #ffef7c90; }
-  .button-yellow.button-bump:active {
+  input[type="button"]:not(:disabled).button-yellow.button-bump:active,
+  input[type="submit"]:not(:disabled).button-yellow.button-bump:active,
+  input[type="reset"]:not(:disabled).button-yellow.button-bump:active,
+  button:not(:disabled).button-yellow.button-bump:active {
     box-shadow: 10px 10px 20px #d9b15c, -10px -10px 20px #ffef7c, 10px 10px 20px #d9b15c inset, -10px -10px 20px #ffef7c inset; }
 
-.colored-dark {
+input[type="button"]:not(:disabled).colored-dark,
+input[type="submit"]:not(:disabled).colored-dark,
+input[type="reset"]:not(:disabled).colored-dark,
+button:not(:disabled).colored-dark {
   background: #24282d;
   box-shadow: 10px 10px 20px #1f2226, -10px -10px 20px #292e34, inset 0 0 100px #00000020; }
-  .colored-dark:focus {
+  input[type="button"]:not(:disabled).colored-dark:focus,
+  input[type="submit"]:not(:disabled).colored-dark:focus,
+  input[type="reset"]:not(:disabled).colored-dark:focus,
+  button:not(:disabled).colored-dark:focus {
     box-shadow: 10px 10px 20px #1f2226, -10px -10px 20px #292e34, inset 0 0 50px #00000020; }
-
-.colored-light {
+input[type="button"]:not(:disabled).colored-light,
+input[type="submit"]:not(:disabled).colored-light,
+input[type="reset"]:not(:disabled).colored-light,
+button:not(:disabled).colored-light {
   background: #e1e8f0;
   box-shadow: 10px 10px 20px #bfc5cc, -10px -10px 20px #ffffff, inset 0 0 100px #00000020; }
-  .colored-light:focus {
+  input[type="button"]:not(:disabled).colored-light:focus,
+  input[type="submit"]:not(:disabled).colored-light:focus,
+  input[type="reset"]:not(:disabled).colored-light:focus,
+  button:not(:disabled).colored-light:focus {
     box-shadow: 10px 10px 20px #bfc5cc, -10px -10px 20px #ffffff, inset 0 0 50px #00000020; }
-
-.colored-blue {
+input[type="button"]:not(:disabled).colored-blue,
+input[type="submit"]:not(:disabled).colored-blue,
+input[type="reset"]:not(:disabled).colored-blue,
+button:not(:disabled).colored-blue {
   background: #017dd3;
   box-shadow: 10px 10px 20px #016ab3, -10px -10px 20px #0190f3, inset 0 0 100px #00000020; }
-  .colored-blue:focus {
+  input[type="button"]:not(:disabled).colored-blue:focus,
+  input[type="submit"]:not(:disabled).colored-blue:focus,
+  input[type="reset"]:not(:disabled).colored-blue:focus,
+  button:not(:disabled).colored-blue:focus {
     box-shadow: 10px 10px 20px #016ab3, -10px -10px 20px #0190f3, inset 0 0 50px #00000020; }
-
-.colored-green {
+input[type="button"]:not(:disabled).colored-green,
+input[type="submit"]:not(:disabled).colored-green,
+input[type="reset"]:not(:disabled).colored-green,
+button:not(:disabled).colored-green {
   background: #2a8a86;
   box-shadow: 10px 10px 20px #247572, -10px -10px 20px #309f9a, inset 0 0 100px #00000020; }
-  .colored-green:focus {
+  input[type="button"]:not(:disabled).colored-green:focus,
+  input[type="submit"]:not(:disabled).colored-green:focus,
+  input[type="reset"]:not(:disabled).colored-green:focus,
+  button:not(:disabled).colored-green:focus {
     box-shadow: 10px 10px 20px #247572, -10px -10px 20px #309f9a, inset 0 0 50px #00000020; }
-
-.colored-red {
+input[type="button"]:not(:disabled).colored-red,
+input[type="submit"]:not(:disabled).colored-red,
+input[type="reset"]:not(:disabled).colored-red,
+button:not(:disabled).colored-red {
   background: #b91715;
   box-shadow: 10px 10px 20px #9d1412, -10px -10px 20px #d51a18, inset 0 0 100px #00000020; }
-  .colored-red:focus {
+  input[type="button"]:not(:disabled).colored-red:focus,
+  input[type="submit"]:not(:disabled).colored-red:focus,
+  input[type="reset"]:not(:disabled).colored-red:focus,
+  button:not(:disabled).colored-red:focus {
     box-shadow: 10px 10px 20px #9d1412, -10px -10px 20px #d51a18, inset 0 0 50px #00000020; }
-
-.colored-yellow {
+input[type="button"]:not(:disabled).colored-yellow,
+input[type="submit"]:not(:disabled).colored-yellow,
+input[type="reset"]:not(:disabled).colored-yellow,
+button:not(:disabled).colored-yellow {
   background: #ffd06c;
   box-shadow: 10px 10px 20px #d9b15c, -10px -10px 20px #ffef7c, inset 0 0 100px #00000020; }
-  .colored-yellow:focus {
+  input[type="button"]:not(:disabled).colored-yellow:focus,
+  input[type="submit"]:not(:disabled).colored-yellow:focus,
+  input[type="reset"]:not(:disabled).colored-yellow:focus,
+  button:not(:disabled).colored-yellow:focus {
     box-shadow: 10px 10px 20px #d9b15c, -10px -10px 20px #ffef7c, inset 0 0 50px #00000020; }
 
-.smaller {
+input[type="button"]:not(:disabled).smaller,
+input[type="submit"]:not(:disabled).smaller,
+input[type="reset"]:not(:disabled).smaller,
+input[type="button"].smaller,
+input[type="submit"].smaller,
+input[type="reset"].smaller,
+button.smaller,
+button:not(:disabled).smaller {
   padding: 1rem;
   min-height: 2rem;
   min-width: 4rem; }
-
-.larger {
+input[type="button"]:not(:disabled).larger,
+input[type="submit"]:not(:disabled).larger,
+input[type="reset"]:not(:disabled).larger,
+input[type="button"].larger,
+input[type="submit"].larger,
+input[type="reset"].larger,
+button.larger,
+button:not(:disabled).larger {
   min-height: 5rem;
   min-width: 12rem; }
 

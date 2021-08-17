@@ -1,9 +1,18 @@
-.smaller{
-    padding: 1rem;
-    min-height: 2rem;
-    min-width: 4rem;
-}
-.larger{
-    min-height: 5rem;
-    min-width: 12rem;
+input[type="button"]:not(:disabled),
+input[type="submit"]:not(:disabled),
+input[type="reset"]:not(:disabled),
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button,
+button:not(:disabled){
+    &.smaller{
+        padding: 1rem;
+        min-height: 2rem;
+        min-width: 4rem;
+    }
+    &.larger{
+        min-height: 5rem;
+        min-width: 12rem;
+    }
 }
