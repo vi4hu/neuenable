@@ -4,7 +4,7 @@ input[type="reset"]:not(:disabled),
 button:not(:disabled){
     &.button{
         padding: 1rem;
-        margin: .5rem;
+        margin: .8rem .5rem;
         position: relative;
         min-height: 3rem;
         min-width: 5rem;
@@ -16,20 +16,36 @@ button:not(:disabled){
         border: 0;
         border-radius: .5rem;
         transition: box-shadow .05s ease, background-position .2s ease;
-        box-shadow: 10px 10px 20px #00000015, -10px -10px 20px #ffffff92;
+        box-shadow: 6px 6px 12px #bfc5cc, -6px -6px 12px #ffffff;
         cursor: pointer;
         &.button-round{
-            padding: .5rem 0 .5rem 0;
             position: relative;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-            content: '';
+            padding: 1%;
             min-height: 3rem;
             min-width: 3rem;
             max-height: 3rem;
             max-width: 3rem;
-            border-radius: 50%;
+            width:auto;
+            height:auto;
+            border-radius:50%;
+            -moz-border-radius:50%;
+            -webkit-border-radius:50%;
+            -khtml-border-radius: 50%;
+            text-align:center;
+            // content: '';
+            // top: 50%;
+            // transform: translateY(-20%);
+            i, span {
+                position: absolute;
+                width: 100%;
+                left: 0;
+                top: 50%;
+                line-height: 1rem;
+                height: 1rem;
+                font-size: 100%;
+                overflow: hidden;
+                transform: translateY(-50%);
+            }
         }
         &.hover--down{
             background: linear-gradient(to bottom, transparent 50%, #00000020 50%);
@@ -96,28 +112,28 @@ button:disabled{
                 content: '';
                 @each $key in $keys{
                     @if $key == box-shadow {
-                        #{$key}: 10px 10px 20px map-get(map-get($valuemap, $key), darker), -10px -10px 20px map-get(map-get($valuemap, $key), lighter);
+                        #{$key}: 6px 6px 12px map-get(map-get($valuemap, $key), darker), -6px -6px 12px map-get(map-get($valuemap, $key), lighter);
                         // &.colored{
-                        //     #{$key}: 10px 10px 20px map-get(map-get($valuemap, $key), darker), -10px -10px 20px map-get(map-get($valuemap, $key), lighter), inset 0 0 100px #00000020;
+                        //     #{$key}: 6px 6px 12px map-get(map-get($valuemap, $key), darker), -6px -6px 12px map-get(map-get($valuemap, $key), lighter), inset 0 0 100px #00000020;
                         // }
                         // &.colored-bump:active{
-                        //     #{$key}: 10px 10px 20px map-get(map-get($valuemap, $key), darker), -10px -10px 20px map-get(map-get($valuemap, $key), lighter), inset 0 0 50px #00000020;
+                        //     #{$key}: 6px 6px 12px map-get(map-get($valuemap, $key), darker), -6px -6px 12px map-get(map-get($valuemap, $key), lighter), inset 0 0 50px #00000020;
                         // }
                         // &.colored-bump:focus{
-                        //     #{$key}: 10px 10px 20px map-get(map-get($valuemap, $key), darker), -10px -10px 20px map-get(map-get($valuemap, $key), lighter), inset 0 0 50px #00000020;
+                        //     #{$key}: 6px 6px 12px map-get(map-get($valuemap, $key), darker), -6px -6px 12px map-get(map-get($valuemap, $key), lighter), inset 0 0 50px #00000020;
                         // }
                         &.button-push:active{
-                            #{$key}: 10px 10px 20px  map-get(map-get($valuemap, $key), darker) inset, -10px -10px 20px map-get(map-get($valuemap, $key), lighter) inset;
+                            #{$key}: 6px 6px 12px  map-get(map-get($valuemap, $key), darker) inset, -6px -6px 12px map-get(map-get($valuemap, $key), lighter) inset;
                         } 
                         &:active{
-                            #{$key}: 10px 10px 20px map-get(map-get($valuemap, $key), modd), -10px -10px 20px map-get(map-get($valuemap, $key), modl);
+                            #{$key}: 6px 6px 12px map-get(map-get($valuemap, $key), modd), -6px -6px 12px map-get(map-get($valuemap, $key), modl);
                         }
                         &.focus:focus{
                             outline: 0;
-                            #{$key}: 10px 10px 20px map-get(map-get($valuemap, $key), modd), -10px -10px 20px map-get(map-get($valuemap, $key), modl);
+                            #{$key}: 6px 6px 12px map-get(map-get($valuemap, $key), modd), -6px -6px 12px map-get(map-get($valuemap, $key), modl);
                         }
                         &.button-bump:active{
-                            #{$key}: 10px 10px 20px map-get(map-get($valuemap, $key), darker), -10px -10px 20px map-get(map-get($valuemap, $key), lighter), 10px 10px 20px map-get(map-get($valuemap, $key), darker) inset, -10px -10px 20px map-get(map-get($valuemap, $key), lighter) inset;
+                            #{$key}: 6px 6px 12px map-get(map-get($valuemap, $key), darker), -6px -6px 12px map-get(map-get($valuemap, $key), lighter), 6px 6px 12px map-get(map-get($valuemap, $key), darker) inset, -6px -6px 12px map-get(map-get($valuemap, $key), lighter) inset;
                         }
                     }
                 }
@@ -134,9 +150,9 @@ button:disabled{
             &.colored-#{$keymap}{
                 @each $key in $keys{
                     @if $key == box-shadow {
-                        #{$key}: 10px 10px 20px map-get(map-get($valuemap, $key), darker), -10px -10px 20px map-get(map-get($valuemap, $key), lighter), inset 0 0 100px #00000020;
+                        #{$key}: 6px 6px 12px map-get(map-get($valuemap, $key), darker), -6px -6px 12px map-get(map-get($valuemap, $key), lighter), inset 0 0 100px #00000020;
                         &:focus{
-                            #{$key}: 10px 10px 20px map-get(map-get($valuemap, $key), darker), -10px -10px 20px map-get(map-get($valuemap, $key), lighter), inset 0 0 30px #00000020;
+                            #{$key}: 6px 6px 12px map-get(map-get($valuemap, $key), darker), -6px -6px 12px map-get(map-get($valuemap, $key), lighter), inset 0 0 30px #00000020;
                         }
                     }
                     @else{

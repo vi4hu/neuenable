@@ -27,10 +27,10 @@ $base: (
 // top-left
 // bottom-left
 $angles:(
-    'tr':('x': -10px 10px, 'y': 10px -10px, 'm': 20px, 'ang': 45deg),
-    'br':('x': -10px -4px, 'y': 10px 10px, 'm': 20px, 'ang': 145deg),
-    'tl':('x': 10px 10px, 'y': -10px -10px, 'm': 20px, 'ang': 315deg),
-    'bl':('x': 10px -10px, 'y': -10px 10px, 'm': 20px, 'ang': 255deg)
+    'tr':('x': -6px 6px, 'y': 6px -6px, 'm': 12px, 'ang': 45deg),
+    'br':('x': -6px -4px, 'y': 6px 6px, 'm': 12px, 'ang': 145deg),
+    'tl':('x': 6px 6px, 'y': -6px -6px, 'm': 12px, 'ang': 315deg),
+    'bl':('x': 6px -6px, 'y': -6px 6px, 'm': 12px, 'ang': 255deg)
     );
 
 // default colors
