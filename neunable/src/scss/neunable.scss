@@ -1,3 +1,8 @@
+/*!
+ * Neunable v0.4.3
+ * Copyright 2021-2021 The Neunable Authors
+ * Licensed under MIT (https://github.com/rain-kun/neunable/blob/main/LICENSE)
+ */
 // map imports
 // @use './components/index' as *;
 // map imports
@@ -9,13 +14,13 @@
 @import './abstracts/maps';
 @import './abstracts/props';
 @import './components/mixins';
-.tl-light{
-    div.inherit{
-        background: inherit;
-        box-shadow: inherit;
-        border-color: inherit;
-    }
-}
+// .tl-light{
+//     div.inherit{
+//         background: inherit;
+//         box-shadow: inherit;
+//         border-color: inherit;
+//     }
+// }
 @include set_neumorph_singletons($colors, $bg-p, 'bg-', ! important);
 @include set_neumorph_singletons($colors, $text-p, 'text-', ! important);
 @include set_neumorph_singletons($curves, $curve-p, '', ! important);
