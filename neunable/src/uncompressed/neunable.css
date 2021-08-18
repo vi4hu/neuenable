@@ -22,28 +22,28 @@
   background: #ffd06c !important; }
 
 .text-dark {
-  color: #999; }
+  color: #999 !important; }
 
 .text-light {
-  color: #e1e8f0; }
+  color: #e1e8f0 !important; }
 
 .text-blue {
-  color: #4169e1; }
+  color: #4169e1 !important; }
 
 .text-green {
-  color: #67ff48; }
+  color: #67ff48 !important; }
 
 .text-red {
-  color: #ff0d45; }
+  color: #ff0d45 !important; }
 
 .text-yellow {
-  color: #ffe032; }
+  color: #ffe032 !important; }
 
 .text-black {
-  color: #000000; }
+  color: #000000 !important; }
 
 .text-white {
-  color: #ffffff; }
+  color: #ffffff !important; }
 
 .curve-1 {
   border-radius: 0.5rem !important; }
@@ -422,7 +422,7 @@ input[type="submit"]:not(:disabled).button,
 input[type="reset"]:not(:disabled).button,
 button:not(:disabled).button {
   padding: 1rem;
-  margin: .5rem;
+  margin: .8rem;
   position: relative;
   min-height: 3rem;
   min-width: 5rem;
@@ -440,17 +440,35 @@ button:not(:disabled).button {
   input[type="submit"]:not(:disabled).button.button-round,
   input[type="reset"]:not(:disabled).button.button-round,
   button:not(:disabled).button.button-round {
-    padding: .5rem 0 .5rem 0;
-    position: relative;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    content: '';
+    padding: 1%;
     min-height: 3rem;
     min-width: 3rem;
-    max-height: 3rem;
-    max-width: 3rem;
-    border-radius: 50%; }
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-20%); }
+    input[type="button"]:not(:disabled).button.button-round i, input[type="button"]:not(:disabled).button.button-round span,
+    input[type="submit"]:not(:disabled).button.button-round i,
+    input[type="submit"]:not(:disabled).button.button-round span,
+    input[type="reset"]:not(:disabled).button.button-round i,
+    input[type="reset"]:not(:disabled).button.button-round span,
+    button:not(:disabled).button.button-round i,
+    button:not(:disabled).button.button-round span {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 50%;
+      line-height: 1rem;
+      height: 1rem;
+      font-size: 100%;
+      overflow: hidden;
+      transform: translateY(-50%); }
   input[type="button"]:not(:disabled).button.hover--down,
   input[type="submit"]:not(:disabled).button.hover--down,
   input[type="reset"]:not(:disabled).button.hover--down,
