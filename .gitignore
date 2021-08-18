@@ -1,3 +1,4 @@
 # personal tests
 test/
 .sass-cache/
+.vscode/

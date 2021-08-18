@@ -1,0 +1,193 @@
+input[type="button"]:not(:disabled),
+input[type="submit"]:not(:disabled),
+input[type="reset"]:not(:disabled),
+button:not(:disabled){
+    &.button{
+        padding: 1rem;
+        margin: .8rem .5rem;
+        position: relative;
+        min-height: 3rem;
+        min-width: 5rem;
+        font-weight: bold;
+        color: inherit;
+        background: inherit;
+        font-size: 1rem;
+        border-color: #41353520 !important;
+        border: 0;
+        border-radius: .5rem;
+        transition: box-shadow .05s ease, background-position .2s ease;
+        box-shadow: 6px 6px 12px #bfc5cc, -6px -6px 12px #ffffff;
+        cursor: pointer;
+        &.button-round{
+            position: relative;
+            padding: 1%;
+            min-height: 3rem;
+            min-width: 3rem;
+            max-height: 3rem;
+            max-width: 3rem;
+            width:auto;
+            height:auto;
+            border-radius:50%;
+            -moz-border-radius:50%;
+            -webkit-border-radius:50%;
+            -khtml-border-radius: 50%;
+            text-align:center;
+            // content: '';
+            // top: 50%;
+            // transform: translateY(-20%);
+            i, span {
+                position: absolute;
+                width: 100%;
+                left: 0;
+                top: 50%;
+                line-height: 1rem;
+                height: 1rem;
+                font-size: 100%;
+                overflow: hidden;
+                transform: translateY(-50%);
+            }
+        }
+        &.hover--down{
+            background: linear-gradient(to bottom, transparent 50%, #00000020 50%);
+            background-size: 100% 200%;
+            background-position: left bottom;
+            &:hover{
+                background-position: right top;
+            }
+        }
+        &.hover--up{
+            background: linear-gradient(to bottom, transparent 50%, #00000020 50%);
+            background-size: 100% 200%;
+            background-position: left top;
+            &:hover{
+                background-position: right bottom;
+            }
+        }
+        &.hover--font{
+            &:hover{
+                color: black;
+            }
+        }
+        &.button-outline{
+            border: .1rem solid;
+            border-color: #00000020;
+        }
+        &.button-push:focus{
+            outline: 0;
+        }
+        &.button-bump:focus{
+            outline: 0;
+        }
+    }
+    
+}
+
+input[type="button"]:disabled,
+input[type="submit"]:disabled,
+input[type="reset"]:disabled,
+button:disabled{
+    padding: 1rem;
+    margin: .5rem;
+    position: relative;
+    min-height: 3rem;
+    min-width: 5rem;
+    font-weight: bold;
+    color: inherit;
+    font-size: 1rem;
+    border: 0;
+    border-radius: .5rem;
+    box-shadow: none;
+    background: #00000020;
+    border-color: #41353520 !important;
+    cursor: auto;
+}
+// mixin for generating button shadows
+@mixin set_button_styling($map, $keys){
+    input[type="button"]:not(:disabled),
+    input[type="submit"]:not(:disabled),
+    input[type="reset"]:not(:disabled),
+    button:not(:disabled){
+        @each $keymap, $valuemap in $map{
+            &.button-#{$keymap}{
+                content: '';
+                @each $key in $keys{
+                    @if $key == box-shadow {
+                        #{$key}: 6px 6px 12px map-get(map-get($valuemap, $key), darker), -6px -6px 12px map-get(map-get($valuemap, $key), lighter);
+                        // &.colored{
+                        //     #{$key}: 6px 6px 12px map-get(map-get($valuemap, $key), darker), -6px -6px 12px map-get(map-get($valuemap, $key), lighter), inset 0 0 100px #00000020;
+                        // }
+                        // &.colored-bump:active{
+                        //     #{$key}: 6px 6px 12px map-get(map-get($valuemap, $key), darker), -6px -6px 12px map-get(map-get($valuemap, $key), lighter), inset 0 0 50px #00000020;
+                        // }
+                        // &.colored-bump:focus{
+                        //     #{$key}: 6px 6px 12px map-get(map-get($valuemap, $key), darker), -6px -6px 12px map-get(map-get($valuemap, $key), lighter), inset 0 0 50px #00000020;
+                        // }
+                        &.button-push:active{
+                            #{$key}: 6px 6px 12px  map-get(map-get($valuemap, $key), darker) inset, -6px -6px 12px map-get(map-get($valuemap, $key), lighter) inset;
+                        } 
+                        &:active{
+                            #{$key}: 6px 6px 12px map-get(map-get($valuemap, $key), modd), -6px -6px 12px map-get(map-get($valuemap, $key), modl);
+                        }
+                        &.focus:focus{
+                            outline: 0;
+                            #{$key}: 6px 6px 12px map-get(map-get($valuemap, $key), modd), -6px -6px 12px map-get(map-get($valuemap, $key), modl);
+                        }
+                        &.button-bump:active{
+                            #{$key}: 6px 6px 12px map-get(map-get($valuemap, $key), darker), -6px -6px 12px map-get(map-get($valuemap, $key), lighter), 6px 6px 12px map-get(map-get($valuemap, $key), darker) inset, -6px -6px 12px map-get(map-get($valuemap, $key), lighter) inset;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@mixin set_button_colored($map, $keys){
+    input[type="button"]:not(:disabled),
+    input[type="submit"]:not(:disabled),
+    input[type="reset"]:not(:disabled),
+    button:not(:disabled){
+        @each $keymap, $valuemap in $map{
+            &.colored-#{$keymap}{
+                @each $key in $keys{
+                    @if $key == box-shadow {
+                        #{$key}: 6px 6px 12px map-get(map-get($valuemap, $key), darker), -6px -6px 12px map-get(map-get($valuemap, $key), lighter), inset 0 0 100px #00000020;
+                        &:focus{
+                            #{$key}: 6px 6px 12px map-get(map-get($valuemap, $key), darker), -6px -6px 12px map-get(map-get($valuemap, $key), lighter), inset 0 0 30px #00000020;
+                        }
+                    }
+                    @else{
+                        #{$key}: map-get($valuemap, $key);
+                    }
+                }
+            }
+            // .colored-#{$keymap}--inner{
+            //     @each $key in $keys{
+            //         // display: inherit;
+            //         // position: absolute;
+            //         padding: 1.4rem 1.4rem;
+            //         // content: '';
+            //         // margin: inherit;
+            //         height: 100%;
+            //         width: 100%;
+            //         // border: inherit;
+            //         border-radius: inherit;
+            //         transform: translate(-50%, -50%);
+            //         // @if $key == box-shadow {
+            //         //         #{$key}: inset 0 0 100px #00000020;
+            //         //         // &:focus{
+            //         //         //     #{$key}: inset 0 0 50px #00000020;
+            //         //         // }
+            //         // }
+            //         // @else{
+            //         //         #{$key}: map-get($valuemap, $key);
+            //         // }
+            //         background: map-get($valuemap, background);
+            //         // &:focus{
+            //         //     background: inherit;
+            //         // }
+            //     }
+            // }
+
+        }
+    }
+}
