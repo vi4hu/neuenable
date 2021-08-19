@@ -566,8 +566,8 @@ input[type=button]:not(:disabled).button,
 input[type=submit]:not(:disabled).button,
 input[type=reset]:not(:disabled).button,
 button:not(:disabled).button {
-  padding: 1rem;
-  margin: 0.8rem 0.5rem;
+  padding: 0.4rem 0.6rem;
+  margin: 0.4rem 0.4rem;
   position: relative;
   min-height: 3rem;
   min-width: 5rem;
@@ -586,19 +586,14 @@ input[type=button]:not(:disabled).button.button-round,
 input[type=submit]:not(:disabled).button.button-round,
 input[type=reset]:not(:disabled).button.button-round,
 button:not(:disabled).button.button-round {
-  position: relative;
-  padding: 1%;
   min-height: 3rem;
   min-width: 3rem;
   max-height: 3rem;
   max-width: 3rem;
-  width: auto;
-  height: auto;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   -khtml-border-radius: 50%;
-  text-align: center;
 }
 input[type=button]:not(:disabled).button.button-round i, input[type=button]:not(:disabled).button.button-round span,
 input[type=submit]:not(:disabled).button.button-round i,
@@ -607,15 +602,13 @@ input[type=reset]:not(:disabled).button.button-round i,
 input[type=reset]:not(:disabled).button.button-round span,
 button:not(:disabled).button.button-round i,
 button:not(:disabled).button.button-round span {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 50%;
-  line-height: 1rem;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
   height: 1rem;
-  font-size: 100%;
   overflow: hidden;
-  transform: translateY(-50%);
 }
 input[type=button]:not(:disabled).button.hover--down,
 input[type=submit]:not(:disabled).button.hover--down,
