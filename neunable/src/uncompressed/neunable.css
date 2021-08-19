@@ -562,10 +562,7 @@
   background: linear-gradient(255deg, #ffdf74, #e6bb61) !important;
 }
 
-input[type=button]:not(:disabled).button,
-input[type=submit]:not(:disabled).button,
-input[type=reset]:not(:disabled).button,
-button:not(:disabled).button {
+.button {
   padding: 0.4rem 0.6rem;
   margin: 0.4rem 0.4rem;
   position: relative;
@@ -574,6 +571,7 @@ button:not(:disabled).button {
   font-weight: bold;
   color: inherit;
   background: inherit;
+  outline: 0;
   font-size: 1rem;
   border-color: #41353520 !important;
   border: 0;
@@ -582,10 +580,7 @@ button:not(:disabled).button {
   box-shadow: 6px 6px 12px #bfc5cc, -6px -6px 12px #ffffff;
   cursor: pointer;
 }
-input[type=button]:not(:disabled).button.button-round,
-input[type=submit]:not(:disabled).button.button-round,
-input[type=reset]:not(:disabled).button.button-round,
-button:not(:disabled).button.button-round {
+.button.button-round {
   min-height: 3rem;
   min-width: 3rem;
   max-height: 3rem;
@@ -595,13 +590,7 @@ button:not(:disabled).button.button-round {
   -webkit-border-radius: 50%;
   -khtml-border-radius: 50%;
 }
-input[type=button]:not(:disabled).button.button-round i, input[type=button]:not(:disabled).button.button-round span,
-input[type=submit]:not(:disabled).button.button-round i,
-input[type=submit]:not(:disabled).button.button-round span,
-input[type=reset]:not(:disabled).button.button-round i,
-input[type=reset]:not(:disabled).button.button-round span,
-button:not(:disabled).button.button-round i,
-button:not(:disabled).button.button-round span {
+.button.button-round i, .button.button-round span {
   margin: 0;
   padding: 0;
   justify-content: center;
@@ -610,64 +599,37 @@ button:not(:disabled).button.button-round span {
   height: 1rem;
   overflow: hidden;
 }
-input[type=button]:not(:disabled).button.hover--down,
-input[type=submit]:not(:disabled).button.hover--down,
-input[type=reset]:not(:disabled).button.hover--down,
-button:not(:disabled).button.hover--down {
+.button.hover--down {
   background: linear-gradient(to bottom, transparent 50%, #00000020 50%);
   background-size: 100% 200%;
   background-position: left bottom;
 }
-input[type=button]:not(:disabled).button.hover--down:hover,
-input[type=submit]:not(:disabled).button.hover--down:hover,
-input[type=reset]:not(:disabled).button.hover--down:hover,
-button:not(:disabled).button.hover--down:hover {
+.button.hover--down:hover {
   background-position: right top;
 }
-input[type=button]:not(:disabled).button.hover--up,
-input[type=submit]:not(:disabled).button.hover--up,
-input[type=reset]:not(:disabled).button.hover--up,
-button:not(:disabled).button.hover--up {
+.button.hover--up {
   background: linear-gradient(to bottom, transparent 50%, #00000020 50%);
   background-size: 100% 200%;
   background-position: left top;
 }
-input[type=button]:not(:disabled).button.hover--up:hover,
-input[type=submit]:not(:disabled).button.hover--up:hover,
-input[type=reset]:not(:disabled).button.hover--up:hover,
-button:not(:disabled).button.hover--up:hover {
+.button.hover--up:hover {
   background-position: right bottom;
 }
-input[type=button]:not(:disabled).button.hover--font:hover,
-input[type=submit]:not(:disabled).button.hover--font:hover,
-input[type=reset]:not(:disabled).button.hover--font:hover,
-button:not(:disabled).button.hover--font:hover {
+.button.hover--font:hover {
   color: black;
 }
-input[type=button]:not(:disabled).button.button-outline,
-input[type=submit]:not(:disabled).button.button-outline,
-input[type=reset]:not(:disabled).button.button-outline,
-button:not(:disabled).button.button-outline {
+.button.button-outline {
   border: 0.1rem solid;
   border-color: #00000020;
 }
-input[type=button]:not(:disabled).button.button-push:focus,
-input[type=submit]:not(:disabled).button.button-push:focus,
-input[type=reset]:not(:disabled).button.button-push:focus,
-button:not(:disabled).button.button-push:focus {
+.button.button-push:focus {
   outline: 0;
 }
-input[type=button]:not(:disabled).button.button-bump:focus,
-input[type=submit]:not(:disabled).button.button-bump:focus,
-input[type=reset]:not(:disabled).button.button-bump:focus,
-button:not(:disabled).button.button-bump:focus {
+.button.button-bump:focus {
   outline: 0;
 }
 
-input[type=button]:disabled,
-input[type=submit]:disabled,
-input[type=reset]:disabled,
-button:disabled {
+button:disabled.button {
   padding: 1rem;
   margin: 0.5rem;
   position: relative;
@@ -684,276 +646,402 @@ button:disabled {
   cursor: auto;
 }
 
-input[type=button]:not(:disabled).button-dark,
-input[type=submit]:not(:disabled).button-dark,
-input[type=reset]:not(:disabled).button-dark,
-button:not(:disabled).button-dark {
+.button-dark {
   content: "";
   box-shadow: 6px 6px 12px #1f2226, -6px -6px 12px #292e34;
 }
-input[type=button]:not(:disabled).button-dark.button-push:active,
-input[type=submit]:not(:disabled).button-dark.button-push:active,
-input[type=reset]:not(:disabled).button-dark.button-push:active,
-button:not(:disabled).button-dark.button-push:active {
+.button-dark.button-push:active {
   box-shadow: 6px 6px 12px #1f2226 inset, -6px -6px 12px #292e34 inset;
 }
-input[type=button]:not(:disabled).button-dark:active,
-input[type=submit]:not(:disabled).button-dark:active,
-input[type=reset]:not(:disabled).button-dark:active,
-button:not(:disabled).button-dark:active {
+.button-dark:active {
   box-shadow: 6px 6px 12px #1f222690, -6px -6px 12px #292e3490;
 }
-input[type=button]:not(:disabled).button-dark.focus:focus,
-input[type=submit]:not(:disabled).button-dark.focus:focus,
-input[type=reset]:not(:disabled).button-dark.focus:focus,
-button:not(:disabled).button-dark.focus:focus {
+.button-dark.focus:focus {
   outline: 0;
   box-shadow: 6px 6px 12px #1f222690, -6px -6px 12px #292e3490;
 }
-input[type=button]:not(:disabled).button-dark.button-bump:active,
-input[type=submit]:not(:disabled).button-dark.button-bump:active,
-input[type=reset]:not(:disabled).button-dark.button-bump:active,
-button:not(:disabled).button-dark.button-bump:active {
+.button-dark.button-bump:active {
   box-shadow: 6px 6px 12px #1f2226, -6px -6px 12px #292e34, 6px 6px 12px #1f2226 inset, -6px -6px 12px #292e34 inset;
 }
-input[type=button]:not(:disabled).button-light,
-input[type=submit]:not(:disabled).button-light,
-input[type=reset]:not(:disabled).button-light,
-button:not(:disabled).button-light {
+
+.button-light {
   content: "";
   box-shadow: 6px 6px 12px #bfc5cc, -6px -6px 12px #ffffff;
 }
-input[type=button]:not(:disabled).button-light.button-push:active,
-input[type=submit]:not(:disabled).button-light.button-push:active,
-input[type=reset]:not(:disabled).button-light.button-push:active,
-button:not(:disabled).button-light.button-push:active {
+.button-light.button-push:active {
   box-shadow: 6px 6px 12px #bfc5cc inset, -6px -6px 12px #ffffff inset;
 }
-input[type=button]:not(:disabled).button-light:active,
-input[type=submit]:not(:disabled).button-light:active,
-input[type=reset]:not(:disabled).button-light:active,
-button:not(:disabled).button-light:active {
+.button-light:active {
   box-shadow: 6px 6px 12px #bfc5cc90, -6px -6px 12px #ffffff90;
 }
-input[type=button]:not(:disabled).button-light.focus:focus,
-input[type=submit]:not(:disabled).button-light.focus:focus,
-input[type=reset]:not(:disabled).button-light.focus:focus,
-button:not(:disabled).button-light.focus:focus {
+.button-light.focus:focus {
   outline: 0;
   box-shadow: 6px 6px 12px #bfc5cc90, -6px -6px 12px #ffffff90;
 }
-input[type=button]:not(:disabled).button-light.button-bump:active,
-input[type=submit]:not(:disabled).button-light.button-bump:active,
-input[type=reset]:not(:disabled).button-light.button-bump:active,
-button:not(:disabled).button-light.button-bump:active {
+.button-light.button-bump:active {
   box-shadow: 6px 6px 12px #bfc5cc, -6px -6px 12px #ffffff, 6px 6px 12px #bfc5cc inset, -6px -6px 12px #ffffff inset;
 }
-input[type=button]:not(:disabled).button-blue,
-input[type=submit]:not(:disabled).button-blue,
-input[type=reset]:not(:disabled).button-blue,
-button:not(:disabled).button-blue {
+
+.button-blue {
   content: "";
   box-shadow: 6px 6px 12px #016ab3, -6px -6px 12px #0190f3;
 }
-input[type=button]:not(:disabled).button-blue.button-push:active,
-input[type=submit]:not(:disabled).button-blue.button-push:active,
-input[type=reset]:not(:disabled).button-blue.button-push:active,
-button:not(:disabled).button-blue.button-push:active {
+.button-blue.button-push:active {
   box-shadow: 6px 6px 12px #016ab3 inset, -6px -6px 12px #0190f3 inset;
 }
-input[type=button]:not(:disabled).button-blue:active,
-input[type=submit]:not(:disabled).button-blue:active,
-input[type=reset]:not(:disabled).button-blue:active,
-button:not(:disabled).button-blue:active {
+.button-blue:active {
   box-shadow: 6px 6px 12px #016ab390, -6px -6px 12px #0190f390;
 }
-input[type=button]:not(:disabled).button-blue.focus:focus,
-input[type=submit]:not(:disabled).button-blue.focus:focus,
-input[type=reset]:not(:disabled).button-blue.focus:focus,
-button:not(:disabled).button-blue.focus:focus {
+.button-blue.focus:focus {
   outline: 0;
   box-shadow: 6px 6px 12px #016ab390, -6px -6px 12px #0190f390;
 }
-input[type=button]:not(:disabled).button-blue.button-bump:active,
-input[type=submit]:not(:disabled).button-blue.button-bump:active,
-input[type=reset]:not(:disabled).button-blue.button-bump:active,
-button:not(:disabled).button-blue.button-bump:active {
+.button-blue.button-bump:active {
   box-shadow: 6px 6px 12px #016ab3, -6px -6px 12px #0190f3, 6px 6px 12px #016ab3 inset, -6px -6px 12px #0190f3 inset;
 }
-input[type=button]:not(:disabled).button-green,
-input[type=submit]:not(:disabled).button-green,
-input[type=reset]:not(:disabled).button-green,
-button:not(:disabled).button-green {
+
+.button-green {
   content: "";
   box-shadow: 6px 6px 12px #247572, -6px -6px 12px #309f9a;
 }
-input[type=button]:not(:disabled).button-green.button-push:active,
-input[type=submit]:not(:disabled).button-green.button-push:active,
-input[type=reset]:not(:disabled).button-green.button-push:active,
-button:not(:disabled).button-green.button-push:active {
+.button-green.button-push:active {
   box-shadow: 6px 6px 12px #247572 inset, -6px -6px 12px #309f9a inset;
 }
-input[type=button]:not(:disabled).button-green:active,
-input[type=submit]:not(:disabled).button-green:active,
-input[type=reset]:not(:disabled).button-green:active,
-button:not(:disabled).button-green:active {
+.button-green:active {
   box-shadow: 6px 6px 12px #24757290, -6px -6px 12px #309f9a90;
 }
-input[type=button]:not(:disabled).button-green.focus:focus,
-input[type=submit]:not(:disabled).button-green.focus:focus,
-input[type=reset]:not(:disabled).button-green.focus:focus,
-button:not(:disabled).button-green.focus:focus {
+.button-green.focus:focus {
   outline: 0;
   box-shadow: 6px 6px 12px #24757290, -6px -6px 12px #309f9a90;
 }
-input[type=button]:not(:disabled).button-green.button-bump:active,
-input[type=submit]:not(:disabled).button-green.button-bump:active,
-input[type=reset]:not(:disabled).button-green.button-bump:active,
-button:not(:disabled).button-green.button-bump:active {
+.button-green.button-bump:active {
   box-shadow: 6px 6px 12px #247572, -6px -6px 12px #309f9a, 6px 6px 12px #247572 inset, -6px -6px 12px #309f9a inset;
 }
-input[type=button]:not(:disabled).button-red,
-input[type=submit]:not(:disabled).button-red,
-input[type=reset]:not(:disabled).button-red,
-button:not(:disabled).button-red {
+
+.button-red {
   content: "";
   box-shadow: 6px 6px 12px #9d1412, -6px -6px 12px #d51a18;
 }
-input[type=button]:not(:disabled).button-red.button-push:active,
-input[type=submit]:not(:disabled).button-red.button-push:active,
-input[type=reset]:not(:disabled).button-red.button-push:active,
-button:not(:disabled).button-red.button-push:active {
+.button-red.button-push:active {
   box-shadow: 6px 6px 12px #9d1412 inset, -6px -6px 12px #d51a18 inset;
 }
-input[type=button]:not(:disabled).button-red:active,
-input[type=submit]:not(:disabled).button-red:active,
-input[type=reset]:not(:disabled).button-red:active,
-button:not(:disabled).button-red:active {
+.button-red:active {
   box-shadow: 6px 6px 12px #9d141290, -6px -6px 12px #d51a1890;
 }
-input[type=button]:not(:disabled).button-red.focus:focus,
-input[type=submit]:not(:disabled).button-red.focus:focus,
-input[type=reset]:not(:disabled).button-red.focus:focus,
-button:not(:disabled).button-red.focus:focus {
+.button-red.focus:focus {
   outline: 0;
   box-shadow: 6px 6px 12px #9d141290, -6px -6px 12px #d51a1890;
 }
-input[type=button]:not(:disabled).button-red.button-bump:active,
-input[type=submit]:not(:disabled).button-red.button-bump:active,
-input[type=reset]:not(:disabled).button-red.button-bump:active,
-button:not(:disabled).button-red.button-bump:active {
+.button-red.button-bump:active {
   box-shadow: 6px 6px 12px #9d1412, -6px -6px 12px #d51a18, 6px 6px 12px #9d1412 inset, -6px -6px 12px #d51a18 inset;
 }
-input[type=button]:not(:disabled).button-yellow,
-input[type=submit]:not(:disabled).button-yellow,
-input[type=reset]:not(:disabled).button-yellow,
-button:not(:disabled).button-yellow {
+
+.button-yellow {
   content: "";
   box-shadow: 6px 6px 12px #d9b15c, -6px -6px 12px #ffef7c;
 }
-input[type=button]:not(:disabled).button-yellow.button-push:active,
-input[type=submit]:not(:disabled).button-yellow.button-push:active,
-input[type=reset]:not(:disabled).button-yellow.button-push:active,
-button:not(:disabled).button-yellow.button-push:active {
+.button-yellow.button-push:active {
   box-shadow: 6px 6px 12px #d9b15c inset, -6px -6px 12px #ffef7c inset;
 }
-input[type=button]:not(:disabled).button-yellow:active,
-input[type=submit]:not(:disabled).button-yellow:active,
-input[type=reset]:not(:disabled).button-yellow:active,
-button:not(:disabled).button-yellow:active {
+.button-yellow:active {
   box-shadow: 6px 6px 12px #d9b15c90, -6px -6px 12px #ffef7c90;
 }
-input[type=button]:not(:disabled).button-yellow.focus:focus,
-input[type=submit]:not(:disabled).button-yellow.focus:focus,
-input[type=reset]:not(:disabled).button-yellow.focus:focus,
-button:not(:disabled).button-yellow.focus:focus {
+.button-yellow.focus:focus {
   outline: 0;
   box-shadow: 6px 6px 12px #d9b15c90, -6px -6px 12px #ffef7c90;
 }
-input[type=button]:not(:disabled).button-yellow.button-bump:active,
-input[type=submit]:not(:disabled).button-yellow.button-bump:active,
-input[type=reset]:not(:disabled).button-yellow.button-bump:active,
-button:not(:disabled).button-yellow.button-bump:active {
+.button-yellow.button-bump:active {
   box-shadow: 6px 6px 12px #d9b15c, -6px -6px 12px #ffef7c, 6px 6px 12px #d9b15c inset, -6px -6px 12px #ffef7c inset;
 }
 
-input[type=button]:not(:disabled).colored-dark,
-input[type=submit]:not(:disabled).colored-dark,
-input[type=reset]:not(:disabled).colored-dark,
-button:not(:disabled).colored-dark {
+.colored-dark {
   background: #24282d;
   box-shadow: 6px 6px 12px #1f2226, -6px -6px 12px #292e34, inset 0 0 100px #00000020;
 }
-input[type=button]:not(:disabled).colored-dark:focus,
-input[type=submit]:not(:disabled).colored-dark:focus,
-input[type=reset]:not(:disabled).colored-dark:focus,
-button:not(:disabled).colored-dark:focus {
+.colored-dark:focus {
   box-shadow: 6px 6px 12px #1f2226, -6px -6px 12px #292e34, inset 0 0 30px #00000020;
 }
-input[type=button]:not(:disabled).colored-light,
-input[type=submit]:not(:disabled).colored-light,
-input[type=reset]:not(:disabled).colored-light,
-button:not(:disabled).colored-light {
+
+.colored-light {
   background: #e1e8f0;
   box-shadow: 6px 6px 12px #bfc5cc, -6px -6px 12px #ffffff, inset 0 0 100px #00000020;
 }
-input[type=button]:not(:disabled).colored-light:focus,
-input[type=submit]:not(:disabled).colored-light:focus,
-input[type=reset]:not(:disabled).colored-light:focus,
-button:not(:disabled).colored-light:focus {
+.colored-light:focus {
   box-shadow: 6px 6px 12px #bfc5cc, -6px -6px 12px #ffffff, inset 0 0 30px #00000020;
 }
-input[type=button]:not(:disabled).colored-blue,
-input[type=submit]:not(:disabled).colored-blue,
-input[type=reset]:not(:disabled).colored-blue,
-button:not(:disabled).colored-blue {
+
+.colored-blue {
   background: #017dd3;
   box-shadow: 6px 6px 12px #016ab3, -6px -6px 12px #0190f3, inset 0 0 100px #00000020;
 }
-input[type=button]:not(:disabled).colored-blue:focus,
-input[type=submit]:not(:disabled).colored-blue:focus,
-input[type=reset]:not(:disabled).colored-blue:focus,
-button:not(:disabled).colored-blue:focus {
+.colored-blue:focus {
   box-shadow: 6px 6px 12px #016ab3, -6px -6px 12px #0190f3, inset 0 0 30px #00000020;
 }
-input[type=button]:not(:disabled).colored-green,
-input[type=submit]:not(:disabled).colored-green,
-input[type=reset]:not(:disabled).colored-green,
-button:not(:disabled).colored-green {
+
+.colored-green {
   background: #2a8a86;
   box-shadow: 6px 6px 12px #247572, -6px -6px 12px #309f9a, inset 0 0 100px #00000020;
 }
-input[type=button]:not(:disabled).colored-green:focus,
-input[type=submit]:not(:disabled).colored-green:focus,
-input[type=reset]:not(:disabled).colored-green:focus,
-button:not(:disabled).colored-green:focus {
+.colored-green:focus {
   box-shadow: 6px 6px 12px #247572, -6px -6px 12px #309f9a, inset 0 0 30px #00000020;
 }
-input[type=button]:not(:disabled).colored-red,
-input[type=submit]:not(:disabled).colored-red,
-input[type=reset]:not(:disabled).colored-red,
-button:not(:disabled).colored-red {
+
+.colored-red {
   background: #b91715;
   box-shadow: 6px 6px 12px #9d1412, -6px -6px 12px #d51a18, inset 0 0 100px #00000020;
 }
-input[type=button]:not(:disabled).colored-red:focus,
-input[type=submit]:not(:disabled).colored-red:focus,
-input[type=reset]:not(:disabled).colored-red:focus,
-button:not(:disabled).colored-red:focus {
+.colored-red:focus {
   box-shadow: 6px 6px 12px #9d1412, -6px -6px 12px #d51a18, inset 0 0 30px #00000020;
 }
-input[type=button]:not(:disabled).colored-yellow,
-input[type=submit]:not(:disabled).colored-yellow,
-input[type=reset]:not(:disabled).colored-yellow,
-button:not(:disabled).colored-yellow {
+
+.colored-yellow {
   background: #ffd06c;
   box-shadow: 6px 6px 12px #d9b15c, -6px -6px 12px #ffef7c, inset 0 0 100px #00000020;
 }
-input[type=button]:not(:disabled).colored-yellow:focus,
-input[type=submit]:not(:disabled).colored-yellow:focus,
-input[type=reset]:not(:disabled).colored-yellow:focus,
-button:not(:disabled).colored-yellow:focus {
+.colored-yellow:focus {
   box-shadow: 6px 6px 12px #d9b15c, -6px -6px 12px #ffef7c, inset 0 0 30px #00000020;
+}
+
+.input {
+  margin: 0.4rem 0.3rem;
+  padding: 0.2rem;
+  outline: 0;
+  min-height: 2rem;
+  min-width: 4rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: inherit;
+  background-color: inherit;
+  border: 0;
+  border-color: #41353520 !important;
+  border-radius: 0.5rem;
+  transition: box-shadow 0.05s ease;
+  box-shadow: 2px 2px 4px #bfc5cc, -2px -2px 4px #ffffff;
+}
+.input.input-push:focus {
+  outline: 0;
+}
+.input.input-bump:focus {
+  outline: 0;
+}
+
+input[type=checkbox]:not(:disabled).input,
+input[type=radio]:not(:disabled).input {
+  position: relative;
+  margin: 0.4rem 0.4rem;
+  padding: 0.5rem;
+  outline: 0;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  border: 0;
+  border-color: #41353520 !important;
+  transition: box-shadow 0.05s ease;
+  box-shadow: 2px 2px 4px #bfc5cc, -2px -2px 4px #ffffff;
+}
+input[type=checkbox]:not(:disabled):focus,
+input[type=radio]:not(:disabled):focus {
+  outline: 0;
+}
+
+input[type=button]:disabled.input,
+input[type=submit]:disabled.input,
+input[type=reset]:disabled.input,
+input[type=date]:disabled.input,
+input[type=datetime-local]:disabled.input,
+input[type=email]:disabled.input,
+input[type=month]:disabled.input,
+input[type=number]:disabled.input,
+input[type=password]:disabled.input,
+input[type=search]:disabled.input,
+input[type=tel]:disabled.input,
+input[type=text]:disabled.input,
+input[type=time]:disabled.input,
+input[type=url]:disabled.input,
+input[type=week]:disabled.input {
+  margin: 0.4rem 0.3rem;
+  padding: 0.2rem;
+  color: inherit;
+  background-color: inherit;
+  border: 0;
+  border-radius: 0.5rem;
+  box-shadow: none;
+  background: #00000020;
+  border-color: #41353520 !important;
+  cursor: auto;
+}
+
+.input-dark {
+  content: "";
+  box-shadow: 2px 2px 4px #1f2226, -2px -2px 4px #292e34;
+}
+.input-dark.button-push:active {
+  box-shadow: 2px 2px 4px #1f2226 inset, -2px -2px 4px #292e34 inset;
+}
+.input-dark:active {
+  box-shadow: 2px 2px 4px #1f222690, -2px -2px 4px #292e3490;
+}
+.input-dark.focus:focus {
+  outline: 0;
+  box-shadow: 2px 2px 4px #1f222690, -2px -2px 4px #292e3490;
+}
+.input-dark.button-bump:active {
+  box-shadow: 2px 2px 4px #1f2226, -2px -2px 4px #292e34, 2px 2px 4px #1f2226 inset, -2px -2px 4px #292e34 inset;
+}
+
+.input-light {
+  content: "";
+  box-shadow: 2px 2px 4px #bfc5cc, -2px -2px 4px #ffffff;
+}
+.input-light.button-push:active {
+  box-shadow: 2px 2px 4px #bfc5cc inset, -2px -2px 4px #ffffff inset;
+}
+.input-light:active {
+  box-shadow: 2px 2px 4px #bfc5cc90, -2px -2px 4px #ffffff90;
+}
+.input-light.focus:focus {
+  outline: 0;
+  box-shadow: 2px 2px 4px #bfc5cc90, -2px -2px 4px #ffffff90;
+}
+.input-light.button-bump:active {
+  box-shadow: 2px 2px 4px #bfc5cc, -2px -2px 4px #ffffff, 2px 2px 4px #bfc5cc inset, -2px -2px 4px #ffffff inset;
+}
+
+.input-blue {
+  content: "";
+  box-shadow: 2px 2px 4px #016ab3, -2px -2px 4px #0190f3;
+}
+.input-blue.button-push:active {
+  box-shadow: 2px 2px 4px #016ab3 inset, -2px -2px 4px #0190f3 inset;
+}
+.input-blue:active {
+  box-shadow: 2px 2px 4px #016ab390, -2px -2px 4px #0190f390;
+}
+.input-blue.focus:focus {
+  outline: 0;
+  box-shadow: 2px 2px 4px #016ab390, -2px -2px 4px #0190f390;
+}
+.input-blue.button-bump:active {
+  box-shadow: 2px 2px 4px #016ab3, -2px -2px 4px #0190f3, 2px 2px 4px #016ab3 inset, -2px -2px 4px #0190f3 inset;
+}
+
+.input-green {
+  content: "";
+  box-shadow: 2px 2px 4px #247572, -2px -2px 4px #309f9a;
+}
+.input-green.button-push:active {
+  box-shadow: 2px 2px 4px #247572 inset, -2px -2px 4px #309f9a inset;
+}
+.input-green:active {
+  box-shadow: 2px 2px 4px #24757290, -2px -2px 4px #309f9a90;
+}
+.input-green.focus:focus {
+  outline: 0;
+  box-shadow: 2px 2px 4px #24757290, -2px -2px 4px #309f9a90;
+}
+.input-green.button-bump:active {
+  box-shadow: 2px 2px 4px #247572, -2px -2px 4px #309f9a, 2px 2px 4px #247572 inset, -2px -2px 4px #309f9a inset;
+}
+
+.input-red {
+  content: "";
+  box-shadow: 2px 2px 4px #9d1412, -2px -2px 4px #d51a18;
+}
+.input-red.button-push:active {
+  box-shadow: 2px 2px 4px #9d1412 inset, -2px -2px 4px #d51a18 inset;
+}
+.input-red:active {
+  box-shadow: 2px 2px 4px #9d141290, -2px -2px 4px #d51a1890;
+}
+.input-red.focus:focus {
+  outline: 0;
+  box-shadow: 2px 2px 4px #9d141290, -2px -2px 4px #d51a1890;
+}
+.input-red.button-bump:active {
+  box-shadow: 2px 2px 4px #9d1412, -2px -2px 4px #d51a18, 2px 2px 4px #9d1412 inset, -2px -2px 4px #d51a18 inset;
+}
+
+.input-yellow {
+  content: "";
+  box-shadow: 2px 2px 4px #d9b15c, -2px -2px 4px #ffef7c;
+}
+.input-yellow.button-push:active {
+  box-shadow: 2px 2px 4px #d9b15c inset, -2px -2px 4px #ffef7c inset;
+}
+.input-yellow:active {
+  box-shadow: 2px 2px 4px #d9b15c90, -2px -2px 4px #ffef7c90;
+}
+.input-yellow.focus:focus {
+  outline: 0;
+  box-shadow: 2px 2px 4px #d9b15c90, -2px -2px 4px #ffef7c90;
+}
+.input-yellow.button-bump:active {
+  box-shadow: 2px 2px 4px #d9b15c, -2px -2px 4px #ffef7c, 2px 2px 4px #d9b15c inset, -2px -2px 4px #ffef7c inset;
+}
+
+.input-dark {
+  content: "";
+  box-shadow: 2px 2px 4px #1f2226, -2px -2px 4px #292e34;
+}
+.input-dark.input-push {
+  box-shadow: 2px 2px 4px #1f2226 inset, -2px -2px 4px #292e34 inset;
+}
+.input-dark.input-bump {
+  box-shadow: 2px 2px 4px #1f2226, -2px -2px 4px #292e34, 2px 2px 4px #1f2226 inset, -2px -2px 4px #292e34 inset;
+}
+
+.input-light {
+  content: "";
+  box-shadow: 2px 2px 4px #bfc5cc, -2px -2px 4px #ffffff;
+}
+.input-light.input-push {
+  box-shadow: 2px 2px 4px #bfc5cc inset, -2px -2px 4px #ffffff inset;
+}
+.input-light.input-bump {
+  box-shadow: 2px 2px 4px #bfc5cc, -2px -2px 4px #ffffff, 2px 2px 4px #bfc5cc inset, -2px -2px 4px #ffffff inset;
+}
+
+.input-blue {
+  content: "";
+  box-shadow: 2px 2px 4px #016ab3, -2px -2px 4px #0190f3;
+}
+.input-blue.input-push {
+  box-shadow: 2px 2px 4px #016ab3 inset, -2px -2px 4px #0190f3 inset;
+}
+.input-blue.input-bump {
+  box-shadow: 2px 2px 4px #016ab3, -2px -2px 4px #0190f3, 2px 2px 4px #016ab3 inset, -2px -2px 4px #0190f3 inset;
+}
+
+.input-green {
+  content: "";
+  box-shadow: 2px 2px 4px #247572, -2px -2px 4px #309f9a;
+}
+.input-green.input-push {
+  box-shadow: 2px 2px 4px #247572 inset, -2px -2px 4px #309f9a inset;
+}
+.input-green.input-bump {
+  box-shadow: 2px 2px 4px #247572, -2px -2px 4px #309f9a, 2px 2px 4px #247572 inset, -2px -2px 4px #309f9a inset;
+}
+
+.input-red {
+  content: "";
+  box-shadow: 2px 2px 4px #9d1412, -2px -2px 4px #d51a18;
+}
+.input-red.input-push {
+  box-shadow: 2px 2px 4px #9d1412 inset, -2px -2px 4px #d51a18 inset;
+}
+.input-red.input-bump {
+  box-shadow: 2px 2px 4px #9d1412, -2px -2px 4px #d51a18, 2px 2px 4px #9d1412 inset, -2px -2px 4px #d51a18 inset;
+}
+
+.input-yellow {
+  content: "";
+  box-shadow: 2px 2px 4px #d9b15c, -2px -2px 4px #ffef7c;
+}
+.input-yellow.input-push {
+  box-shadow: 2px 2px 4px #d9b15c inset, -2px -2px 4px #ffef7c inset;
+}
+.input-yellow.input-bump {
+  box-shadow: 2px 2px 4px #d9b15c, -2px -2px 4px #ffef7c, 2px 2px 4px #d9b15c inset, -2px -2px 4px #ffef7c inset;
 }
 
 input[type=button]:not(:disabled).smaller,

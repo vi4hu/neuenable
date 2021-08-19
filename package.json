@@ -1,6 +1,6 @@
 {
   "name": "neubable",
-  "version": "0.3.2",
+  "version": "0.4.4",
   "description": "create neumorphic style elements",
   "main": "neunable/src/neunable.js",
   "directories": {

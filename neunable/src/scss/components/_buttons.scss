@@ -1,8 +1,8 @@
-input[type="button"]:not(:disabled),
-input[type="submit"]:not(:disabled),
-input[type="reset"]:not(:disabled),
-button:not(:disabled){
-    &.button{
+// input[type="button"]:not(:disabled),
+// input[type="submit"]:not(:disabled),
+// input[type="reset"]:not(:disabled),
+// button:not(:disabled){
+    .button{
         padding: .4rem .6rem;
         margin: .4rem .4rem;
         position: relative;
@@ -11,6 +11,7 @@ button:not(:disabled){
         font-weight: bold;
         color: inherit;
         background: inherit;
+        outline: 0;
         font-size: 1rem;
         border-color: #41353520 !important;
         border: 0;
@@ -75,14 +76,16 @@ button:not(:disabled){
         &.button-bump:focus{
             outline: 0;
         }
-    }
+    // }
 
 }
 
-input[type="button"]:disabled,
-input[type="submit"]:disabled,
-input[type="reset"]:disabled,
+// input[type="button"]:disabled,
+// input[type="submit"]:disabled,
+// input[type="reset"]:disabled,
 button:disabled{
+  &.button{
+
     padding: 1rem;
     margin: .5rem;
     position: relative;
@@ -97,15 +100,17 @@ button:disabled{
     background: #00000020;
     border-color: #41353520 !important;
     cursor: auto;
+
+  }
 }
 // mixin for generating button shadows
 @mixin set_button_styling($map, $keys){
-    input[type="button"]:not(:disabled),
-    input[type="submit"]:not(:disabled),
-    input[type="reset"]:not(:disabled),
-    button:not(:disabled){
+    // input[type="button"]:not(:disabled),
+    // input[type="submit"]:not(:disabled),
+    // input[type="reset"]:not(:disabled),
+    // button:not(:disabled){
         @each $keymap, $valuemap in $map{
-            &.button-#{$keymap}{
+            .button-#{$keymap}{
                 content: '';
                 @each $key in $keys{
                     @if $key == box-shadow {
@@ -136,15 +141,15 @@ button:disabled{
                 }
             }
         }
-    }
+    // }
 }
 @mixin set_button_colored($map, $keys){
-    input[type="button"]:not(:disabled),
-    input[type="submit"]:not(:disabled),
-    input[type="reset"]:not(:disabled),
-    button:not(:disabled){
+    // input[type="button"]:not(:disabled),
+    // input[type="submit"]:not(:disabled),
+    // input[type="reset"]:not(:disabled),
+    // button:not(:disabled){
         @each $keymap, $valuemap in $map{
-            &.colored-#{$keymap}{
+            .colored-#{$keymap}{
                 @each $key in $keys{
                     @if $key == box-shadow {
                         #{$key}: 6px 6px 12px map-get(map-get($valuemap, $key), darker), -6px -6px 12px map-get(map-get($valuemap, $key), lighter), inset 0 0 100px #00000020;
@@ -186,5 +191,5 @@ button:disabled{
             // }
 
         }
-    }
+    // }
 }
