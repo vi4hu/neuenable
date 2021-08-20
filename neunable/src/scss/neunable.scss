@@ -36,7 +36,7 @@
 // input[type="button"],
 // input[type="submit"],
 // input[type="reset"]{
-  @include set_input_button_styling($button, $btn-p);
+  @include set_input_button_styling($input, $btn-p);
 // }
 // input[type="date"],
 // input[type="datetime-local"],

@@ -825,22 +825,100 @@ button:disabled.button {
   outline: 0;
 }
 
-input[type=checkbox]:not(:disabled).input,
-input[type=radio]:not(:disabled).input {
+input[type=checkbox].input,
+input[type=radio].input {
   position: relative;
-  margin: 0.4rem 0.4rem;
-  padding: 0.5rem;
+  margin: 0;
+  padding: 0;
   outline: 0;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  border: 0;
-  border-color: #41353520 !important;
+  min-width: 0;
+  min-height: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
   transition: box-shadow 0.05s ease;
-  box-shadow: 2px 2px 4px #bfc5cc, -2px -2px 4px #ffffff;
+  border: 2px solid red;
 }
-input[type=checkbox]:not(:disabled):focus,
-input[type=radio]:not(:disabled):focus {
+input[type=checkbox].input-control,
+input[type=radio].input-control {
+  margin: 1rem;
+  padding: 1rem;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.2rem;
+  border: 0.5rem solid red !important;
+}
+input[type=checkbox]:focus,
+input[type=radio]:focus {
   outline: 0;
+}
+
+input[type=range].input {
+  margin: auto;
+  -webkit-appearance: none;
+  postion: relative;
+  overflow: hidden;
+  min-height: 3rem;
+  min-width: 4rem;
+  height: auto;
+  width: auto;
+  background: inherit;
+  box-shadow: none;
+  transform: translate(0, 25%);
+  cursor: pointer;
+}
+input[type=range].input::-webkit-slider-runnable-track {
+  height: 1rem;
+  border-radius: 0.5rem;
+  background: #00000020;
+}
+input[type=range].input::-webkit-slider-runnable-progress {
+  height: 1rem;
+  border-radius: 0.5rem;
+  background-color: #ffffff50;
+}
+input[type=range].input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 0.8rem;
+  height: 1.8rem;
+  transform: translateY(-15%);
+  background: inherit;
+  border: 0.2rem solid;
+  border-radius: 0.2rem;
+}
+input[type=range].input::-moz-range-track {
+  height: 1rem;
+  border-radius: 0.5rem;
+  background: #00000020;
+}
+input[type=range].input::-moz-range-progress {
+  height: 1rem;
+  border-radius: 0.5rem;
+  background-color: #ffffff50;
+}
+input[type=range].input::-moz-range-thumb {
+  -webkit-appearance: none;
+  width: 0.8rem;
+  height: 1.8rem;
+  background: inherit;
+  border: 0.2rem solid;
+  border-radius: 0.2rem;
+}
+input[type=range].input::-ms-fill-lower {
+  background-color: #ffffff20;
+}
+input[type=range].input::-ms-thumb {
+  -webkit-appearance: none;
+  width: 0.8rem;
+  height: 1.5rem;
+  background: inherit;
+  border: 0.2rem solid;
+  border: 0;
+  border-radius: 0.2rem;
+}
+input[type=range].input::-ms-fill-lower {
+  background-color: #00000020;
 }
 
 input[type=button]:disabled.input,

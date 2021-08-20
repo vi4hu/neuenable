@@ -10,45 +10,26 @@
   <title>Forms</title>
 </head>
 
-<body class="bg-dark">
-  <nav class="tl-dark navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand text-green" href="#">Navbar</a>
-      <button class="navbar-toggler button button-dark smaller text-blue" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active text-green" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item text-blue">
-            <a class="nav-link text-green" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-green" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu tl-dark" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item text-green" href="#">Action</a></li>
-              <li><a class="dropdown-item text-green" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item text-green" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled text-green" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success button button-dark smaller text-green" type="submit">Search</button>
-        </form>
-      </div>
+<body class="bg-dark text-blue">
+  <form class="tl-dark s2 border-5 curve-5 container p-5 mt-5">
+    <div class="">
+      <label class="row m-2 pl-5" for="username" style="width:100%;">Username</lable>
+        <input id="username" name="username" class="row m-2 px-4 input input-dark input-push" type="text" style="width:100%;">
     </div>
-  </nav>
+    <div>
+      <label class=" row m-2 pl-5" for="email" style="width:100%;">Email</lable>
+        <input id="email" name="email" class="row m-2 px-4 input input-dark input-push" type="email" style="width:100%;" />
+    </div>
+    <div>
+      <label class=" row m-2 pl-5" for="password" style="width:100%;">Password</lable>
+        <input id="username" name="password" class="row m-2 px-4 input input-dark input-push" type="password" style="width:100%;" />
+    </div>
+    <div>
+      <label class=" row m-2 pl-5" for="energy">Energy</lable>
+        <input id="energy" name="energy" class="row m-2 px-4 input input-dark input-push" type="range" style="width:100%;" />
+    </div>
+    <input class="button button-dark" type="submit" value="submit" style="align-items:center;width:100%;" />
+  </form>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
