@@ -1,12 +1,13 @@
 // types of components (this library offers by default)
 // DESCRIPTION
+@use "./defaults" as *;
 $base: (
-    'dark': ('background': #24282d, 'box-shadow':('darker': #1f2226, 'lighter': #292e34), 'border-color': #24282d),
-    'light': ('background': #e1e8f0, 'box-shadow':('darker': #bfc5cc, 'lighter': #ffffff), 'border-color': #e1e8f0),
-    'blue': ('background': #017dd3, 'box-shadow':('darker': #016ab3, 'lighter': #0190f3), 'border-color': #017dd3),
-    'green': ('background': #2a8a86, 'box-shadow':('darker': #247572, 'lighter': #309f9a), 'border-color': #256668),
-    'red': ('background': #b91715, 'box-shadow':('darker': #9d1412, 'lighter': #d51a18), 'border-color': #b91715),
-    'yellow': ('background': #ffd06c, 'box-shadow':('darker': #d9b15c, 'lighter': #ffef7c), 'border-color': #ffd06c)
+    'dark': ('background': $dark, 'box-shadow':('darker': $ddark, 'lighter': $ldark), 'border-color': $dark),
+    'light': ('background': $light, 'box-shadow':('darker': $dlight, 'lighter': $llight), 'border-color': $light),
+    'blue': ('background': $blue, 'box-shadow':('darker': $dblue, 'lighter': $lblue), 'border-color': $blue),
+    'green': ('background': $green, 'box-shadow':('darker': $dgreen, 'lighter': $lgreen), 'border-color': $green),
+    'red': ('background': $red, 'box-shadow':('darker': $dred, 'lighter': $lred), 'border-color': $red),
+    'yellow': ('background': $yellow, 'box-shadow':('darker': $dyellow, 'lighter': $lyellow), 'border-color': $yellow)
     );
 // if gradient together with base
 // $base: (
@@ -28,7 +29,7 @@ $base: (
 // bottom-left
 $angles:(
     'tr':('x': -6px 6px, 'y': 6px -6px, 'm': 12px, 'ang': 45deg),
-    'br':('x': -6px -4px, 'y': 6px 6px, 'm': 12px, 'ang': 145deg),
+    'br':('x': -6px -6px, 'y': 6px 6px, 'm': 12px, 'ang': 145deg),
     'tl':('x': 6px 6px, 'y': -6px -6px, 'm': 12px, 'ang': 315deg),
     'bl':('x': 6px -6px, 'y': -6px 6px, 'm': 12px, 'ang': 255deg)
     );
@@ -36,14 +37,14 @@ $angles:(
 // default colors
 // twelve default colors are given, six for background or components and six for text or icon
 $colors: (
-    'dark': ('color': #999, 'background': #24282d),
-    'light': ('color': #e1e8f0, 'background': #e1e8f0),
-    'blue': ('color': #4169e1, 'background': #017dd3),
-    'green': ('color': #67ff48, 'background': #2a8a86),
-    'red': ('color': #ff0d45, 'background': #b91715),
-    'yellow': ('color': #ffe032, 'background': #ffd06c),
-    'black': ('color': #000000),
-    'white': ('color': #ffffff)
+    'dark': ('color': $tdark, 'background': $dark),
+    'light': ('color': $tlight, 'background': $light),
+    'blue': ('color': $blue, 'background': $blue),
+    'green': ('color': $tgreen, 'background': $green),
+    'red': ('color': $tred, 'background': $red),
+    'yellow': ('color': $tyellow, 'background': $yellow),
+    'black': ('color': $tblack),
+    'white': ('color': $twhite)
     );
 
 // default curves
@@ -65,29 +66,28 @@ $borders: (
     );
 
 $grad:(
-    'dark': ('background': #24282d, 'start': #202429, 'end': #272b30),
-    'light': ('background': #e1e8f0, 'start': #cbd1d8, 'end': #f1f8ff),
-    'blue': ('background': #017dd3, 'start': #0171be, 'end': #0186e2),
-    'green': ('background': #2a8a86, 'start': #215c5e, 'end': #286d6f),
-    'red': ('background': #b91715, 'start': #a71513, 'end': #c61916),
-    'yellow': ('background': #ffd06c, 'start': #e6bb61, 'end': #ffdf74)
+    'dark': ('background': $dark, 'start': #202429, 'end': #272b30),
+    'light': ('background': $light, 'start': #cbd1d8, 'end': #f1f8ff),
+    'blue': ('background': $blue, 'start': #0171be, 'end': #0186e2),
+    'green': ('background': $green, 'start': #215c5e, 'end': #286d6f),
+    'red': ('background': $red, 'start': #a71513, 'end': #c61916),
+    'yellow': ('background': $yellow, 'start': #e6bb61, 'end': #ffdf74)
 );
 
 $button:(
-    'dark': ('background': #24282d, 'color':'', 'box-shadow':('darker': #1f2226, 'lighter': #292e34, 'modd': #1f222690, 'modl': #292e3490)),
-    'light': ('background': #e1e8f0, 'box-shadow':('darker': #bfc5cc, 'lighter': #ffffff, 'modd': #bfc5cc90, 'modl': #ffffff90)),
-    'blue': ('background': #017dd3, 'box-shadow':('darker': #016ab3, 'lighter': #0190f3, 'modd': #016ab390, 'modl': #0190f390)),
-    'green': ('background': #2a8a86, 'box-shadow':('darker': #247572, 'lighter': #309f9a, 'modd': #24757290, 'modl': #309f9a90)),
-    'red': ('background': #b91715, 'box-shadow':('darker': #9d1412, 'lighter': #d51a18, 'modd': #9d141290, 'modl': #d51a1890)),
-    'yellow': ('background': #ffd06c, 'box-shadow':('darker': #d9b15c, 'lighter': #ffef7c, 'modd': #d9b15c90, 'modl': #ffef7c90))
+    'dark': ('background': $dark, 'color':'', 'box-shadow':('darker': $ddark, 'lighter': $ldark, 'modd': $ddark+"90", 'modl': $ldark+"90")),
+    'light': ('background': $light, 'box-shadow':('darker': $dlight, 'lighter': $llight, 'modd': $dlight+"90", 'modl': $llight+"90")),
+    'blue': ('background': $blue, 'box-shadow':('darker': $blue, 'lighter': $lblue, 'modd': $dblue+"90", 'modl': $lblue+"90")),
+    'green': ('background': $green, 'box-shadow':('darker': $green, 'lighter': $lgreen, 'modd': $dgreen+"90", 'modl': $lgreen+"90")),
+    'red': ('background': $red, 'box-shadow':('darker': $dred, 'lighter': $lred, 'modd': $dred+"90", 'modl': $lred+"90")),
+    'yellow': ('background': $yellow, 'box-shadow':('darker': $dyellow, 'lighter': $lyellow, 'modd': $dyellow+"90", 'modl': $lyellow+"90"))
     );
-
 
 $input:(
-    'dark': ('background': #24282d, 'color':'', 'box-shadow':('darker': #1f2226, 'lighter': #292e34, 'modd': #1f222690, 'modl': #292e3490)),
-    'light': ('background': #e1e8f0, 'box-shadow':('darker': #bfc5cc, 'lighter': #ffffff, 'modd': #bfc5cc90, 'modl': #ffffff90)),
-    'blue': ('background': #017dd3, 'box-shadow':('darker': #016ab3, 'lighter': #0190f3, 'modd': #016ab390, 'modl': #0190f390)),
-    'green': ('background': #2a8a86, 'box-shadow':('darker': #247572, 'lighter': #309f9a, 'modd': #24757290, 'modl': #309f9a90)),
-    'red': ('background': #b91715, 'box-shadow':('darker': #9d1412, 'lighter': #d51a18, 'modd': #9d141290, 'modl': #d51a1890)),
-    'yellow': ('background': #ffd06c, 'box-shadow':('darker': #d9b15c, 'lighter': #ffef7c, 'modd': #d9b15c90, 'modl': #ffef7c90))
-    );
+    'dark': ('background': $dark, 'color':'', 'box-shadow':('darker': $ddark, 'lighter': $ldark, 'modd': $ddark+"90", 'modl': $ldark+"90")),
+    'light': ('background': $light, 'box-shadow':('darker': $dlight, 'lighter': $llight, 'modd': $dlight+"90", 'modl': $llight+"90")),
+    'blue': ('background': $blue, 'box-shadow':('darker': $blue, 'lighter': $lblue, 'modd': $dblue+"90", 'modl': $lblue+"90")),
+    'green': ('background': $green, 'box-shadow':('darker': $green, 'lighter': $lgreen, 'modd': $dgreen+"90", 'modl': $lgreen+"90")),
+    'red': ('background': $red, 'box-shadow':('darker': $dred, 'lighter': $lred, 'modd': $dred+"90", 'modl': $lred+"90")),
+    'yellow': ('background': $yellow, 'box-shadow':('darker': $dyellow, 'lighter': $lyellow, 'modd': $dyellow+"90", 'modl': $lyellow+"90"))
+);
