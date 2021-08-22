@@ -32,31 +32,10 @@
 @import './components/buttons';
 @include set_button_styling($button, $btn-p);
 @include set_button_colored($button, $btn-p);
+@import "./components/forms";
 @import "./components/inputs";
-// input[type="button"],
-// input[type="submit"],
-// input[type="reset"]{
-  @include set_input_button_styling($input, $btn-p);
-// }
-// input[type="date"],
-// input[type="datetime-local"],
-// input[type="email"],
-// input[type="month"],
-// input[type="number"],
-// input[type="password"],
-// input[type="search"],
-// input[type="tel"],
-// input[type="text"],
-// input[type="time"],
-// input[type="url"],
-// input[type="week"]{
-// @include set_input_typing_styling($button, $btn-p);
-// }
-// input[type="checkbox"],
-// input[type="radio"]{
-// @include set_input_check_styling($button, $btn-p);
-// }
-@import "./components/sizes";
+@include set_input_button_styling($input, $btn-p);
+@import "./components/utilities";
 // @mixin setup($map, $keys){
     //     @each $keymap, $valuemap in $map{
         //         .#{$keymap}-type{

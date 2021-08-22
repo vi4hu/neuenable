@@ -580,6 +580,9 @@
   box-shadow: 6px 6px 12px #bfc5cc, -6px -6px 12px #ffffff;
   cursor: pointer;
 }
+.button.button-wide {
+  width: 100%;
+}
 .button.button-round {
   min-height: 3rem;
   min-width: 3rem;
@@ -802,6 +805,60 @@ button:disabled.button {
   box-shadow: 6px 6px 12px #d9b15c, -6px -6px 12px #ffef7c, inset 0 0 30px #00000020;
 }
 
+.form {
+  position: relative;
+  margin: 0;
+  margin-top: 1rem;
+  margin-top: 1rem;
+  padding: 2rem;
+  text-align: center;
+  justify-content: center;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+.form input {
+  margin: 0.6rem 0rem;
+  outline: 0;
+  width: 100%;
+}
+.form .form-field label {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.6rem 0rem;
+  text-align: left;
+  font-weight: bold;
+  width: 100%;
+}
+.form .form-fieldinput {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.6rem 0.4rem;
+  width: 100%;
+  outline: 0;
+  border-radius: 0.5rem;
+  background: inherit;
+  box-shadow: 4px 4px 8px inherit;
+  font-weight: bold;
+}
+.form .form-fieldinput:focus {
+  background: inherit;
+}
+.form .form-field input[type=button],
+.form .form-field input[type=submit] {
+  margin: 0.6rem 0.4rem;
+  outline: 0;
+  min-width: 4rem;
+  border: 0;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+.form .form-field input[type=range] {
+  width: 100%;
+  margin: 0.6rem 0rem;
+  outline: 0;
+  border: 0;
+}
+
 .input {
   margin: 0.4rem 0.3rem;
   padding: 0.2rem;
@@ -816,7 +873,7 @@ button:disabled.button {
   border-color: #41353520 !important;
   border-radius: 0.5rem;
   transition: box-shadow 0.05s ease;
-  box-shadow: 2px 2px 4px #bfc5cc, -2px -2px 4px #ffffff;
+  box-shadow: inset -2px -2px 4px #ffffff, inset 2px 2px 4px #bfc5cc;
 }
 .input.input-push:focus {
   outline: 0;
@@ -950,10 +1007,10 @@ input[type=week]:disabled.input {
 
 .input-dark {
   content: "";
-  box-shadow: 2px 2px 4px #1f2226, -2px -2px 4px #292e34;
+  box-shadow: inset -2px -2px 4px #292e34, inset 2px 2px 4px #1f2226;
 }
-.input-dark.input-push {
-  box-shadow: 2px 2px 4px #1f2226 inset, -2px -2px 4px #292e34 inset;
+.input-dark.input-pull {
+  box-shadow: 2px 2px 4px #1f2226, -2px -2px 4px #292e34;
 }
 .input-dark.input-bump {
   box-shadow: 2px 2px 4px #1f2226, -2px -2px 4px #292e34, 2px 2px 4px #1f2226 inset, -2px -2px 4px #292e34 inset;
@@ -961,10 +1018,10 @@ input[type=week]:disabled.input {
 
 .input-light {
   content: "";
-  box-shadow: 2px 2px 4px #bfc5cc, -2px -2px 4px #ffffff;
+  box-shadow: inset -2px -2px 4px #ffffff, inset 2px 2px 4px #bfc5cc;
 }
-.input-light.input-push {
-  box-shadow: 2px 2px 4px #bfc5cc inset, -2px -2px 4px #ffffff inset;
+.input-light.input-pull {
+  box-shadow: 2px 2px 4px #bfc5cc, -2px -2px 4px #ffffff;
 }
 .input-light.input-bump {
   box-shadow: 2px 2px 4px #bfc5cc, -2px -2px 4px #ffffff, 2px 2px 4px #bfc5cc inset, -2px -2px 4px #ffffff inset;
@@ -972,10 +1029,10 @@ input[type=week]:disabled.input {
 
 .input-blue {
   content: "";
-  box-shadow: 2px 2px 4px #016ab3, -2px -2px 4px #0190f3;
+  box-shadow: inset -2px -2px 4px #0190f3, inset 2px 2px 4px #016ab3;
 }
-.input-blue.input-push {
-  box-shadow: 2px 2px 4px #016ab3 inset, -2px -2px 4px #0190f3 inset;
+.input-blue.input-pull {
+  box-shadow: 2px 2px 4px #016ab3, -2px -2px 4px #0190f3;
 }
 .input-blue.input-bump {
   box-shadow: 2px 2px 4px #016ab3, -2px -2px 4px #0190f3, 2px 2px 4px #016ab3 inset, -2px -2px 4px #0190f3 inset;
@@ -983,10 +1040,10 @@ input[type=week]:disabled.input {
 
 .input-green {
   content: "";
-  box-shadow: 2px 2px 4px #247572, -2px -2px 4px #309f9a;
+  box-shadow: inset -2px -2px 4px #309f9a, inset 2px 2px 4px #247572;
 }
-.input-green.input-push {
-  box-shadow: 2px 2px 4px #247572 inset, -2px -2px 4px #309f9a inset;
+.input-green.input-pull {
+  box-shadow: 2px 2px 4px #247572, -2px -2px 4px #309f9a;
 }
 .input-green.input-bump {
   box-shadow: 2px 2px 4px #247572, -2px -2px 4px #309f9a, 2px 2px 4px #247572 inset, -2px -2px 4px #309f9a inset;
@@ -994,10 +1051,10 @@ input[type=week]:disabled.input {
 
 .input-red {
   content: "";
-  box-shadow: 2px 2px 4px #9d1412, -2px -2px 4px #d51a18;
+  box-shadow: inset -2px -2px 4px #d51a18, inset 2px 2px 4px #9d1412;
 }
-.input-red.input-push {
-  box-shadow: 2px 2px 4px #9d1412 inset, -2px -2px 4px #d51a18 inset;
+.input-red.input-pull {
+  box-shadow: 2px 2px 4px #9d1412, -2px -2px 4px #d51a18;
 }
 .input-red.input-bump {
   box-shadow: 2px 2px 4px #9d1412, -2px -2px 4px #d51a18, 2px 2px 4px #9d1412 inset, -2px -2px 4px #d51a18 inset;
@@ -1005,13 +1062,19 @@ input[type=week]:disabled.input {
 
 .input-yellow {
   content: "";
-  box-shadow: 2px 2px 4px #d9b15c, -2px -2px 4px #ffef7c;
+  box-shadow: inset -2px -2px 4px #ffef7c, inset 2px 2px 4px #d9b15c;
 }
-.input-yellow.input-push {
-  box-shadow: 2px 2px 4px #d9b15c inset, -2px -2px 4px #ffef7c inset;
+.input-yellow.input-pull {
+  box-shadow: 2px 2px 4px #d9b15c, -2px -2px 4px #ffef7c;
 }
 .input-yellow.input-bump {
   box-shadow: 2px 2px 4px #d9b15c, -2px -2px 4px #ffef7c, 2px 2px 4px #d9b15c inset, -2px -2px 4px #ffef7c inset;
+}
+
+.wide {
+  width: 100%;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 input[type=button]:not(:disabled).smaller,

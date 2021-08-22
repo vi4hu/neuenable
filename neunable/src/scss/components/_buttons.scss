@@ -19,6 +19,9 @@
         transition: box-shadow .05s ease, background-position .2s ease;
         box-shadow: 6px 6px 12px #bfc5cc, -6px -6px 12px #ffffff;
         cursor: pointer;
+        &.button-wide{
+          width: 100%;
+        }
         &.button-round{
             min-height: 3rem;
             min-width: 3rem;

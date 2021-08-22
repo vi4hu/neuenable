@@ -1,43 +1,26 @@
-// input[type="button"]:not(:disabled),
-// input[type="submit"]:not(:disabled),
-// input[type="reset"]:not(:disabled),
-// input[type="date"]:not(:disabled),
-// input[type="datetime-local"]:not(:disabled),
-// input[type="email"]:not(:disabled),
-// input[type="month"]:not(:disabled),
-// input[type="number"]:not(:disabled),
-// input[type="password"]:not(:disabled),
-// input[type="search"]:not(:disabled),
-// input[type="tel"]:not(:disabled),
-// input[type="text"]:not(:disabled),
-// input[type="time"]:not(:disabled),
-// input[type="url"]:not(:disabled),
-// input[type="week"]:not(:disabled)
-// {
+.input{
+  margin: .4rem .3rem;
+  padding: .2rem;
+  outline: 0;
+  min-height: 2rem;
+  min-width: 4rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: inherit;
+  background-color: inherit;
+  border: 0;
+  border-color: #41353520 !important;
+  border-radius: .5rem;
+  transition: box-shadow .05s ease;
+  box-shadow: inset -2px -2px 4px #ffffff, inset 2px 2px 4px #bfc5cc;
 
-  .input{
-    margin: .4rem .3rem;
-    padding: .2rem;
-    outline: 0;
-    min-height: 2rem;
-    min-width: 4rem;
-    font-size: 1rem;
-    font-weight: bold;
-    color: inherit;
-    background-color: inherit;
-    border: 0;
-    border-color: #41353520 !important;
-    border-radius: .5rem;
-    transition: box-shadow .05s ease;
-    box-shadow: 2px 2px 4px #bfc5cc, -2px -2px 4px #ffffff;
-
-    &.input-push:focus{
-        outline: 0;
-    }
-    &.input-bump:focus{
-        outline: 0;
-    }
+  &.input-push:focus{
+      outline: 0;
   }
+  &.input-bump:focus{
+      outline: 0;
+  }
+}
 // }
 
 input[type="checkbox"],
@@ -191,65 +174,14 @@ input[type="week"]:disabled
 }
 
 @mixin set_input_button_styling($map, $keys){
-    // input[type="button"]:not(:disabled),
-    // input[type="submit"]:not(:disabled),
-    // input[type="reset"]:not(:disabled)
-    // {
-      // input{}
-        // @each $keymap, $valuemap in $map{
-        //     .button-#{$keymap}{
-        //         content: '';
-        //         @each $key in $keys{
-        //             @if $key == box-shadow {
-        //                 #{$key}: 2px 2px 4px map-get(map-get($valuemap, $key), darker), -2px -2px 4px map-get(map-get($valuemap, $key), lighter);
-        //                 // &.colored{
-        //                 //     #{$key}: 2px 2px 4px map-get(map-get($valuemap, $key), darker), -2px -2px 4px map-get(map-get($valuemap, $key), lighter), inset 0 0 100px #00000020;
-        //                 // }
-        //                 // &.colored-bump:active{
-        //                 //     #{$key}: 2px 2px 4px map-get(map-get($valuemap, $key), darker), -2px -2px 4px map-get(map-get($valuemap, $key), lighter), inset 0 0 50px #00000020;
-        //                 // }
-        //                 // &.colored-bump:focus{
-        //                 //     #{$key}: 2px 2px 4px map-get(map-get($valuemap, $key), darker), -2px -2px 4px map-get(map-get($valuemap, $key), lighter), inset 0 0 50px #00000020;
-        //                 // }
-        //                 &.button-push:active{
-        //                     #{$key}: 2px 2px 4px  map-get(map-get($valuemap, $key), darker) inset, -2px -2px 4px map-get(map-get($valuemap, $key), lighter) inset;
-        //                 }
-        //                 &:active{
-        //                     #{$key}: 2px 2px 4px map-get(map-get($valuemap, $key), modd), -2px -2px 4px map-get(map-get($valuemap, $key), modl);
-        //                 }
-        //                 &.focus:focus{
-        //                     outline: 0;
-        //                     #{$key}: 2px 2px 4px map-get(map-get($valuemap, $key), modd), -2px -2px 4px map-get(map-get($valuemap, $key), modl);
-        //                 }
-        //                 &.button-bump:active{
-        //                     #{$key}: 2px 2px 4px map-get(map-get($valuemap, $key), darker), -2px -2px 4px map-get(map-get($valuemap, $key), lighter), 2px 2px 4px map-get(map-get($valuemap, $key), darker) inset, -2px -2px 4px map-get(map-get($valuemap, $key), lighter) inset;
-        //                 }
-        //             }
-        //         }
-        //     }
-        // }
-    // }
-    // input[type="date"]:not(:disabled),
-    // input[type="datetime-local"]:not(:disabled),
-    // input[type="email"]:not(:disabled),
-    // input[type="month"]:not(:disabled),
-    // input[type="number"]:not(:disabled),
-    // input[type="password"]:not(:disabled),
-    // input[type="search"]:not(:disabled),
-    // input[type="tel"]:not(:disabled),
-    // input[type="text"]:not(:disabled),
-    // input[type="time"]:not(:disabled),
-    // input[type="url"]:not(:disabled),
-    // input[type="week"]:not(:disabled)
-    // {
     @each $keymap, $valuemap in $map{
         .input-#{$keymap}{
             content: '';
             @each $key in $keys{
                 @if $key == box-shadow {
-                    #{$key}: 2px 2px 4px map-get(map-get($valuemap, $key), darker), -2px -2px 4px map-get(map-get($valuemap, $key), lighter);
-                    &.input-push{
-                        #{$key}: 2px 2px 4px  map-get(map-get($valuemap, $key), darker) inset, -2px -2px 4px map-get(map-get($valuemap, $key), lighter) inset;
+                    #{$key}:inset -2px -2px 4px map-get(map-get($valuemap, $key), lighter), inset 2px 2px 4px map-get(map-get($valuemap, $key), darker);
+                    &.input-pull{
+                        #{$key}: 2px 2px 4px  map-get(map-get($valuemap, $key), darker), -2px -2px 4px map-get(map-get($valuemap, $key), lighter);
                     }
                     // &:active{
                     //     #{$key}: 2px 2px 4px map-get(map-get($valuemap, $key), modd), -2px -2px 4px map-get(map-get($valuemap, $key), modl);
@@ -265,7 +197,6 @@ input[type="week"]:disabled
             }
         }
     }
-  // }
 
 }
 
