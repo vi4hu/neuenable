@@ -84,10 +84,10 @@ $button:(
     );
 
 $input:(
-    'dark': ('background': $dark, 'color':'', 'box-shadow':('darker': $ddark, 'lighter': $ldark, 'modd': $ddark+"90", 'modl': $ldark+"90")),
-    'light': ('background': $light, 'box-shadow':('darker': $dlight, 'lighter': $llight, 'modd': $dlight+"90", 'modl': $llight+"90")),
-    'blue': ('background': $blue, 'box-shadow':('darker': $blue, 'lighter': $lblue, 'modd': $dblue+"90", 'modl': $lblue+"90")),
-    'green': ('background': $green, 'box-shadow':('darker': $green, 'lighter': $lgreen, 'modd': $dgreen+"90", 'modl': $lgreen+"90")),
-    'red': ('background': $red, 'box-shadow':('darker': $dred, 'lighter': $lred, 'modd': $dred+"90", 'modl': $lred+"90")),
-    'yellow': ('background': $yellow, 'box-shadow':('darker': $dyellow, 'lighter': $lyellow, 'modd': $dyellow+"90", 'modl': $lyellow+"90"))
-);
+    'dark': ('background': $dark, 'color':'', 'box-shadow':('darker': $ddark, 'lighter': $ldark, 'modd': #{$ddark}+#{$nty}, 'modl': #{$ldark}+#{$nty})),
+    'light': ('background': $light, 'box-shadow':('darker': $dlight, 'lighter': $llight, 'modd': #{$dlight}+#{$nty}, 'modl': #{$llight}+#{$nty})),
+    'blue': ('background': $blue, 'box-shadow':('darker': $dblue, 'lighter': $lblue, 'modd': #{$dblue}+#{$nty}, 'modl': #{$lblue}+#{$nty})),
+    'green': ('background': $green, 'box-shadow':('darker': $dgreen, 'lighter': $lgreen, 'modd': #{$dgreen}+#{$nty}, 'modl': #{$lgreen}+#{$nty})),
+    'red': ('background': $red, 'box-shadow':('darker': $dred, 'lighter': $lred, 'modd': #{$dred}+#{$nty}, 'modl': #{$lred}+#{$nty})),
+    'yellow': ('background': $yellow, 'box-shadow':('darker': $dyellow, 'lighter': $lyellow, 'modd': #{$dyellow}+#{$nty}, 'modl': #{$lyellow}+#{$nty}))
+    );

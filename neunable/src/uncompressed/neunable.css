@@ -1029,24 +1029,24 @@ input[type=week]:disabled.input {
 
 .input-blue {
   content: "";
-  box-shadow: inset -2px -2px 4px #0190f3, inset 2px 2px 4px #017dd3;
+  box-shadow: inset -2px -2px 4px #0190f3, inset 2px 2px 4px #016ab3;
 }
 .input-blue.input-pull {
-  box-shadow: 2px 2px 4px #017dd3, -2px -2px 4px #0190f3;
+  box-shadow: 2px 2px 4px #016ab3, -2px -2px 4px #0190f3;
 }
 .input-blue.input-bump {
-  box-shadow: 2px 2px 4px #017dd3, -2px -2px 4px #0190f3, 2px 2px 4px #017dd3 inset, -2px -2px 4px #0190f3 inset;
+  box-shadow: 2px 2px 4px #016ab3, -2px -2px 4px #0190f3, 2px 2px 4px #016ab3 inset, -2px -2px 4px #0190f3 inset;
 }
 
 .input-green {
   content: "";
-  box-shadow: inset -2px -2px 4px #309f9a, inset 2px 2px 4px #2a8a86;
+  box-shadow: inset -2px -2px 4px #309f9a, inset 2px 2px 4px #247572;
 }
 .input-green.input-pull {
-  box-shadow: 2px 2px 4px #2a8a86, -2px -2px 4px #309f9a;
+  box-shadow: 2px 2px 4px #247572, -2px -2px 4px #309f9a;
 }
 .input-green.input-bump {
-  box-shadow: 2px 2px 4px #2a8a86, -2px -2px 4px #309f9a, 2px 2px 4px #2a8a86 inset, -2px -2px 4px #309f9a inset;
+  box-shadow: 2px 2px 4px #247572, -2px -2px 4px #309f9a, 2px 2px 4px #247572 inset, -2px -2px 4px #309f9a inset;
 }
 
 .input-red {
