@@ -632,6 +632,9 @@
   outline: 0;
 }
 
+input[type=button]:disabled.button,
+input[type=submit]:disabled.button,
+input[type=reset]:disabled.button,
 button:disabled.button {
   padding: 1rem;
   margin: 0.5rem;
@@ -644,7 +647,7 @@ button:disabled.button {
   border: 0;
   border-radius: 0.5rem;
   box-shadow: none !important;
-  background: #00000020;
+  background: #00000020 !important;
   border-color: #41353520 !important;
   cursor: auto;
 }
@@ -882,29 +885,38 @@ button:disabled.button {
   outline: 0;
 }
 
+.input-radio {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.2rem;
+  background: inherit;
+  margin: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.05rem solid;
+  box-shadow: 2px 2px 4px #bfc5cc, -2px -2px 4px #ffffff;
+}
+.input-radio > .checkmark {
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  border-radius: 0.2rem;
+  background-color: lightsalmon;
+  display: none;
+}
+.input-radioinput:checked + .checkmark {
+  display: inline-block;
+}
+
 input[type=checkbox].input,
 input[type=radio].input {
   position: relative;
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  min-width: 0;
-  min-height: 0;
-  opacity: 0;
-  width: 0;
-  height: 0;
   transition: box-shadow 0.05s ease;
-  border: 2px solid red;
+  display: none;
 }
-input[type=checkbox].input-control,
-input[type=radio].input-control {
-  margin: 1rem;
-  padding: 1rem;
-  display: block;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 0.2rem;
-  border: 0.5rem solid red !important;
+input[type=checkbox]:checked + .checkmark,
+input[type=radio]:checked + .checkmark {
+  display: inline-block;
 }
 input[type=checkbox]:focus,
 input[type=radio]:focus {
@@ -926,11 +938,13 @@ input[type=range].input {
   cursor: pointer;
 }
 input[type=range].input::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
   height: 1rem;
   border-radius: 0.5rem;
   background: #00000020;
 }
 input[type=range].input::-webkit-slider-runnable-progress {
+  -webkit-appearance: none;
   height: 1rem;
   border-radius: 0.5rem;
   background-color: #ffffff50;
@@ -940,7 +954,7 @@ input[type=range].input::-webkit-slider-thumb {
   width: 0.8rem;
   height: 1.8rem;
   transform: translateY(-15%);
-  background: inherit;
+  background-color: inherit;
   border: 0.2rem solid;
   border-radius: 0.2rem;
 }
@@ -952,7 +966,7 @@ input[type=range].input::-moz-range-track {
 input[type=range].input::-moz-range-progress {
   height: 1rem;
   border-radius: 0.5rem;
-  background-color: #ffffff50;
+  background-color: #ffffff60;
 }
 input[type=range].input::-moz-range-thumb {
   -webkit-appearance: none;
@@ -963,7 +977,7 @@ input[type=range].input::-moz-range-thumb {
   border-radius: 0.2rem;
 }
 input[type=range].input::-ms-fill-lower {
-  background-color: #ffffff20;
+  background-color: #ffffff;
 }
 input[type=range].input::-ms-thumb {
   -webkit-appearance: none;
@@ -975,9 +989,19 @@ input[type=range].input::-ms-thumb {
   border-radius: 0.2rem;
 }
 input[type=range].input::-ms-fill-lower {
-  background-color: #00000020;
+  background-color: #000000;
 }
 
+input[type=file].input::file-selector-button, input[type=file].input::-webkit-file-upload-button {
+  background: inherit;
+  border: 0;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  transition: 0.4s;
+}
+input[type=file].input::file-selector-button:hover {
+  background-color: #00000020;
+}
 input[type=button]:disabled.input,
 input[type=submit]:disabled.input,
 input[type=reset]:disabled.input,
@@ -992,7 +1016,7 @@ input[type=tel]:disabled.input,
 input[type=text]:disabled.input,
 input[type=time]:disabled.input,
 input[type=url]:disabled.input,
-input[type=week]:disabled.input {
+input[type=week]:disabled input[type=file]:disabled.input {
   margin: 0.4rem 0.3rem;
   padding: 0.2rem;
   color: inherit;

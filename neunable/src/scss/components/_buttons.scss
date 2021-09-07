@@ -176,9 +176,9 @@
 
 
 
-// input[type="button"]:disabled,
-// input[type="submit"]:disabled,
-// input[type="reset"]:disabled,
+input[type="button"]:disabled,
+input[type="submit"]:disabled,
+input[type="reset"]:disabled,
 button:disabled{
   &.button{
 
@@ -193,9 +193,8 @@ button:disabled{
     border: 0;
     border-radius: .5rem;
     box-shadow: none !important;
-    background: #00000020;
+    background: #00000020 !important;
     border-color: #41353520 !important;
     cursor: auto;
-
   }
 }

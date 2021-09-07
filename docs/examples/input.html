@@ -12,14 +12,17 @@
 
 <body class="bg-blue">
 
-  <div class="bg-blue text-dark p-2 container">
+  <div class="bg-blue text-white p-2 container">
     <input class="button button-blue" type="submit" value="submit" disabled />
     <input class="button button-blue button-push" type="button" value="button">
-    <input class="input input-blue" type="checkbox">
-    <span class="radio__input">
-      <input class="input" type="checkbox">
-      <span class="input input-control"></span>
-    </span>
+    <label class="input-radio input-blue">
+      <input class="input input-blue" type="checkbox">
+      <span class="checkmark"></span>
+    </label>
+    <label class="input-radio">
+      <input class="input input-blue" type="checkbox">
+      <span class="checkmark"></span>
+    </label>
     <input class="input input-blue" type="color">
     <input class="input input-blue" type="date">
     <input class="input input-blue" type="datetime-local">
@@ -31,7 +34,10 @@
     <input class="input input-blue" type="month" disabled>
     <input class="input input-blue" type="number">
     <input class="input input-blue" type="password">
-    <input class="input input-blue" type="radio">
+    <label class="input-radio tl-blue">
+      <input class="input input-blue" type="radio">
+      <span class="checkmark"></span>
+    </label>
     <input class="input input-blue" type="range">
     <input class="button button-blue" type="reset">
     <input class="input input-blue input-bump curve-2 border-1" type="search">
