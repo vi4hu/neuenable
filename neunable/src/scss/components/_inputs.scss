@@ -1,0 +1,305 @@
+.input{
+  margin: .4rem .3rem;
+  padding: .2rem;
+  outline: 0;
+  min-height: 2rem;
+  min-width: 4rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: inherit;
+  background-color: inherit;
+  border: 0;
+  border-color: #41353520 !important;
+  border-radius: .5rem;
+  transition: box-shadow .05s ease;
+  box-shadow: inset -2px -2px 4px #ffffff, inset 2px 2px 4px #bfc5cc;
+
+  &.input-push:focus{
+      outline: 0;
+  }
+  &.input-bump:focus{
+      outline: 0;
+  }
+}
+input[type=radio], input[type=checkbox]{
+&.input-pill{
+  position: relative;
+  width: 3.5rem;
+  height: 1.5rem;
+  -webkit-appearance: none;
+  background: inherit; //#000000+#{20};
+  outline: none;
+  border-radius: 4rem;
+  // box-shadow: 2px 2px 4px #bfc5cc, -2px -2px 4px #ffffff;
+  transition: .5s;
+  &:checked{
+    background: #63b1bc;
+    box-shadow: none !important;
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #000000+#{40};
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle, rgba(174,238,227,1) 0%, rgba(148,187,233,1) 100%);
+    transform: scale(1.1);
+    transition: .2s;
+  }
+  &:checked{
+    &:before{
+      left: 2rem;
+    }
+  }
+}
+}
+input[type=radio], input[type=checkbox]{
+&.input-round{
+  position: relative;
+  min-width: 2rem !important;
+  min-height: 2rem !important;
+  -webkit-appearance: none;
+  background: inherit; //#000000+#{10};
+  outline: none;
+  border-radius: 50%;
+  transition: .5s;
+  border: 2px;
+  &:before{
+    content: '';
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid #000000+#{40};
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle, rgba(174,238,227,1) 0%, rgba(148,187,233,1) 100%);
+    transform: scale(1.1), translate(-50%, -50%);
+    transition: .2s;
+    opacity: 0;
+  }
+  &:checked{
+    &:before{
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+  }
+}
+}
+input[type="range"]
+{
+  &.input{
+    margin: auto;
+    -webkit-appearance: none;
+    postion: relative;
+    overflow: hidden;
+    min-height: 3rem;
+    min-width: 4rem;
+    height: auto;
+    width: auto;
+    background: inherit;
+    box-shadow: none;
+    transform: translate(0,25%);
+    cursor: pointer;
+    &::-webkit-slider-runnable-track {
+      -webkit-appearance: none;
+      height: 1rem;
+      border-radius: .5rem;
+      background: #00000020;
+      // box-shadow: 2px 2px 4px #bfc5cc, -2px -2px 4px #ffffff;
+    }
+    &::-webkit-slider-runnable-progress {
+      -webkit-appearance: none;
+      height: 1rem;
+      border-radius: .5rem;
+      background-color: #ffffff50;
+    }
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: .8rem;
+      height: 1.8rem;
+      transform: translateY(-15%);
+      background-color: inherit;
+      border: .2rem solid;
+      border-radius: .2rem;
+      // box-shadow: 2px 2px 4px #bfc5cc, -2px -2px 4px #ffffff;
+    }
+    &::-moz-range-track {
+      height: 1rem;
+      border-radius: .5rem;
+      background: #00000020;
+      // box-shadow: 2px 2px 4px #bfc5cc, -2px -2px 4px #ffffff;
+    }
+    &::-moz-range-progress {
+      height: 1rem;
+      border-radius: .5rem;
+      background-color: #ffffff60;
+    }
+    &::-moz-range-thumb {
+      -webkit-appearance: none;
+      width: .8rem;
+      height: 1.8rem;
+      background: inherit;
+      border: .2rem solid;
+      border-radius: .2rem;
+      // box-shadow: 2px 2px 4px #bfc5cc, -2px -2px 4px #ffffff;
+    }
+    &::-ms-fill-lower {
+      background-color: #ffffff;
+    }
+    &::-ms-thumb {
+      -webkit-appearance: none;
+      width: .8rem;
+      height: 1.5rem;
+      background: inherit;
+      border: .2rem solid;
+      border: 0;
+      border-radius: .2rem;
+    }
+    &::-ms-fill-lower {
+      background-color: #000000;
+    }
+  }
+
+}
+
+// for file button
+input[type="file"]{
+  &.input{
+    &::file-selector-button,
+    &::-webkit-file-upload-button
+    {
+      background: inherit;
+      border: 0;
+      // border-radius: 0;
+      // border: 2px solid #6c5ce7;
+      padding: .2em .4em;
+      border-radius: .2em;
+      // background-color: #a29bfe;
+      transition: .4s;
+    }
+    &::file-selector-button:hover{
+      background-color: #00000020;
+    }
+    // transition: .4s;
+    &::-ms-browse {}
+  }
+}
+
+input[type="button"]:disabled,
+input[type="submit"]:disabled,
+input[type="reset"]:disabled,
+input[type="date"]:disabled,
+input[type="datetime-local"]:disabled,
+input[type="email"]:disabled,
+input[type="month"]:disabled,
+input[type="number"]:disabled,
+input[type="password"]:disabled,
+input[type="search"]:disabled,
+input[type="tel"]:disabled,
+input[type="text"]:disabled,
+input[type="time"]:disabled,
+input[type="url"]:disabled,
+input[type="week"]:disabled
+input[type="file"]:disabled
+{
+
+  &.input{
+    margin: .4rem .3rem;
+    padding: .2rem;
+    color: inherit;
+    background-color: inherit;
+    border: 0;
+    border-radius: .5rem;
+    box-shadow: none;
+    background: #00000020;
+    border-color: #41353520 !important;
+    cursor: auto;
+  }
+}
+
+@mixin set_input_button_styling($map, $keys){
+    @each $keymap, $valuemap in $map{
+        .input-#{$keymap}{
+            content: '';
+            @each $key in $keys{
+                @if $key == box-shadow {
+                    #{$key}:inset -2px -2px 4px map-get(map-get($valuemap, $key), lighter), inset 2px 2px 4px map-get(map-get($valuemap, $key), darker);
+                    &.input-pull{
+                        #{$key}: 2px 2px 4px  map-get(map-get($valuemap, $key), darker), -2px -2px 4px map-get(map-get($valuemap, $key), lighter);
+                    }
+                    // &:active{
+                    //     #{$key}: 2px 2px 4px map-get(map-get($valuemap, $key), modd), -2px -2px 4px map-get(map-get($valuemap, $key), modl);
+                    // }
+                    // &.focus:focus{
+                    //     outline: 0;
+                    //     #{$key}: 2px 2px 4px map-get(map-get($valuemap, $key), modd), -2px -2px 4px map-get(map-get($valuemap, $key), modl);
+                    // }
+                    &.input-bump{
+                        #{$key}: 2px 2px 4px map-get(map-get($valuemap, $key), darker), -2px -2px 4px map-get(map-get($valuemap, $key), lighter), 2px 2px 4px map-get(map-get($valuemap, $key), darker) inset, -2px -2px 4px map-get(map-get($valuemap, $key), lighter) inset;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@mixin set_input_typing_styling($map, $keys){
+  @each $keymap, $valuemap in $map{
+      &.input-#{$keymap}{
+          content: '';
+          @each $key in $keys{
+              @if $key == box-shadow {
+                  #{$key}: 2px 2px 4px map-get(map-get($valuemap, $key), darker), -2px -2px 4px map-get(map-get($valuemap, $key), lighter);
+                  &.input-push{
+                      #{$key}: 2px 2px 4px  map-get(map-get($valuemap, $key), darker) inset, -2px -2px 4px map-get(map-get($valuemap, $key), lighter) inset;
+                  }
+                  // &:active{
+                  //     #{$key}: 2px 2px 4px map-get(map-get($valuemap, $key), modd), -2px -2px 4px map-get(map-get($valuemap, $key), modl);
+                  // }
+                  // &.focus:focus{
+                  //     outline: 0;
+                  //     #{$key}: 2px 2px 4px map-get(map-get($valuemap, $key), modd), -2px -2px 4px map-get(map-get($valuemap, $key), modl);
+                  // }
+                  &.input-bump{
+                      #{$key}: 2px 2px 4px map-get(map-get($valuemap, $key), darker), -2px -2px 4px map-get(map-get($valuemap, $key), lighter), 2px 2px 4px map-get(map-get($valuemap, $key), darker) inset, -2px -2px 4px map-get(map-get($valuemap, $key), lighter) inset;
+                  }
+              }
+          }
+      }
+  }
+  // }
+}
+
+@mixin set_input_check_styling($map, $keys){
+  @each $keymap, $valuemap in $map{
+      &.input-#{$keymap}{
+          content: '';
+          @each $key in $keys{
+              @if $key == box-shadow {
+                  #{$key}: 2px 2px 4px map-get(map-get($valuemap, $key), darker), -2px -2px 4px map-get(map-get($valuemap, $key), lighter);
+                  &.input-push{
+                      #{$key}: 2px 2px 4px  map-get(map-get($valuemap, $key), darker) inset, -2px -2px 4px map-get(map-get($valuemap, $key), lighter) inset;
+                  }
+                  // &:active{
+                  //     #{$key}: 2px 2px 4px map-get(map-get($valuemap, $key), modd), -2px -2px 4px map-get(map-get($valuemap, $key), modl);
+                  // }
+                  // &.focus:focus{
+                  //     outline: 0;
+                  //     #{$key}: 2px 2px 4px map-get(map-get($valuemap, $key), modd), -2px -2px 4px map-get(map-get($valuemap, $key), modl);
+                  // }
+                  &.input-bump{
+                      #{$key}: 2px 2px 4px map-get(map-get($valuemap, $key), darker), -2px -2px 4px map-get(map-get($valuemap, $key), lighter), 2px 2px 4px map-get(map-get($valuemap, $key), darker) inset, -2px -2px 4px map-get(map-get($valuemap, $key), lighter) inset;
+                  }
+              }
+          }
+      }
+  }
+  // }
+}

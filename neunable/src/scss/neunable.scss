@@ -29,10 +29,13 @@
 @include set_neumorph_grad($grad, '', ! important);
 
 // buttons
-@import './components/_buttons.scss';
+@import './components/buttons';
 @include set_button_styling($button, $btn-p);
 @include set_button_colored($button, $btn-p);
-@import "./components/sizes";
+@import "./components/forms";
+@import "./components/inputs";
+@include set_input_button_styling($input, $btn-p);
+@import "./components/utilities";
 // @mixin setup($map, $keys){
     //     @each $keymap, $valuemap in $map{
         //         .#{$keymap}-type{
@@ -44,7 +47,7 @@
                     //         }
                     //     }
                     // }
-                    
+
                     // @include mi.set_neumorph_singletons(m.$colors, p.$bg-p, 'bg-', ! important);
                     // @include mi.set_neumorph_singletons(m.$colors, p.$text-p, 'text-');
                     // @include mi.set_neumorph_singletons(m.$curves, p.$curve-p);
@@ -52,7 +55,7 @@
                     // @include mi.set_neumorph_element(m.$base, p.$base-p, '', ! important);
                     // @include mi.set_neumorph_grad(m.$grad, '', ! important);
                     // @include set_neumorph_animation($types, $effecttsprops);
-                    
+
                     // @include setup($test, $k);
                     /* Type 1 */
 @keyframes tl-push{
