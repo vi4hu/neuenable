@@ -21,57 +21,75 @@
       outline: 0;
   }
 }
-// }
-
-.input-radio, .input-checkbox{
-  min-width: 2.5rem;
-  min-height: 2.5rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  background: inherit;
-  margin: .4rem ;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: .05rem solid;
-  box-shadow: 2px 2px 4px #bfc5cc, -2px -2px 4px #ffffff;
-  cursor: pointer;
-  > .checkmark{
-    width: calc(100% - 6px);
-    height: calc(100% - 6px);
+input[type=radio], input[type=checkbox]{
+&.input-pill{
+  position: relative;
+  width: 3.5rem;
+  height: 1.5rem;
+  -webkit-appearance: none;
+  background: inherit; //#000000+#{20};
+  outline: none;
+  border-radius: 4rem;
+  // box-shadow: 2px 2px 4px #bfc5cc, -2px -2px 4px #ffffff;
+  transition: .5s;
+  &:checked{
+    background: #63b1bc;
+    box-shadow: none !important;
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #000000+#{40};
     border-radius: 50%;
-    background: rgb(174,238,227);
+    top: 0;
+    left: 0;
     background: radial-gradient(circle, rgba(174,238,227,1) 0%, rgba(148,187,233,1) 100%);
-    display: none;
+    transform: scale(1.1);
+    transition: .2s;
   }
-  &input:checked + .checkmark{
-    display: inline-block;
+  &:checked{
+    &:before{
+      left: 2rem;
+    }
   }
-
-
-
 }
-input[type="checkbox"],
-input[type="radio"]
-{
-  &.input-radio{
-    position: relative;
-    transition: box-shadow .05s ease;
-    display: none;
+}
+input[type=radio], input[type=checkbox]{
+&.input-round{
+  position: relative;
+  min-width: 2rem !important;
+  min-height: 2rem !important;
+  -webkit-appearance: none;
+  background: inherit; //#000000+#{10};
+  outline: none;
+  border-radius: 50%;
+  transition: .5s;
+  border: 2px;
+  &:before{
+    content: '';
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid #000000+#{40};
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle, rgba(174,238,227,1) 0%, rgba(148,187,233,1) 100%);
+    transform: scale(1.1), translate(-50%, -50%);
+    transition: .2s;
+    opacity: 0;
   }
-  &.input-checkbox{
-    position: relative;
-    transition: box-shadow .05s ease;
-    display: none;
+  &:checked{
+    &:before{
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
   }
-  &:checked + .checkmark{
-    display: inline-block;
-  }
-  &:focus{
-    outline: 0;
-  }
+}
 }
 input[type="range"]
 {
