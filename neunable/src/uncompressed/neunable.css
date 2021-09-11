@@ -885,31 +885,42 @@ button:disabled.button {
   outline: 0;
 }
 
-.input-radio {
+.input-radio, .input-checkbox {
+  min-width: 2.5rem;
+  min-height: 2.5rem;
   width: 2.5rem;
   height: 2.5rem;
-  border-radius: 0.2rem;
+  border-radius: 50%;
   background: inherit;
   margin: 0.4rem;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 0.05rem solid;
   box-shadow: 2px 2px 4px #bfc5cc, -2px -2px 4px #ffffff;
+  cursor: pointer;
 }
-.input-radio > .checkmark {
+.input-radio > .checkmark, .input-checkbox > .checkmark {
   width: calc(100% - 6px);
   height: calc(100% - 6px);
-  border-radius: 0.2rem;
-  background-color: lightsalmon;
+  border-radius: 50%;
+  background: #aeeee3;
+  background: radial-gradient(circle, #aeeee3 0%, #94bbe9 100%);
   display: none;
 }
-.input-radioinput:checked + .checkmark {
+.input-radioinput:checked + .checkmark, .input-checkboxinput:checked + .checkmark {
   display: inline-block;
 }
 
-input[type=checkbox].input,
-input[type=radio].input {
+input[type=checkbox].input-radio,
+input[type=radio].input-radio {
+  position: relative;
+  transition: box-shadow 0.05s ease;
+  display: none;
+}
+input[type=checkbox].input-checkbox,
+input[type=radio].input-checkbox {
   position: relative;
   transition: box-shadow 0.05s ease;
   display: none;

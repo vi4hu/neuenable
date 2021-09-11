@@ -23,24 +23,27 @@
 }
 // }
 
-.input-radio{
+.input-radio, .input-checkbox{
+  min-width: 2.5rem;
+  min-height: 2.5rem;
   width: 2.5rem;
   height: 2.5rem;
-  // position: relative;
-  border-radius: .2rem;
+  border-radius: 50%;
   background: inherit;
-  margin: .4rem;
-  // padding: 1rem;
+  margin: .4rem ;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   border: .05rem solid;
   box-shadow: 2px 2px 4px #bfc5cc, -2px -2px 4px #ffffff;
+  cursor: pointer;
   > .checkmark{
     width: calc(100% - 6px);
     height: calc(100% - 6px);
-    border-radius: .2rem;
-    background-color: lightsalmon;
+    border-radius: 50%;
+    background: rgb(174,238,227);
+    background: radial-gradient(circle, rgba(174,238,227,1) 0%, rgba(148,187,233,1) 100%);
     display: none;
   }
   &input:checked + .checkmark{
@@ -53,7 +56,12 @@
 input[type="checkbox"],
 input[type="radio"]
 {
-  &.input{
+  &.input-radio{
+    position: relative;
+    transition: box-shadow .05s ease;
+    display: none;
+  }
+  &.input-checkbox{
     position: relative;
     transition: box-shadow .05s ease;
     display: none;
