@@ -1,25 +1,30 @@
 {
-  "name": "neubable",
-  "version": "0.4.4",
+  "name": "neuenable",
+  "version": "0.5.2",
   "description": "create neumorphic style elements",
-  "main": "neunable/src/neunable.js",
+  "main": "dist/js/neuenable.js",
   "directories": {
-    "doc": "docs"
+    "doc": "docs",
+    "dist": "dist"
   },
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "wsass": "sass -w src/scss:dist/css",
+    "wsassmin": "sass -w src/scss/neuenable.scss:dist/css/neuenable.min.css --style compressed"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rain-kun/neunable.git"
+    "url": "git+https://github.com/rain-kun/neuenable.git"
   },
   "keywords": [
-    "neumorphism"
+    "neumorphism",
+    "neumorphic",
+    "ui-components"
   ],
-  "author": "vishumode",
+  "author": "Ashutosh Yadav",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rain-kun/neunable/issues"
+    "url": "https://github.com/rain-kun/neuenable/issues"
   },
-  "homepage": "https://github.com/rain-kun/neunable#readme"
+  "homepage": "https://github.com/rain-kun/neuenable#readme"
 }
