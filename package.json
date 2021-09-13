@@ -2,16 +2,19 @@
   "name": "neuenable",
   "version": "0.5.2",
   "description": "create neumorphic style elements",
-  "main": "dist/js/neunable.js",
+  "main": "dist/js/neuenable.js",
   "directories": {
-    "doc": "docs"
+    "doc": "docs",
+    "dist": "dist"
   },
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "wsass": "sass -w src/scss:dist/css",
+    "wsassmin": "sass -w src/scss/neuenable.scss:dist/css/neuenable.min.css --style compressed"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rain-kun/neunable.git"
+    "url": "git+https://github.com/rain-kun/neuenable.git"
   },
   "keywords": [
     "neumorphism",
