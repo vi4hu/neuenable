@@ -1,0 +1,35 @@
+@use '../../node_modules/sass-true' as *;
+@use '../../src/scss/abstracts/defaults' as *;
+
+@include describe('Default variable values') {
+  @include it('Check default values of different variable') {
+
+    @include assert-equal($dark, #24282d);
+    @include assert-equal($light, #e1e8f0);
+    @include assert-equal($blue, #017dd3);
+    @include assert-equal($green, #2a8a86);
+    @include assert-equal($red, #b91715);
+    @include assert-equal($yellow, #ffd06c);
+    @include assert-equal($ddark, #1f2226);
+    @include assert-equal($dlight, #bfc5cc);
+    @include assert-equal($dblue, #016ab3);
+    @include assert-equal($dgreen, #247572);
+    @include assert-equal($dred, #9d1412);
+    @include assert-equal($dyellow, #d9b15c);
+    @include assert-equal($ldark, #292e34);
+    @include assert-equal($llight, #ffffff);
+    @include assert-equal($lblue, #0190f3);
+    @include assert-equal($lgreen, #309f9a);
+    @include assert-equal($lred, #d51a18);
+    @include assert-equal($lyellow, #ffef7c);
+    @include assert-equal($tdark, #999999);
+    @include assert-equal($tlight, #e1e8f0);
+    @include assert-equal($tblue, #4169e1);
+    @include assert-equal($tgreen, #67ff48);
+    @include assert-equal($tred, #ff0d45);
+    @include assert-equal($tyellow, #ffe032);
+    @include assert-equal($tblack, #000000);
+    @include assert-equal($twhite, #ffffff);
+
+  }
+}
