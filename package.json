@@ -8,9 +8,10 @@
     "dist": "dist"
   },
   "scripts": {
-    "test": "test",
-    "wsass": "sass -w src/scss:dist/css",
-    "wsassmin": "sass -w src/scss/neuenable.scss:dist/css/neuenable.min.css --style compressed"
+    "test": "sass tests/sass_tests.scss",
+    "sass": "sass -w src/scss:dist/css",
+    "sass-min": "sass -w src/scss/neuenable.scss:dist/css/neuenable.min.css --style compressed",
+    "check-content": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz"
   },
   "repository": {
     "type": "git",
@@ -26,5 +27,10 @@
   "bugs": {
     "url": "https://github.com/rain-kun/neuenable/issues"
   },
-  "homepage": "https://github.com/rain-kun/neuenable#readme"
+  "homepage": "https://github.com/rain-kun/neuenable#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.40.0",
+    "sass-true": "^6.0.1"
+  }
 }

@@ -1,0 +1,40 @@
+@use '../node_modules/sass-true' as *;
+@import '../src/scss/abstracts/maps';
+@import '../src/scss/abstracts/props';
+@import '../src/scss/components/mixins';
+
+@import './abstracts/defaultstest';
+
+@include describe('background colors mixin'){
+  @include it('Outputs a background styling with all the default colors') {
+    @include assert {
+      @include output {
+        @include set_neumorph_singletons($colors, $bg-p, 'bg-', ! important);
+      }
+
+      @include expect {
+        .bg-dark {
+          background: #24282d !important;
+        }
+        .bg-light {
+          background: #e1e8f0 !important;
+        }
+        .bg-blue {
+          background: #017dd3 !important;
+        }
+        .bg-green {
+          background: #2a8a86 !important;
+        }
+        .bg-red {
+          background: #b91715 !important;
+        }
+        .bg-yellow {
+          background: #ffd06c !important;
+        }
+      }
+    }
+  }
+}
+
+
+@include report();
