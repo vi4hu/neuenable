@@ -34,7 +34,7 @@ $twhite: #ffffff;
 
 // box shadow param
 $of: 6px;
-$nof: "-"+$of;
+$nof: #{"-"}+$of;
 $blur: 12px;
 $sped: 0;
 

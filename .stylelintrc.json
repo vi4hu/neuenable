@@ -1,0 +1,25 @@
+{
+  "plugins":[
+    "stylelint-scss",
+    "stylelint-order"
+  ],
+  "rules":{
+    "no-eol-whitespace": true,
+    "no-extra-semicolons": true,
+    "color-no-invalid-hex": true,
+    "unit-no-unknown": true,
+    "property-no-unknown": true,
+    "keyframe-declaration-no-important": true,
+    "scss/at-rule-no-unknown": true,
+    "scss/selector-no-redundant-nesting-selector": true,
+    "order/order": [
+			"custom-properties",
+			"declarations"
+		],
+		"order/properties-order": [
+			"width",
+			"height"
+		]
+  },
+  "ignoreFiles": ["**/*.js"]
+}

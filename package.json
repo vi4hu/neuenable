@@ -10,7 +10,9 @@
   "scripts": {
     "test": "sass tests/sass_tests.scss",
     "sass": "sass -w src/scss:dist/css",
-    "sass-min": "sass -w src/scss/neuenable.scss:dist/css/neuenable.min.css --style compressed",
+    "sass:min": "sass -w src/scss/neuenable.scss:dist/css/neuenable.min.css --style compressed",
+    "sass:build": "sass src/scss:dist/css",
+    "sass:lint": "npx stylelint '**/*.scss'",
     "check-content": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz"
   },
   "repository": {
@@ -28,9 +30,13 @@
     "url": "https://github.com/rain-kun/neuenable/issues"
   },
   "homepage": "https://github.com/rain-kun/neuenable#readme",
-  "dependencies": {},
+  "dependencies": {
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.21.0"
+  },
   "devDependencies": {
     "sass": "^1.40.0",
-    "sass-true": "^6.0.1"
+    "sass-true": "^6.0.1",
+    "stylelint": "^13.13.1"
   }
 }

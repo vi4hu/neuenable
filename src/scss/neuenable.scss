@@ -1,5 +1,5 @@
 /*!
- * Neunable v0.4.3
+ * Neunable v0.5.3
  * Copyright 2021-2021 The Neunable Authors
  * Licensed under MIT (https://github.com/rain-kun/neunable/blob/main/LICENSE)
  */
@@ -60,13 +60,13 @@
                     /* Type 1 */
 @keyframes tl-push{
     0%{
-        height: 3rem;
         width: 6rem;
+        height: 3rem;
         box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.25), -4px -4px 10px rgba(255, 255, 255, 0.08);
     }
     100%{
-        height:  3rem;
         width: 6rem;
+        height:  3rem;
         box-shadow: -4px -4px 15px 0px rgba(177, 177, 177, 0.03) inset, 4px 4px 10px 2px rgba(0, 0, 0, 0.12) inset;
     }
 }
@@ -75,13 +75,13 @@
 
 @keyframes tl-un-push{
     0%{
-        height:  3rem;
         width: 6rem;
+        height:  3rem;
         box-shadow: -4px -4px 15px rgba(177, 177, 177, 0.03) inset, 4px 4px 10px rgba(0, 0, 0, 0.12) inset;
     }
     100%{
-        height: 3rem;
         width: 6rem;
+        height: 3rem;
         box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.25), -4px -4px 10px rgba(255, 255, 255, 0.08);
     }
 }
