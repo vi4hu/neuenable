@@ -10,7 +10,8 @@
   "scripts": {
     "test": "test",
     "wsass": "sass -w src/scss:dist/css",
-    "wsassmin": "sass -w src/scss/neuenable.scss:dist/css/neuenable.min.css --style compressed"
+    "wsassmin": "sass -w src/scss/neuenable.scss:dist/css/neuenable.min.css --style compressed",
+    "check": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz"
   },
   "repository": {
     "type": "git",
