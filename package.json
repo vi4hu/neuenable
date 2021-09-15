@@ -20,16 +20,13 @@
     "url": "git+https://github.com/rain-kun/neuenable.git"
   },
   "keywords": [
+    "cdn",
     "neumorphism",
     "neumorphic",
     "ui-components"
   ],
   "author": "Ashutosh Yadav",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rain-kun/neuenable/issues"
-  },
-  "homepage": "https://github.com/rain-kun/neuenable#readme",
+  "license": "MIT",
   "dependencies": {
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.21.0"
