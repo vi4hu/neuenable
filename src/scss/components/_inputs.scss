@@ -96,12 +96,12 @@ input[type="range"]
   &.input{
     margin: auto;
     -webkit-appearance: none;
-    postion: relative;
+    position: relative;
     overflow: hidden;
-    min-height: 3rem;
     min-width: 4rem;
-    height: auto;
+    min-height: 3rem;
     width: auto;
+    height: auto;
     background: inherit;
     box-shadow: none;
     transform: translate(0,25%);

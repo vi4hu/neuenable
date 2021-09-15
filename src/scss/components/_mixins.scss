@@ -6,7 +6,7 @@
                 @if $imp == ''{
                     @each $p in $props{
                     #{$p}: map-get($valuemap, $p);
-                }    
+                }
             }
             @else{
                 @each $p in $props{
@@ -35,7 +35,7 @@
                     //     @if $p == 'bump'{
                     //         #{$p}: linear-gradient(map-get($valuemap, start));
                     //     }
-                    // }    
+                    // }
                 // }
                 // @else{
                 //     @if map-get($valuemap, $p){
@@ -47,7 +47,6 @@
                 //         }
                 //     }
                 //     // @each $p in $props{
-                            
                 //     //         #{$p}: map-get($valuemap, $p) $imp;
                 //     //     }
                 // }
