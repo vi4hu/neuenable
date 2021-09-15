@@ -2,7 +2,10 @@
 
 [![NPM version](https://img.shields.io/npm/v/neuenable?color=blue)](https://www.npmjs.com/package/neuenable)
 [![Build Status](https://img.shields.io/github/workflow/status/rain-kun/neuenable/Quality%20and%20Publish/main)](https://github.com/rain-kun/neuenable/actions?workflow=Quality%20and%20Publish)
-![Issues](https://img.shields.io/github/issues/rain-kun/neuenable)
+[![Issues](https://img.shields.io/github/issues/rain-kun/neuenable)](https://github.com/rain-kun/neuenable/issues)
+
+[![Milestones](https://img.shields.io/github/milestones/progress/rain-kun/neuenable/2?style=social)](https://github.com/rain-kun/neuenable/milestone/2)
+[![Active milestones](https://img.shields.io/github/milestones/open/rain-kun/neuenable?style=social)](https://github.com/rain-kun/neuenable/milestones?state=open)
 
 **NOTE: This is Work in progress project, lots of testing and functionality is remaining, some given functionality may not work.**
 
@@ -34,7 +37,7 @@ Some components require the use of Javascript to function. Place the following `
 ```
 
 ## Use with Bootstrap
-Bootstrap, the world's most popular framework for building responsive, mobile-first sites.
+Bootstrap, the world's most popular framework for building responsive, mobile-first projects on the web.
 
 Neuenable will override the styling of Bootstrap components and you will be able to use the wide range of Bootstrap functionality with Neumorphism styling.
 
@@ -75,8 +78,8 @@ bg-light
 
 ```html
 <button class="button button-light button-push button-outline border-4 curve-5">Click me</button>
-<!-- round button -->
-<button class="button button-light button-round button-bump button-outline border-3"><i class="fa fa-download"></i></button>
+<!-- Disabled-->
+<button class="button button-light hover--up" disabled>Disabled</button>
 <!-- border -->
 <button class="button button-light button-outline border-4">Border</button>
 ```
